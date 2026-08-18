@@ -85,10 +85,12 @@
     font-family: var(--font-body);
     background-color: oklch(var(--background-50));
     color: oklch(var(--foreground-950));
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   html {
     scroll-behavior: smooth;
+    padding-top: env(safe-area-inset-top);
   }
 
   h1, h2, h3, h4, h5, h6 {

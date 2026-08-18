@@ -2,7 +2,16 @@
 .env.*
 !.env.example
 node_modules/
+.npm-cache/
+.gradle-cache/
 out/
 *.log
 *.map
 *.zip
+android/.gradle/
+android/local.properties
+android/app/build/
+ios/App/Pods/
+ios/App/DerivedData/
+ios/App/App.xcworkspace/xcuserdata/
+supabase/.temp/

@@ -11,12 +11,14 @@ import ProductSeo from "@/components/feature/ProductSeo";
 import ProjectSeo from "@/components/feature/ProjectSeo";
 import LocalBusinessSeo from "@/components/feature/LocalBusinessSeo";
 import WebSiteSearchSeo from "@/components/feature/WebSiteSearchSeo";
+import MobileRuntime from "@/components/feature/MobileRuntime";
 
 
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
       <BrowserRouter basename={__BASE_PATH__}>
+        <MobileRuntime />
         <LocaleSync />
         <LocalBusinessSeo />
         <WebSiteSearchSeo />
