@@ -1,0 +1,73 @@
+import { useTranslation } from 'react-i18next';
+import { softwareTechFactors, softwareDeployModels } from '@/mocks/software';
+import useLang from '@/hooks/useLang';
+import RevealStagger from '@/components/base/RevealStagger';
+
+export default function SoftwareTechSection() {
+  const lang = useLang();
+  const { t } = useTranslation();
+  return (
+    <section className="py-12 md:py-16 bg-background-50">
+      <div className="container-main">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+          <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-widest text-primary-700 bg-primary-50 rounded-full mb-4">
+            <i className="ri-settings-4-line w-3.5 h-3.5 flex items-center justify-center" />
+            {t('software.badge')}
+          </span>
+          <h2 className="text-xl md:text-2xl font-bold text-foreground-900 mb-3 tracking-tight">
+            {t('software.techTitle')}
+          </h2>
+          <p className="text-sm md:text-base text-foreground-600 leading-relaxed">
+            {t('software.techDesc')}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-10 items-start">
+          <div className="lg:col-span-2">
+            <h3 className="text-base md:text-lg font-semibold text-foreground-900 mb-4 flex items-center gap-2">
+              <i className="ri-list-check-2 w-5 h-5 flex items-center justify-center text-primary-600" />
+              {t('software.techFactorsTitle')}
+            </h3>
+            <ul className="space-y-2.5">
+              {softwareTechFactors[lang].map((factor) => (
+                <li key={factor} className="flex items-center gap-3 bg-background-100 border border-background-200/70 rounded-lg px-4 py-3">
+                  <i className="ri-checkbox-circle-line w-5 h-5 flex items-center justify-center text-accent-600 shrink-0" />
+                  <span className="text-sm text-foreground-800">{factor}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lg:col-span-3">
+            <h3 className="text-base md:text-lg font-semibold text-foreground-900 mb-4 flex items-center gap-2">
+              <i className="ri-stack-line w-5 h-5 flex items-center justify-center text-primary-600" />
+              {t('software.techModelsTitle')}
+            </h3>
+            <RevealStagger className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {softwareDeployModels[lang].map((model) => (
+                <div
+                  key={model.id}
+                  className="bg-background-100 border border-background-200/70 rounded-lg p-5 hover:border-primary-300 transition-colors flex flex-col"
+                >
+                  <div className="w-11 h-11 flex items-center justify-center rounded-full bg-primary-100 text-primary-600 mb-3 shrink-0">
+                    <i className={`${model.icon} w-5 h-5 flex items-center justify-center text-lg`} />
+                  </div>
+                  <h4 className="text-sm md:text-base font-semibold text-foreground-900 mb-2">
+                    {model.title}
+                  </h4>
+                  <p className="text-xs md:text-sm text-foreground-600 leading-relaxed">
+                    {model.description}
+                  </p>
+                </div>
+              ))}
+            </RevealStagger>
+            <p className="mt-5 flex items-start gap-2 text-xs md:text-sm text-foreground-600 leading-relaxed">
+              <i className="ri-information-line w-4 h-4 flex items-center justify-center text-accent-600 shrink-0 mt-0.5" />
+              {t('software.techModelsNote')}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
