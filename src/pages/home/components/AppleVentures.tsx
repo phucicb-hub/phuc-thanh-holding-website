@@ -44,21 +44,21 @@ export default function AppleVentures() {
   return (
     <section
       data-sc-act="flow"
-      className="py-24 bg-[#0a0c10] text-[#f5f5f7] border-t border-white/[0.06] relative overflow-hidden"
+      className="py-24 bg-[#f8fafc] text-[#1d1d1f] border-t border-gray-200/80 relative overflow-hidden"
     >
       <div className="container-main max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 mb-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#00f0b5]">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#046842]/8 border border-[#046842]/20 mb-4">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#046842]">
                 {isVi ? 'Dự Án Tiêu Biểu' : 'Featured Ventures'}
               </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f]">
               {isVi ? 'Hiện Thực Hóa Năng Lực Công Nghệ' : 'Proven Technological Execution'}
             </h2>
           </div>
-          <p className="max-w-md text-sm sm:text-base text-[#8b949e]">
+          <p className="max-w-md text-sm sm:text-base text-[#4b5563]">
             {isVi
               ? 'Tất cả các sản phẩm và dự án của Phúc Thành Holding đều được xây dựng trên nền tảng độc lập, có thể xác thực và kiểm chứng năng lực vận hành.'
               : 'Every project is engineered with independent rigor, transparent operational verifiability, and long-term durability.'}
@@ -71,34 +71,34 @@ export default function AppleVentures() {
               key={venture.id}
               data-sc-tilt="8"
               data-sc-spotlight
-              className="apple-glass-card p-8 flex flex-col justify-between group"
+              className="bg-white rounded-3xl border border-gray-200/90 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] p-8 flex flex-col justify-between group transition-all duration-300"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
                   <span
-                    className="text-xs font-semibold px-3 py-1 rounded-full border"
+                    className="text-xs font-bold px-3 py-1 rounded-full border"
                     style={{
-                      borderColor: `${venture.color}40`,
-                      backgroundColor: `${venture.color}15`,
-                      color: venture.color,
+                      borderColor: `${venture.color === '#00f0b5' ? '#046842' : venture.color}30`,
+                      backgroundColor: `${venture.color === '#00f0b5' ? '#046842' : venture.color}10`,
+                      color: venture.color === '#00f0b5' ? '#046842' : venture.color === '#f5a623' ? '#d97706' : venture.color,
                     }}
                   >
                     {venture.tag}
                   </span>
-                  <span className="text-xs text-white/50">{venture.status}</span>
+                  <span className="text-xs font-medium text-gray-400">{venture.status}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#00f0b5] transition-colors">
+                <h3 className="text-xl font-bold text-[#1d1d1f] mb-3 group-hover:text-[#046842] transition-colors">
                   {venture.name}
                 </h3>
-                <p className="text-sm text-[#8b949e] leading-relaxed mb-6">
+                <p className="text-sm text-[#4b5563] leading-relaxed mb-6">
                   {venture.desc}
                 </p>
               </div>
 
-              <div className="pt-6 border-t border-white/[0.08] flex items-center justify-between">
+              <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
                 <a
                   href={localizeLegacyHref(venture.href, lang)}
-                  className="text-xs font-semibold text-white/90 group-hover:text-[#00f0b5] flex items-center gap-1.5 transition-colors"
+                  className="text-xs font-bold text-[#046842] hover:text-[#025938] flex items-center gap-1.5 transition-colors"
                 >
                   <span>{isVi ? 'Xem chi tiết giải pháp' : 'Explore architecture'}</span>
                   <i className="ri-arrow-right-line" />

@@ -30,65 +30,65 @@ export default function AppleTerminalCTA() {
     <section
       id="lien-he"
       data-sc-act="flow"
-      className="py-24 sm:py-32 bg-[#07080a] text-[#f5f5f7] border-t border-white/[0.08] relative overflow-hidden"
+      className="py-24 sm:py-32 bg-[#fbfbfd] text-[#1d1d1f] border-t border-gray-200/80 relative overflow-hidden"
     >
       {/* Background glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-t from-[#00f0b5]/15 via-[#f5a623]/8 to-transparent blur-[160px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-t from-[#046842]/10 via-[#f59e0b]/5 to-transparent blur-[160px] pointer-events-none rounded-full" />
 
       <div className="container-main max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Direct Sovereign Identity & Contacts */}
           <div className="lg:col-span-5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#00f0b5]" />
-              <span className="text-xs font-semibold uppercase tracking-wider text-white/90">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#046842]/8 border border-[#046842]/20 mb-6">
+              <span className="w-2 h-2 rounded-full bg-[#046842]" />
+              <span className="text-xs font-bold uppercase tracking-wider text-[#046842]">
                 {isVi ? 'Cổng Hợp Tác Doanh Nghiệp' : 'Enterprise Partnership Terminal'}
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] mb-6 leading-tight">
               {isVi ? 'Đồng Hành Cùng Phúc Thành Holding.' : 'Partner with Phuc Thanh Holding.'}
             </h2>
 
-            <p className="text-[#8b949e] text-sm sm:text-base leading-relaxed mb-8">
+            <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-8">
               {isVi
                 ? 'Chúng tôi luôn chào đón các cơ hội hợp tác chiến lược, chuyển giao giải pháp công nghệ hoặc cùng đầu tư ươm tạo dự án số.'
                 : 'We welcome strategic enterprise collaboration, technology transfer, and co-investment opportunities.'}
             </p>
 
-            <div className="space-y-5 text-sm text-[#8b949e] border-t border-white/[0.08] pt-6">
+            <div className="space-y-5 text-sm text-[#4b5563] border-t border-gray-200 pt-6">
               <div className="flex items-start gap-3.5">
-                <i className="ri-building-line text-lg text-[#00f0b5] shrink-0 mt-0.5" />
+                <i className="ri-building-line text-lg text-[#046842] shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-xs text-white/50">{isVi ? 'Pháp nhân chính thức' : 'Legal Entity'}</div>
-                  <div className="text-white font-medium">{isVi ? company.nameVi : company.nameEn}</div>
-                  <div className="text-xs text-[#00f0b5] mt-0.5">MST: {company.registrationNumber}</div>
+                  <div className="text-xs text-gray-500">{isVi ? 'Pháp nhân chính thức' : 'Legal Entity'}</div>
+                  <div className="text-[#1d1d1f] font-bold">{isVi ? company.nameVi : company.nameEn}</div>
+                  <div className="text-xs text-[#046842] font-semibold mt-0.5">MST: {company.registrationNumber}</div>
                 </div>
               </div>
 
               <div className="flex items-start gap-3.5">
-                <i className="ri-map-pin-line text-lg text-[#00f0b5] shrink-0 mt-0.5" />
+                <i className="ri-map-pin-line text-lg text-[#046842] shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-xs text-white/50">{isVi ? 'Địa chỉ trụ sở' : 'Headquarters'}</div>
-                  <div className="text-white/90">{isVi ? company.addressVi : company.addressEn}</div>
+                  <div className="text-xs text-gray-500">{isVi ? 'Địa chỉ trụ sở' : 'Headquarters'}</div>
+                  <div className="text-gray-800 font-medium">{isVi ? company.addressVi : company.addressEn}</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3.5">
-                <i className="ri-mail-send-line text-lg text-[#00f0b5] shrink-0" />
+                <i className="ri-mail-send-line text-lg text-[#046842] shrink-0" />
                 <div>
-                  <div className="text-xs text-white/50">{isVi ? 'Hòm thư điều hành' : 'Direct Email'}</div>
-                  <a href={`mailto:${company.generalEmail}`} className="text-white hover:text-[#00f0b5] transition-colors font-medium">
+                  <div className="text-xs text-gray-500">{isVi ? 'Hòm thư điều hành' : 'Direct Email'}</div>
+                  <a href={`mailto:${company.generalEmail}`} className="text-[#046842] hover:text-[#025938] transition-colors font-bold">
                     {company.generalEmail}
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-3.5">
-                <i className="ri-phone-line text-lg text-[#00f0b5] shrink-0" />
+                <i className="ri-phone-line text-lg text-[#046842] shrink-0" />
                 <div>
-                  <div className="text-xs text-white/50">{isVi ? 'Đường dây nóng' : 'Hotline'}</div>
-                  <a href={`tel:${company.phone}`} className="text-white hover:text-[#00f0b5] transition-colors font-medium">
+                  <div className="text-xs text-gray-500">{isVi ? 'Đường dây nóng' : 'Hotline'}</div>
+                  <a href={`tel:${company.phone}`} className="text-[#046842] hover:text-[#025938] transition-colors font-bold">
                     {company.phone}
                   </a>
                 </div>
@@ -101,26 +101,26 @@ export default function AppleTerminalCTA() {
             <div
               data-sc-tilt="4"
               data-sc-spotlight
-              className="apple-glass rounded-3xl p-8 sm:p-10 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
+              className="bg-white rounded-3xl p-8 sm:p-10 border border-gray-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.06)]"
             >
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#1d1d1f] mb-2">
                 {isVi ? 'Gửi Yêu Cầu Hợp Tác & Tư Vấn' : 'Submit Partnership Proposal'}
               </h3>
-              <p className="text-xs sm:text-sm text-[#8b949e] mb-6">
+              <p className="text-xs sm:text-sm text-[#4b5563] mb-6">
                 {isVi
                   ? 'Mọi thông tin liên hệ được bảo vệ nghiêm ngặt theo tiêu chuẩn bảo mật dữ liệu của Phúc Thành Holding.'
                   : 'All information is strictly safeguarded in compliance with sovereign data protection protocols.'}
               </p>
 
               {status === 'success' ? (
-                <div className="p-6 rounded-2xl bg-[#00f0b5]/10 border border-[#00f0b5]/30 text-center animate-fade-in">
-                  <div className="w-12 h-12 rounded-full bg-[#00f0b5]/20 flex items-center justify-center text-[#00f0b5] mx-auto mb-3">
+                <div className="p-6 rounded-2xl bg-[#046842]/10 border border-[#046842]/30 text-center animate-fade-in">
+                  <div className="w-12 h-12 rounded-full bg-[#046842]/20 flex items-center justify-center text-[#046842] mx-auto mb-3">
                     <i className="ri-checkbox-circle-fill text-2xl" />
                   </div>
-                  <h4 className="text-white font-bold text-base mb-1">
+                  <h4 className="text-[#046842] font-bold text-base mb-1">
                     {isVi ? 'Đã gửi yêu cầu thành công!' : 'Proposal Submitted Successfully!'}
                   </h4>
-                  <p className="text-xs text-[#8b949e]">
+                  <p className="text-xs text-[#4b5563]">
                     {isVi
                       ? 'Đội ngũ chuyên trách của Phúc Thành Holding sẽ liên hệ phản hồi trong thời gian sớm nhất.'
                       : 'Our executive team will reach out with a technical and partnership response shortly.'}
@@ -141,7 +141,7 @@ export default function AppleTerminalCTA() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium text-white/70 mb-1.5">
+                      <label className="block text-xs font-semibold text-gray-700 mb-1.5">
                         {isVi ? 'Họ và tên *' : 'Full Name *'}
                       </label>
                       <input
@@ -150,12 +150,12 @@ export default function AppleTerminalCTA() {
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                         placeholder={isVi ? 'Ví dụ: Nguyễn Văn An' : 'e.g., John Smith'}
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#00f0b5] transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-[#f8fafc] border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:border-[#046842] focus:bg-white transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-white/70 mb-1.5">
+                      <label className="block text-xs font-semibold text-gray-700 mb-1.5">
                         {isVi ? 'Số điện thoại *' : 'Phone Number *'}
                       </label>
                       <input
@@ -164,13 +164,13 @@ export default function AppleTerminalCTA() {
                         value={formState.phone}
                         onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                         placeholder="0912 xxx xxx"
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#00f0b5] transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-[#f8fafc] border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:border-[#046842] focus:bg-white transition-colors"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-white/70 mb-1.5">
+                    <label className="block text-xs font-semibold text-gray-700 mb-1.5">
                       {isVi ? 'Địa chỉ Email doanh nghiệp *' : 'Corporate Email Address *'}
                     </label>
                     <input
@@ -179,12 +179,12 @@ export default function AppleTerminalCTA() {
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       placeholder="name@company.com"
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#00f0b5] transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-[#f8fafc] border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:border-[#046842] focus:bg-white transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-white/70 mb-1.5">
+                    <label className="block text-xs font-semibold text-gray-700 mb-1.5">
                       {isVi ? 'Nội dung đề xuất / Yêu cầu giải pháp *' : 'Inquiry / Proposal Details *'}
                     </label>
                     <textarea
@@ -193,14 +193,14 @@ export default function AppleTerminalCTA() {
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                       placeholder={isVi ? 'Mô tả tóm tắt nhu cầu giải pháp phần mềm, y tế, đào tạo hoặc đầu tư...' : 'Brief summary of software, healthcare, training, or venture scope...'}
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-white/30 text-sm focus:outline-none focus:border-[#00f0b5] transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-[#f8fafc] border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:border-[#046842] focus:bg-white transition-colors resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full py-3.5 rounded-xl bg-[#00f0b5] text-[#07080a] font-bold text-sm hover:bg-white hover:text-[#07080a] transition-all duration-300 shadow-[0_0_20px_rgba(0,240,181,0.3)] disabled:opacity-50"
+                    className="w-full py-3.5 rounded-xl bg-[#046842] text-white font-bold text-sm hover:bg-[#025938] transition-all duration-300 shadow-[0_4px_16px_rgba(4,104,66,0.25)] disabled:opacity-50"
                   >
                     {status === 'submitting'
                       ? (isVi ? 'Đang gửi...' : 'Transmitting...')

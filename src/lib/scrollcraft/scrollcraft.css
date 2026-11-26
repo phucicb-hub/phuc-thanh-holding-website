@@ -16,24 +16,24 @@
 
 /* ---------------------------------------------------------------- tokens -- */
 :root {
-  /* --- colour roles. Branded for Phuc Thanh Holding (Apple Pro Obsidian / Titanium / Emerald Cyan) --- */
-  --sc-canvas: #07080a;
-  /* Deep obsidian space black ground */
-  --sc-surface: #11131a;
-  /* Titanium space gray surface */
-  --sc-ink: #f5f5f7;
-  /* Apple crisp pure white */
-  --sc-ink-soft: #8b949e;
-  /* Refined metallic silver */
-  --sc-accent: #00f0b5;
-  /* Phuc Thanh Emerald Cyan tech accent */
-  --sc-accent-gold: #f5a623;
-  /* Imperial Gold holding accent */
-  --sc-accent-ink: #07080a;
-  /* High-contrast ink on accent */
+  /* --- colour roles. Apple Enterprise Clean Light (Ceramic White / Silver / Brand Green & Gold) --- */
+  --sc-canvas: #fbfbfd;
+  /* Apple Ceramic White ground */
+  --sc-surface: #ffffff;
+  /* Pure white elevated surface */
+  --sc-ink: #1d1d1f;
+  /* Apple Obsidian Black / Deep Charcoal text (>16:1 contrast) */
+  --sc-ink-soft: #4b5563;
+  /* High-readability secondary charcoal (>7:1 contrast) */
+  --sc-accent: #046842;
+  /* Phuc Thanh Official Sovereign Green */
+  --sc-accent-gold: #f59e0b;
+  /* Phuc Thanh Official Golden Yellow */
+  --sc-accent-ink: #ffffff;
+  /* Pure white on accent buttons */
 
-  --sc-hairline: rgba(255, 255, 255, 0.08);
-  --sc-hairline-strong: rgba(255, 255, 255, 0.16);
+  --sc-hairline: rgba(0, 0, 0, 0.08);
+  --sc-hairline-strong: rgba(0, 0, 0, 0.16);
 
   /* --- type. Apple SF Pro & Inter font stack --- */
   --sc-font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;

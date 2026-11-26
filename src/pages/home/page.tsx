@@ -15,7 +15,7 @@ export default function Home() {
   const scrollRef = useScrollCraft();
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#07080a] text-[#f5f5f7]">
+    <div className="min-h-screen flex flex-col bg-[#fbfbfd] text-[#1d1d1f]">
       <Navbar />
       <main ref={scrollRef} className="flex-1 overflow-x-hidden">
         {/* Act 1: The Dimensional Hero */}
@@ -34,17 +34,17 @@ export default function Home() {
         <AppleVentures />
 
         {/* Sovereign Entity Verification */}
-        <div className="bg-[#0a0c10] border-t border-white/[0.06]">
+        <div className="bg-[#f8fafc] border-t border-gray-200/80">
           <CompanyIdentity />
         </div>
 
         {/* Latest Announcements & News */}
-        <div className="bg-[#07080a] border-t border-white/[0.06]">
+        <div className="bg-[#ffffff] border-t border-gray-200/80">
           <LatestNews />
         </div>
 
         {/* Ecosystem Partners */}
-        <div className="bg-[#0a0c10] border-t border-white/[0.06]">
+        <div className="bg-[#f8fafc] border-t border-gray-200/80">
           <PartnersSection />
         </div>
 
