@@ -391,13 +391,17 @@ export default function Navbar() {
                   Hotline: 0343.089.666
                 </a>
               </div>
+              <div className="flex sm:hidden items-center gap-1.5 text-gray-700">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#046842]" />
+                <span className="font-semibold text-[11px]">MST: 2500716846</span>
+              </div>
 
               {/* Right: Search, Sitemap, Language switcher */}
-              <div className="flex items-center justify-end w-full sm:w-auto gap-4">
+              <div className="flex items-center justify-end gap-3 sm:gap-4">
                 <button
                   type="button"
                   onClick={() => setIsSearchOpen(true)}
-                  className="flex items-center gap-1.5 text-gray-600 hover:text-[#046842] transition-colors whitespace-nowrap cursor-pointer"
+                  className="hidden sm:flex items-center gap-1.5 py-1 px-2 text-gray-600 hover:text-[#046842] transition-colors whitespace-nowrap cursor-pointer rounded-md hover:bg-gray-200/50"
                   title={isVi ? 'Tìm kiếm (Ctrl + K)' : 'Search (Ctrl + K)'}
                 >
                   <i className="ri-search-line w-3 h-3 flex items-center justify-center text-xs" />
@@ -550,18 +554,22 @@ export default function Navbar() {
               </nav>
 
               {/* Mobile hamburger & search icons */}
-              <div className="flex items-center gap-1 lg:hidden">
+              <div className="flex items-center gap-1.5 lg:hidden">
                 <button
+                  type="button"
                   onClick={() => setIsSearchOpen(true)}
-                  className="p-2 text-gray-700 hover:text-[#046842] transition-colors"
+                  className="w-11 h-11 flex items-center justify-center text-gray-700 hover:text-[#046842] hover:bg-gray-100/80 rounded-xl transition-all cursor-pointer"
                   aria-label="Search"
+                  title="Tìm kiếm"
                 >
                   <i className="ri-search-line text-xl" />
                 </button>
                 <button
+                  type="button"
                   onClick={() => setMobileOpen(!mobileOpen)}
-                  className="p-2 text-gray-700 hover:text-[#046842] transition-colors"
-                  aria-label="Toggle menu"
+                  className="w-11 h-11 flex items-center justify-center text-gray-700 hover:text-[#046842] hover:bg-gray-100/80 rounded-xl transition-all cursor-pointer"
+                  aria-label={mobileOpen ? 'Close menu' : 'Toggle menu'}
+                  title="Menu"
                 >
                   <i
                     className={`${mobileOpen ? 'ri-close-line' : 'ri-menu-line'
