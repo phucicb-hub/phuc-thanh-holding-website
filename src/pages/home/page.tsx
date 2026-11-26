@@ -6,6 +6,7 @@ import BrandBar from './components/BrandBar';
 import QuickLinks from './components/QuickLinks';
 import PartnersSection from './components/PartnersSection';
 import LatestNews from './components/LatestNews';
+import CompanyIdentity from './components/CompanyIdentity';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroCarousel />
         <BrandBar />
+        <CompanyIdentity />
         <ServiceCards />
         <QuickLinks />
         <LatestNews />

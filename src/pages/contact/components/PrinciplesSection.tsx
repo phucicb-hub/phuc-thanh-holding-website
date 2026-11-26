@@ -76,7 +76,7 @@ export default function PrinciplesSection() {
               <div className="flex items-start gap-2.5">
                 <i className="ri-mail-line w-4 h-4 flex items-center justify-center text-accent-400 shrink-0 mt-0.5" />
                 <a
-                  href="mailto:phucthanhholding@gmail.com"
+                  href="mailto:phuclv@phucthanhholding.com"
                   className="text-sm text-background-100 leading-relaxed hover:text-accent-300 transition-colors"
                 >
                   {legalInfo[lang].email}

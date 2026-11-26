@@ -1,58 +1,32 @@
 import { useEffect, useState } from 'react';
-import { supabase } from '@/lib/supabase';
-import type { Session, User } from '@supabase/supabase-js';
-
+import { apiRequest } from '@/lib/api';
+interface AdminUser { id: number; email: string }
+interface SessionResult { user: AdminUser | null }
+const SESSION_EVENT = 'pth-session-change';
 export function useAdminAuth() {
-  const [user, setUser] = useState<User | null>(null);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [user, setUser] = useState<AdminUser | null>(null);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    let mounted = true;
-
-    async function applySession(session: Session | null) {
-      const currentUser = session?.user ?? null;
-      setUser(currentUser);
-      if (!currentUser) {
-        setIsAdmin(false);
-        setLoading(false);
-        return;
-      }
-      setLoading(true);
-      try {
-        const { data: res } = await supabase.functions.invoke('admin-api', {
-          body: { action: 'check' },
-        });
-        if (mounted) setIsAdmin(res?.isAdmin === true);
-      } catch {
-        if (mounted) setIsAdmin(false);
-      } finally {
-        if (mounted) setLoading(false);
-      }
-    }
-
-    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (mounted) applySession(session);
-    });
-
-    supabase.auth.getSession().then(({ data: sessionData }) => {
-      if (mounted) applySession(sessionData.session);
-    });
-
-    return () => {
-      mounted = false;
-      data.subscription.unsubscribe();
+    let active = true;
+    const refresh = () => {
+      apiRequest<SessionResult>('/auth/session')
+        .then(data => { if (active) setUser(data.user); })
+        .catch(() => { if (active) setUser(null); })
+        .finally(() => { if (active) setLoading(false); });
     };
+    refresh();
+    window.addEventListener(SESSION_EVENT, refresh);
+    return () => { active = false; window.removeEventListener(SESSION_EVENT, refresh); };
   }, []);
-
   const signIn = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) throw error;
+    const result = await apiRequest<SessionResult>('/auth/login', { email, password });
+    setUser(result.user);
+    window.dispatchEvent(new Event(SESSION_EVENT));
   };
-
   const signOut = async () => {
-    await supabase.auth.signOut();
+    await apiRequest('/auth/logout', {});
+    setUser(null);
+    window.dispatchEvent(new Event(SESSION_EVENT));
   };
-
-  return { user, isAdmin, loading, signIn, signOut };
+  return { user, isAdmin: Boolean(user), loading, signIn, signOut };
 }

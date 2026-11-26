@@ -141,6 +141,12 @@ export default function ProductsSection() {
                   {t('common.retry')}
                 </button>
               </div>
+            ) : products.length === 0 ? (
+              <div className="text-center py-16">
+                <h3 className="text-lg font-semibold mb-3">{lang === 'en' ? 'No products published yet' : 'Chưa công bố sản phẩm trong danh mục'}</h3>
+                <p className="text-sm text-foreground-600 mb-4">{lang === 'en' ? 'Our online shop is In Development. The planned Claude API assistant has not yet been integrated. Visit the development page for the current project status.' : 'Shop đang phát triển. Trợ lý Claude API dự kiến chưa được tích hợp. Xem trang phát triển để biết tình trạng hiện tại của dự án.'}</p>
+                <a href={lang === 'en' ? '/en/ai-products' : '/vi/san-pham-ai'} className="text-primary-700 underline">{lang === 'en' ? 'View development status' : 'Xem tình trạng phát triển'}</a>
+              </div>
             ) : filtered.length > 0 ? (
               <RevealStagger className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5">
                 {filtered.map((product) => (

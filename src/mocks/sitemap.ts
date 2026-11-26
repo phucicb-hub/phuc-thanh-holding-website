@@ -23,6 +23,8 @@ export const sitemapGroups: Localized<SitemapGroup[]> = {
       description: 'Thông tin tổng quan, định hướng và giá trị cốt lõi của doanh nghiệp.',
       links: [
         { label: 'Tổng quan doanh nghiệp', href: '/tong-quan', level: 1 },
+        { label: 'Xác minh doanh nghiệp', href: '/vi/xac-minh-doanh-nghiep', level: 1 },
+        { label: 'AI Product / Claude Use Case', href: '/vi/san-pham-ai', level: 1 },
         { label: 'Tầm nhìn & Sứ mệnh', href: '/tong-quan', level: 2 },
         { label: 'Giá trị cốt lõi', href: '/tong-quan', level: 2 },
         { label: 'Đội ngũ & Văn hóa', href: '/tong-quan', level: 2 },
@@ -173,6 +175,8 @@ export const sitemapGroups: Localized<SitemapGroup[]> = {
       description: 'Overview, direction and core values of the company.',
       links: [
         { label: 'Company overview', href: '/tong-quan', level: 1 },
+        { label: 'Company Verification', href: '/en/company-verification', level: 1 },
+        { label: 'AI Products & Development', href: '/en/ai-products', level: 1 },
         { label: 'Vision & Mission', href: '/tong-quan', level: 2 },
         { label: 'Core values', href: '/tong-quan', level: 2 },
         { label: 'Team & Culture', href: '/tong-quan', level: 2 },

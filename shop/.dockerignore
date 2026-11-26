@@ -1,0 +1,10 @@
+.env
+.env.*
+node_modules
+server/node_modules
+.preview-db
+*.local.txt
+*oauth*.local.json
+qa
+test-fixtures
+*.tar.gz

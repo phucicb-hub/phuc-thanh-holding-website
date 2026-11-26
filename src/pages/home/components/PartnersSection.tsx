@@ -6,6 +6,7 @@ import RevealStagger from '@/components/base/RevealStagger';
 export default function PartnersSection() {
   const { t } = useTranslation();
   const lang = useLang();
+  if (partners[lang].length === 0) return null;
   return (
     <section className="py-10 md:py-14 bg-background-50">
       <div className="container-main">

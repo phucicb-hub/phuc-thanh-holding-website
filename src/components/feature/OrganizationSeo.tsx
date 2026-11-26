@@ -16,7 +16,7 @@ export default function OrganizationSeo() {
       logo: LOGO_URL,
       description:
         'A trusted investment and technology partner providing software solutions, digital transformation and training for businesses.',
-      email: 'phucthanhholding@gmail.com',
+      email: 'phuclv@phucthanhholding.com',
       telephone: '+84343089666',
       taxID: '2500716846',
       foundingDate: '2024-04-04',
@@ -31,7 +31,7 @@ export default function OrganizationSeo() {
           '@type': 'ContactPoint',
           telephone: '+84343089666',
           contactType: 'customer service',
-          email: 'phucthanhholding@gmail.com',
+          email: 'phuclv@phucthanhholding.com',
           areaServed: 'VN',
           availableLanguage: ['Vietnamese', 'English'],
         },

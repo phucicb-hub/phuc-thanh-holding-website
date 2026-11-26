@@ -1,10 +1,8 @@
-import { supabase } from '@/lib/supabase';
+import { apiRequest } from '@/lib/api';
 
 async function call<T>(payload: Record<string, unknown>): Promise<T> {
-  const { data, error } = await supabase.functions.invoke('admin-api', { body: payload });
-  if (error) throw new Error(error.message);
-  if (data?.error) throw new Error(data.error as string);
-  return data?.data as T;
+  const result = await apiRequest<{ data: T }>('/admin', payload);
+  return result.data;
 }
 
 export function adminCreate<T = unknown>(table: string, data: Record<string, unknown>): Promise<T> {

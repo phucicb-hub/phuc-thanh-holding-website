@@ -4,6 +4,9 @@ import { Navigate, useParams } from "react-router-dom";
 import { resolveLocaleFromStorage } from "@/lib/routes";
 import NotFound from "@/pages/NotFound";
 import Home from "@/pages/home/page";
+import CompanyVerification from "@/pages/verification/page";
+import AiProduct from "@/pages/ai-product/page";
+import Technology from "@/pages/technology/page";
 import Products from "@/pages/products/page";
 import Overview from "@/pages/overview/page";
 import Fields from "@/pages/fields/page";
@@ -41,6 +44,7 @@ const AdminNews = lazy(() => import("@/pages/admin/news/page"));
 const AdminProjects = lazy(() => import("@/pages/admin/projects/page"));
 const AdminProducts = lazy(() => import("@/pages/admin/products/page"));
 const AdminOrders = lazy(() => import("@/pages/admin/orders/page"));
+const AdminContacts = lazy(() => import("@/pages/admin/contacts/page"));
 
 function RedirectSplat({ to }: { to: string }) {
   const params = useParams();
@@ -49,6 +53,14 @@ function RedirectSplat({ to }: { to: string }) {
 }
 
 const routes: RouteObject[] = [
+  { path: '/en/technology', element: <Technology /> },
+  { path: '/vi/cong-nghe', element: <Technology /> },
+  { path: '/en/about', element: <Overview /> },
+  { path: '/vi/xac-minh-doanh-nghiep', element: <CompanyVerification /> },
+  { path: '/en/company-verification', element: <CompanyVerification /> },
+  { path: '/vi/san-pham-ai', element: <AiProduct /> },
+  { path: '/en/ai-products', element: <AiProduct /> },
+  { path: '/en/ai-product', element: <Navigate to="/en/ai-products" replace /> },
   // Root → saved/browser locale
   {
     path: "/",
@@ -186,6 +198,7 @@ const routes: RouteObject[] = [
       </Suspense>
     ),
     children: [
+      { path: 'lien-he', element: <Suspense fallback={<AdminLoadingState />}><AdminContacts /></Suspense> },
       {
         index: true,
         element: (

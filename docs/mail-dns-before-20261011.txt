@@ -1,0 +1,8 @@
+DNS email trước cập nhật 2026-10-11
+Tên miền: phucthanhholding.com
+SPF TXT @: v=spf1 a mx ~all ; TTL Auto
+DKIM dkim._domainkey: chưa có
+DMARC _dmarc: chưa có
+MX @: mail.phucthanhholding.com ; priority 10
+A mail: 113.175.119.93 ; DNS only
+Phương án khôi phục: đưa SPF về giá trị trên, xóa hai TXT mới nếu cần.

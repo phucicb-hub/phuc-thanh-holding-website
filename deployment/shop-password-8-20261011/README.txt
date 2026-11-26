@@ -1,0 +1,1 @@
+Shop user password length: 8-128 characters. Frontend and backend updated. Includes prior consent and notifications changes. Installer backs up source, HTML, database and API image; rollback command is printed. Existing passwords remain valid.

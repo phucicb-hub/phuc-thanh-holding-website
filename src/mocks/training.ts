@@ -597,7 +597,7 @@ export const trainingFaq: Localized<TrainingFaqItem[]> = {
       id: 6,
       question: 'Làm thế nào để đề xuất chương trình đào tạo?',
       answer:
-        'Gửi nhu cầu qua trang Liên hệ hợp tác, email phucthanhholding@gmail.com hoặc số điện thoại 0343 089 666.',
+        'Gửi nhu cầu qua trang Liên hệ hợp tác, email phuclv@phucthanhholding.com hoặc số điện thoại 0343 089 666.',
     },
   ],
   en: [
@@ -635,7 +635,7 @@ export const trainingFaq: Localized<TrainingFaqItem[]> = {
       id: 6,
       question: 'How can I propose a training program?',
       answer:
-        'Send your needs via the Contact page, email phucthanhholding@gmail.com or phone 0343 089 666.',
+        'Send your needs via the Contact page, email phuclv@phucthanhholding.com or phone 0343 089 666.',
     },
   ],
 };

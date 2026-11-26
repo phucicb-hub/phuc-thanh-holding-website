@@ -1,5 +1,6 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "@capacitor/android": "^8.5.0",
     "@capacitor/app": "^8.1.1",
     "@capacitor/browser": "^8.0.4",
@@ -9,6 +10,8 @@
     "@capacitor/keyboard": "^8.0.5",
     "@capacitor/status-bar": "^8.0.3",
     "@supabase/supabase-js": "2.57.4",
+=======
+>>>>>>> a25e08e (Upload project)
     "i18next": "25.4.1",
     "i18next-browser-languagedetector": "^8.2.0",
     "react": "^19.1.0",
@@ -20,6 +23,7 @@
     "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "^8.5.0",
     "@eslint/js": "^9.30.1",
+    "@tailwindcss/postcss": "4.3.3",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^6.0.1",
@@ -31,8 +35,12 @@
     "jiti": "^2.6.1",
     "postcss": "^8.5.6",
     "source-map": "^0.7.6",
+<<<<<<< HEAD
     "supabase": "^2.115.0",
     "tailwindcss": "^3.4.17",
+=======
+    "tailwindcss": "4.3.3",
+>>>>>>> a25e08e (Upload project)
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
     "unplugin-auto-import": "^19.3.0",
@@ -41,16 +49,24 @@
   "name": "phuc-thanh-holding",
   "private": true,
   "scripts": {
+<<<<<<< HEAD
     "build": "vite build",
     "build:mobile": "npm run build && npx cap sync",
     "cap:sync": "npm run build && npx cap sync",
     "cap:android": "npm run cap:sync && npx cap open android",
     "cap:ios": "npm run cap:sync && npx cap open ios",
     "assets:generate": "npx capacitor-assets generate --android --ios",
+=======
+    "build": "node scripts/build.mjs",
+    "prerender": "node scripts/prerender.mjs",
+>>>>>>> a25e08e (Upload project)
     "dev": "vite",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "type-check": "tsc --noEmit --project tsconfig.app.json"
+    "type-check": "tsc --noEmit --project tsconfig.app.json",
+    "shop:dev": "vite --config shop/vite.config.ts",
+    "shop:build": "node shop/build.mjs",
+    "shop:test": "node --test shop/server/test.mjs shop/server/security.test.mjs shop/server/marketing.test.mjs"
   },
   "type": "module",
   "version": "0.0.0"

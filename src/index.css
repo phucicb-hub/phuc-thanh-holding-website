@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss" source(none);
+@config "../tailwind.config.ts";
+@source "./";
 
 @layer base {
   :root {
@@ -132,3 +132,8 @@
     transform: translateY(0);
   }
 }
+<<<<<<< HEAD
+=======
+/* Preserve v3 defaults used by the existing design. */
+@layer base { *, ::before, ::after { border-color: var(--color-gray-200, currentColor); } button, [role="button"] { cursor: pointer; } }
+>>>>>>> a25e08e (Upload project)

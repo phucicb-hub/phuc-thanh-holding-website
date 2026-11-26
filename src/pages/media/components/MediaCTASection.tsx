@@ -52,10 +52,10 @@ export default function MediaCTASection() {
               <div className="flex items-center gap-2">
                 <i className="ri-mail-line w-4 h-4 flex items-center justify-center text-accent-400" />
                 <a
-                  href="mailto:phucthanhholding@gmail.com"
+                  href="mailto:phuclv@phucthanhholding.com"
                   className="hover:text-accent-400 transition-colors"
                 >
-                  phucthanhholding@gmail.com
+                  phuclv@phucthanhholding.com
                 </a>
               </div>
               <div className="flex items-center gap-2">

@@ -8,6 +8,9 @@ export default function Footer() {
   const lang = useLang();
 
   const quickNav = [
+    { title: lang === 'en' ? 'Technology' : 'Công nghệ', href: getLocalizedPath('technology', lang) },
+    { title: lang === 'en' ? 'Company Verification' : 'Xác minh doanh nghiệp', href: getLocalizedPath('verification', lang) },
+    { title: 'AI Product / Claude Use Case', href: getLocalizedPath('ai-product', lang) },
     { title: t('footer.about'), href: getLocalizedPath('overview', lang) },
     { title: t('footer.products'), href: getLocalizedPath('products', lang) },
     { title: t('footer.fields'), href: getLocalizedPath('fields', lang) },
@@ -188,7 +191,7 @@ export default function Footer() {
               <li className="flex items-center gap-1">
                 <i className="ri-mail-line w-3 h-3 flex items-center justify-center" />
                 <a
-                  href="mailto:phucthanhholding@gmail.com"
+                  href="mailto:phuclv@phucthanhholding.com"
                   className="text-foreground-700 hover:text-primary-700 transition-colors"
                 >
                   {t('footer.email')}

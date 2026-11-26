@@ -39,7 +39,7 @@ export const heroSlides: Localized<
       id: 3,
       image: 'https://readdy.ai/api/search-image?query=Technology%20project%20showcase%20hero%20banner%2C%20modern%20software%20development%20workspace%20with%20multiple%20monitors%20displaying%20application%20dashboards%20and%20data%20visualization%2C%20deep%20emerald%20green%20gradient%20with%20warm%20golden%20light%20accents%2C%20abstract%20digital%20project%20network%20visualization%2C%20clean%20corporate%20minimalist%20professional%20illustration&width=1600&height=560&seq=hero-pt-03&orientation=landscape',
       title: 'DỰ ÁN TIÊU BIỂU',
-      subtitle: 'Khám phá những dự án công nghệ nổi bật đã triển khai thành công, mang lại giá trị thực tế cho khách hàng và cộng đồng',
+      subtitle: 'Tìm hiểu định hướng dự án công nghệ; kết quả triển khai chỉ được công bố khi có thông tin xác minh',
       cta: 'Xem dự án',
       href: '/du-an',
     },
@@ -65,7 +65,7 @@ export const heroSlides: Localized<
       id: 3,
       image: 'https://readdy.ai/api/search-image?query=Technology%20project%20showcase%20hero%20banner%2C%20modern%20software%20development%20workspace%20with%20multiple%20monitors%20displaying%20application%20dashboards%20and%20data%20visualization%2C%20deep%20emerald%20green%20gradient%20with%20warm%20golden%20light%20accents%2C%20abstract%20digital%20project%20network%20visualization%2C%20clean%20corporate%20minimalist%20professional%20illustration&width=1600&height=560&seq=hero-pt-03&orientation=landscape',
       title: 'FEATURED PROJECTS',
-      subtitle: 'Discover outstanding technology projects successfully delivered, bringing real value to customers and the community',
+      subtitle: 'Explore technology project directions; implementation results are published only with supporting verification',
       cta: 'View projects',
       href: '/du-an',
     },
@@ -274,21 +274,4 @@ export const quickLinks: Localized<QuickLink[]> = {
   ],
 };
 
-export const partners: Localized<{ id: number; name: string; category: string }[]> = {
-  vi: [
-    { id: 1, name: 'Viettel Solutions', category: 'Viễn thông & Công nghệ' },
-    { id: 2, name: 'FPT Software', category: 'Phát triển phần mềm' },
-    { id: 3, name: 'VNPT IT', category: 'Hạ tầng số' },
-    { id: 4, name: 'Microsoft Vietnam', category: 'Nền tảng đám mây' },
-    { id: 5, name: 'AWS Vietnam', category: 'Điện toán đám mây' },
-    { id: 6, name: 'CMC Corporation', category: 'Giải pháp công nghệ' },
-  ],
-  en: [
-    { id: 1, name: 'Viettel Solutions', category: 'Telecom & Technology' },
-    { id: 2, name: 'FPT Software', category: 'Software Development' },
-    { id: 3, name: 'VNPT IT', category: 'Digital Infrastructure' },
-    { id: 4, name: 'Microsoft Vietnam', category: 'Cloud Platform' },
-    { id: 5, name: 'AWS Vietnam', category: 'Cloud Computing' },
-    { id: 6, name: 'CMC Corporation', category: 'Technology Solutions' },
-  ],
-};
+export const partners: Localized<{ id: number; name: string; category: string }[]> = { vi: [], en: [] };

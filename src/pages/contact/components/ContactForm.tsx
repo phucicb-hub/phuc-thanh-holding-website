@@ -2,7 +2,7 @@ import { useState, useEffect, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { cooperationFields } from '@/mocks/contact';
 import useLang from '@/hooks/useLang';
-import { supabase } from '@/lib/supabase';
+import { apiRequest } from '@/lib/api';
 
 interface ContactFormProps {
   selectedField?: string;
@@ -47,8 +47,8 @@ export default function ContactForm({ selectedField = '' }: ContactFormProps) {
 
     try {
       payload.consent = formData.get('consent') === 'on';
-      const { error } = await supabase.functions.invoke('contact-submit', { body: payload });
-      if (!error) {
+      const result = await apiRequest<{ ok: boolean }>('/contact', payload);
+      if (result.ok) {
         setStatus('success');
         setFormError('');
         form.reset();

@@ -1,6 +1,9 @@
 export type Locale = 'vi' | 'en';
 
 export type PageKey =
+  | 'technology'
+  | 'verification'
+  | 'ai-product'
   | 'home'
   | 'overview'
   | 'fields'
@@ -36,6 +39,9 @@ interface PageEntry {
 export const DEFAULT_LOCALE: Locale = 'vi';
 
 const PAGES: Record<PageKey, PageEntry> = {
+  technology: { vi: '/vi/cong-nghe', en: '/en/technology' },
+  verification: { vi: '/vi/xac-minh-doanh-nghiep', en: '/en/company-verification' },
+  'ai-product': { vi: '/vi/san-pham-ai', en: '/en/ai-products' },
   home: { vi: '/vi', en: '/en' },
   overview: { vi: '/vi/ve-phuc-thanh/tong-quan', en: '/en/about/overview' },
   fields: { vi: '/vi/linh-vuc-hoat-dong', en: '/en/business-areas' },
@@ -231,6 +237,9 @@ export function localizeLegacyHref(href: string, locale: Locale): string {
 // Maps a page key back to its legacy (pre-bilingual) Vietnamese path, used by
 // SEO components that key their metadata on the old URL structure.
 const KEY_TO_LEGACY: Record<PageKey, string> = {
+  technology: '/cong-nghe',
+  verification: '/xac-minh-doanh-nghiep',
+  'ai-product': '/san-pham-ai',
   home: '/',
   overview: '/tong-quan',
   fields: '/linh-vuc',

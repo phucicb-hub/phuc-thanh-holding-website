@@ -1,0 +1,1 @@
+{"manifest_version":3,"name":"PtIQ — video shortcut (prototype)","version":"0.1.0","description":"Mở tra cứu video đang xem trong PtIQ. Chưa cung cấp overlay hoặc dữ liệu tự động.","permissions":["activeTab"],"action":{"default_popup":"popup.html"}}

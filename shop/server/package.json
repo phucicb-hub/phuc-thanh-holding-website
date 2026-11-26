@@ -1,0 +1,1 @@
+{"name":"phucthanh-ai-shop-api","private":true,"type":"module","scripts":{"start":"node index.mjs"},"dependencies":{"nodemailer":"10.0.16","pg":"8.16.3"}}

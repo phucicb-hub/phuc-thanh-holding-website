@@ -1,0 +1,59 @@
+name: phucthanhholding-fresh
+services:
+  database:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: phucthanhholding
+      POSTGRES_USER: website
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Database password required}
+    volumes:
+      - database:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U website -d phucthanhholding"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+  api:
+    build: ./server
+    restart: unless-stopped
+    init: true
+    environment:
+      PGHOST: database
+      PGDATABASE: phucthanhholding
+      PGUSER: website_runtime
+      PGPASSWORD: ${WEBSITE_RUNTIME_PASSWORD:?Runtime password required}
+      RUN_MIGRATIONS: "false"
+      ALLOWED_ORIGINS: https://phucthanhholding.com,https://www.phucthanhholding.com,http://localhost:3004,http://127.0.0.1:3004
+      COOKIE_SECURE: "true"
+    depends_on:
+      database: { condition: service_healthy }
+    security_opt: ["no-new-privileges:true"]
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8080/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 4s
+      retries: 20
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+  website:
+    image: nginx:stable-alpine
+    restart: unless-stopped
+    ports:
+      - "${WEBSITE_BIND:-127.0.0.1:3004}:80"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      api: { condition: service_healthy }
+    security_opt: ["no-new-privileges:true"]
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+volumes:
+  database:
+    name: phucthanhholding_fresh_database

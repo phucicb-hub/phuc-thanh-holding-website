@@ -278,7 +278,7 @@ export const digitalFaq: Localized<DigitalFaqItem[]> = {
       id: 5,
       question: 'Làm thế nào để trao đổi nhu cầu chuyển đổi số?',
       answer:
-        'Tổ chức có thể liên hệ qua trang Liên hệ hợp tác, email phucthanhholding@gmail.com hoặc số điện thoại 0343 089 666 để được trao đổi cụ thể.',
+        'Tổ chức có thể liên hệ qua trang Liên hệ hợp tác, email phuclv@phucthanhholding.com hoặc số điện thoại 0343 089 666 để được trao đổi cụ thể.',
     },
   ],
   en: [
@@ -310,7 +310,7 @@ export const digitalFaq: Localized<DigitalFaqItem[]> = {
       id: 5,
       question: 'How can I discuss digital transformation needs?',
       answer:
-        'Organizations can contact us via the Contact page, email phucthanhholding@gmail.com or phone 0343 089 666 for a detailed discussion.',
+        'Organizations can contact us via the Contact page, email phuclv@phucthanhholding.com or phone 0343 089 666 for a detailed discussion.',
     },
   ],
 };

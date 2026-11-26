@@ -1,4 +1,4 @@
-import { supabase } from '@/lib/supabase';
+import { apiRequest } from '@/lib/api';
 import i18n from '@/i18n';
 import { detailHref, type Locale } from '@/lib/routes';
 
@@ -46,40 +46,10 @@ function hasEnglish(row: { title_en?: string | null }): boolean {
   return Boolean(row.title_en && row.title_en.trim().length > 0);
 }
 
-export async function checkContentTranslation(
-  section: ContentSection,
-  param: string,
-  targetLocale: Locale,
-): Promise<boolean> {
+export async function checkContentTranslation(section: ContentSection, param: string, targetLocale: Locale): Promise<boolean> {
   if (targetLocale === 'vi') return true;
-
-  const isId = /^\d+$/.test(param);
-  let data: { title_en?: string | null } | null = null;
-
-  if (section === 'news') {
-    const res = await supabase
-      .from('content_news')
-      .select('title_en')
-      .eq('id', Number(param))
-      .maybeSingle();
-    data = res.data as { title_en?: string | null } | null;
-  } else if (section === 'products') {
-    const query = supabase.from('content_products').select('title_en');
-    const res = isId
-      ? await query.eq('id', Number(param)).maybeSingle()
-      : await query.eq('slug', param).maybeSingle();
-    data = res.data as { title_en?: string | null } | null;
-  } else {
-    const res = await supabase
-      .from('content_projects')
-      .select('title_en')
-      .eq('id', Number(param))
-      .maybeSingle();
-    data = res.data as { title_en?: string | null } | null;
-  }
-
-  if (!data) return true;
-  return hasEnglish(data);
+  const row = await apiRequest<{ title_en?: string | null } | null>('/content/content_' + section + '/' + encodeURIComponent(param));
+  return !row || hasEnglish(row);
 }
 
 interface NewsRow {
@@ -173,89 +143,34 @@ function mapProject(row: ProjectRow): ProjectItem {
 }
 
 export async function fetchNews(): Promise<NewsItem[]> {
-  const { data, error } = await supabase
-    .from('content_news')
-    .select('*')
-    .order('date', { ascending: false });
-  if (error) throw error;
-  const rows = (data as NewsRow[]) ?? [];
-  const visible = isEnglish() ? rows.filter(hasEnglish) : rows;
-  return visible.map(mapNews);
+  const rows = await apiRequest<NewsRow[]>('/content/content_news');
+  return (isEnglish() ? rows.filter(hasEnglish) : rows).map(mapNews).sort((a,b) => b.date.localeCompare(a.date));
 }
-
 export async function fetchNewsById(id: number): Promise<NewsItem | null> {
-  const { data, error } = await supabase
-    .from('content_news')
-    .select('*')
-    .eq('id', id)
-    .maybeSingle();
-  if (error) throw error;
-  return data ? mapNews(data as NewsRow) : null;
+  const row = await apiRequest<NewsRow | null>('/content/content_news/' + id);
+  return row ? mapNews(row) : null;
 }
-
 export function productHref(product: ProductItem): string {
-  const locale = i18n.language?.startsWith('en') ? 'en' : 'vi';
-  const param = product.slug ?? String(product.id);
-  return detailHref('products', param, locale);
+  const locale: Locale = isEnglish() ? 'en' : 'vi';
+  return detailHref('products', product.slug ?? String(product.id), locale);
 }
-
 export async function fetchProducts(): Promise<ProductItem[]> {
-  const { data, error } = await supabase
-    .from('content_products')
-    .select('*')
-    .order('id', { ascending: true });
-  if (error) throw error;
-  const rows = (data as ProductRow[]) ?? [];
-  const visible = isEnglish() ? rows.filter(hasEnglish) : rows;
-  return visible.map(mapProduct);
+  const rows = await apiRequest<ProductRow[]>('/content/content_products');
+  return (isEnglish() ? rows.filter(hasEnglish) : rows).map(mapProduct);
 }
-
-export async function fetchProductById(id: number): Promise<ProductItem | null> {
-  const { data, error } = await supabase
-    .from('content_products')
-    .select('*')
-    .eq('id', id)
-    .maybeSingle();
-  if (error) throw error;
-  return data ? mapProduct(data as ProductRow) : null;
-}
-
-export async function fetchProductBySlug(slug: string): Promise<ProductItem | null> {
-  const { data, error } = await supabase
-    .from('content_products')
-    .select('*')
-    .eq('slug', slug)
-    .maybeSingle();
-  if (error) throw error;
-  return data ? mapProduct(data as ProductRow) : null;
-}
-
+export async function fetchProductById(id: number): Promise<ProductItem | null> { return fetchProductByParam(String(id)); }
+export async function fetchProductBySlug(slug: string): Promise<ProductItem | null> { return fetchProductByParam(slug); }
 export async function fetchProductByParam(param: string): Promise<ProductItem | null> {
-  if (/^\d+$/.test(param)) {
-    return fetchProductById(Number(param));
-  }
-  return fetchProductBySlug(param);
+  const row = await apiRequest<ProductRow | null>('/content/content_products/' + encodeURIComponent(param));
+  return row ? mapProduct(row) : null;
 }
-
 export async function fetchProjects(): Promise<ProjectItem[]> {
-  const { data, error } = await supabase
-    .from('content_projects')
-    .select('*')
-    .order('id', { ascending: true });
-  if (error) throw error;
-  const rows = (data as ProjectRow[]) ?? [];
-  const visible = isEnglish() ? rows.filter(hasEnglish) : rows;
-  return visible.map(mapProject);
+  const rows = await apiRequest<ProjectRow[]>('/content/content_projects');
+  return (isEnglish() ? rows.filter(hasEnglish) : rows).map(mapProject);
 }
-
 export async function fetchProjectById(id: number): Promise<ProjectItem | null> {
-  const { data, error } = await supabase
-    .from('content_projects')
-    .select('*')
-    .eq('id', id)
-    .maybeSingle();
-  if (error) throw error;
-  return data ? mapProject(data as ProjectRow) : null;
+  const row = await apiRequest<ProjectRow | null>('/content/content_projects/' + id);
+  return row ? mapProject(row) : null;
 }
 
 export type SearchResultType = 'news' | 'products' | 'projects';
@@ -268,29 +183,6 @@ export interface SearchResult {
   date: string;
   image: string;
   href: string;
-}
-
-interface SearchResultRow {
-  id: number;
-  type: SearchResultType;
-  title: string;
-  excerpt: string;
-  date: string;
-  image: string;
-  slug: string | null;
-}
-
-function mapSearchResult(row: SearchResultRow, locale: Locale): SearchResult {
-  const param = row.type === 'products' && row.slug ? row.slug : row.id;
-  return {
-    id: row.id,
-    type: row.type,
-    title: row.title,
-    excerpt: row.excerpt,
-    date: row.date,
-    image: row.image,
-    href: detailHref(row.type, param, locale),
-  };
 }
 
 async function searchContentLocally(query: string, locale: Locale): Promise<SearchResult[]> {
@@ -329,19 +221,6 @@ async function searchContentLocally(query: string, locale: Locale): Promise<Sear
 export async function searchContent(query: string): Promise<SearchResult[]> {
   const q = query.trim();
   if (!q) return [];
-
-  const locale: Locale = i18n.language?.startsWith('en') ? 'en' : 'vi';
-  const { data, error } = await supabase.rpc('search_site_content', {
-    search_query: q,
-    search_locale: locale,
-    result_limit: 50,
-  });
-
-  if (!error) return ((data as SearchResultRow[]) ?? []).map((row) => mapSearchResult(row, locale));
-
-  // Keep search available while an older environment is waiting for the migration.
-  if (error.code === 'PGRST202' || error.message.includes('search_site_content')) {
-    return searchContentLocally(q, locale);
-  }
-  throw error;
+  const locale: Locale = isEnglish() ? 'en' : 'vi';
+  return searchContentLocally(q, locale);
 }
