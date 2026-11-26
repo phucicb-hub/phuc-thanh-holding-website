@@ -290,7 +290,7 @@ export const dataFaq: Localized<DataFaqItem[]> = {
       id: 5,
       question: 'Làm thế nào để trao đổi nhu cầu quản trị dữ liệu?',
       answer:
-        'Tổ chức có thể liên hệ qua trang Liên hệ hợp tác, email phuclv@phucthanhholding.com hoặc số điện thoại 0343 089 666 để được trao đổi cụ thể.',
+        'Tổ chức có thể liên hệ qua trang Liên hệ hợp tác, email info@phucthanhholding.com hoặc số điện thoại 0343 089 666 để được trao đổi cụ thể.',
     },
   ],
   en: [
@@ -322,7 +322,7 @@ export const dataFaq: Localized<DataFaqItem[]> = {
       id: 5,
       question: 'How can I discuss data management needs?',
       answer:
-        'Organizations can contact us via the Contact page, email phuclv@phucthanhholding.com or phone 0343 089 666 for a detailed discussion.',
+        'Organizations can contact us via the Contact page, email info@phucthanhholding.com or phone 0343 089 666 for a detailed discussion.',
     },
   ],
 };

@@ -22,5 +22,5 @@ Best regards,
 Lê Văn Phúc
 Legal representative
 PHUC THANH HOLDING INVESTMENT AND TECHNOLOGY JOINT STOCK COMPANY
-phuclv@phucthanhholding.com
+info@phucthanhholding.com
 https://phucthanhholding.com

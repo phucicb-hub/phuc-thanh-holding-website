@@ -7,7 +7,7 @@ export const company = {
   representative: 'LÊ VĂN PHÚC',
   addressVi: 'Số 424 Đường Mê Linh, Phường Vĩnh Phúc, Tỉnh Phú Thọ, Việt Nam',
   addressEn: '424 Me Linh Street, Vinh Phuc Ward, Phu Tho Province, Vietnam',
-  email: 'phuclv@phucthanhholding.com',
+  email: 'info@phucthanhholding.com',
   generalEmail: 'info@phucthanhholding.com',
   phone: '0343 089 666',
   source: 'https://thuvienphapluat.vn/ma-so-thue/cong-ty-co-phan-dau-tu-va-cong-nghe-phuc-thanh-holding-mst-2500716846.html',

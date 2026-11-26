@@ -92,10 +92,10 @@ export default {
   'footer.responsible': 'Người đại diện: LÊ VĂN PHÚC - Giám đốc',
   'footer.address': 'Địa chỉ: Số 424 Đường Mê Linh, Phường Vĩnh Phúc, Tỉnh Phú Thọ, Việt Nam',
   'footer.phone': 'Điện thoại: 0343 089 666',
-  'footer.email': 'Email: phuclv@phucthanhholding.com',
+  'footer.email': 'Email: info@phucthanhholding.com',
   'footer.copyright': '© Copyright Phúc Thành Holding 2024',
   'brand.hotline': '0343 089 666',
-  'brand.email': 'phuclv@phucthanhholding.com',
+  'brand.email': 'info@phucthanhholding.com',
   'brand.callNow': 'Gọi ngay',
   'hero.prev': 'Trước',
   'hero.next': 'Sau',
@@ -270,7 +270,7 @@ export default {
     'Thời gian triển khai tùy thuộc vào độ phức tạp của từng giải pháp. Các hạng mục nhỏ có thể hoàn thành trong vài tuần, trong khi các dự án quy mô lớn có thể kéo dài vài tháng. Tiến độ cụ thể sẽ được thống nhất rõ ràng trong kế hoạch trước khi bắt đầu.',
   'products.faq5.q': 'Làm thế nào để được tư vấn giải pháp phù hợp nhất?',
   'products.faq5.a':
-    'Bạn có thể liên hệ qua trang Liên hệ, gọi trực tiếp hotline 0343 089 666 hoặc gửi email đến phuclv@phucthanhholding.com. Đội ngũ tư vấn sẽ liên hệ lại trong thời gian sớm nhất để trao đổi chi tiết về nhu cầu của bạn.',
+    'Bạn có thể liên hệ qua trang Liên hệ, gọi trực tiếp hotline 0343 089 666 hoặc gửi email đến info@phucthanhholding.com. Đội ngũ tư vấn sẽ liên hệ lại trong thời gian sớm nhất để trao đổi chi tiết về nhu cầu của bạn.',
   'contact.breadcrumb': 'Liên hệ hợp tác',
   'contact.badge': 'KẾT NỐI CÙNG PHÚC THÀNH',
   'contact.heroTitle': 'Cùng hợp tác, cùng kiến tạo giá trị bền vững',
@@ -314,7 +314,7 @@ export default {
     'Phúc Thành Holding tiếp nhận đề xuất hợp tác trong các lĩnh vực: công nghệ và phần mềm, đầu tư và phát triển dự án, đào tạo và phát triển nguồn nhân lực, truyền thông và nội dung, phân phối và hợp tác thương mại, cùng các hoạt động vì cộng đồng.',
   'contact.faq2.q': 'Tôi có thể gửi đề xuất và tài liệu liên quan bằng cách nào?',
   'contact.faq2.a':
-    'Bạn có thể gửi qua biểu mẫu trên trang, gọi hotline 0343 089 666, hoặc gửi email đến phuclv@phucthanhholding.com. Tài liệu chi tiết có thể được trao đổi bổ sung sau khi bộ phận phụ trách liên hệ với bạn.',
+    'Bạn có thể gửi qua biểu mẫu trên trang, gọi hotline 0343 089 666, hoặc gửi email đến info@phucthanhholding.com. Tài liệu chi tiết có thể được trao đổi bổ sung sau khi bộ phận phụ trách liên hệ với bạn.',
   'contact.faq3.q': 'Quy trình xem xét đề xuất diễn ra như thế nào?',
   'contact.faq3.a':
     'Đề xuất được xử lý theo 5 bước: tiếp nhận, sàng lọc sơ bộ, trao đổi và thẩm định, thống nhất hợp tác, cuối cùng là ký kết và triển khai. Mỗi bước đều được thực hiện minh bạch và phản hồi rõ ràng.',
@@ -728,7 +728,7 @@ export default {
       heading: '2. Kênh kết nối',
       paragraphs: [
         'Điện thoại: 0343 089 666',
-        'Email: phuclv@phucthanhholding.com',
+        'Email: info@phucthanhholding.com',
         'Bạn cũng có thể kết nối với chúng tôi qua Facebook, YouTube và Zalo chính thức của Phúc Thành Holding.',
       ],
     },

@@ -3,7 +3,7 @@
 Triển khai vào `/srv/phucthanhholding/fresh-stack`; chưa sử dụng Compose Next.js cũ tại `/srv/phucthanhholding/app`. Cloudflare Tunnel hiện tại giữ nguyên.
 
 1. `sudo bash setup.sh`: tạo mật khẩu database trên máy chủ, build API, chạy trên `127.0.0.1:3004`, kiểm thử PostgreSQL thực trong schema tạm rồi xóa schema kiểm thử. Không tạo nội dung mẫu trong database chính.
-2. `sudo bash create-admin.sh`: nhập mật khẩu ẩn trực tiếp, không lưu mật khẩu rõ; tài khoản mặc định phuclv@phucthanhholding.com. Không ghi đè tài khoản có sẵn.
+2. `sudo bash create-admin.sh`: nhập mật khẩu ẩn trực tiếp, không lưu mật khẩu rõ; tài khoản mặc định info@phucthanhholding.com. Không ghi đè tài khoản có sẵn.
 3. SSH forward cổng 3004 rồi kiểm tra `/admin/dang-nhap`, quản trị nội dung và biểu mẫu. Cookie Secure dành cho HTTPS hoặc trình duyệt hỗ trợ localhost là secure context.
 4. `sudo bash activate.sh`: sao lưu database/config, chuyển sang cổng 3000, giữ container bản trước đã dừng. Tự khôi phục khi kiểm tra HTTP thất bại. Kiểm tra công khai và đăng nhập lại sau chuyển đổi.
 5. Vận hành bằng `sudo docker compose` trong thư mục này. Không chạy Compose cũ để khởi động website Next.js.

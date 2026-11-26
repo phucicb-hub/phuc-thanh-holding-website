@@ -92,10 +92,10 @@ export default {
   'footer.responsible': 'Legal representative: LE VAN PHUC - Director',
   'footer.address': 'Address: 424 Me Linh Street, Vinh Phuc Ward, Phu Tho Province, Vietnam',
   'footer.phone': 'Phone: 0343 089 666',
-  'footer.email': 'Email: phuclv@phucthanhholding.com',
+  'footer.email': 'Email: info@phucthanhholding.com',
   'footer.copyright': '© Copyright Phuc Thanh Holding 2024',
   'brand.hotline': '0343 089 666',
-  'brand.email': 'phuclv@phucthanhholding.com',
+  'brand.email': 'info@phucthanhholding.com',
   'brand.callNow': 'Call now',
   'hero.prev': 'Previous',
   'hero.next': 'Next',
@@ -271,7 +271,7 @@ export default {
     'Implementation time depends on the complexity of each solution. Small items can be completed in a few weeks, while large-scale projects may take a few months. Specific timelines will be clearly agreed in the plan before starting.',
   'products.faq5.q': 'How can I get advice on the most suitable solution?',
   'products.faq5.a':
-    'You can contact us via the Contact page, call the hotline 0343 089 666 or email phuclv@phucthanhholding.com. The consulting team will get back to you as soon as possible to discuss your needs in detail.',
+    'You can contact us via the Contact page, call the hotline 0343 089 666 or email info@phucthanhholding.com. The consulting team will get back to you as soon as possible to discuss your needs in detail.',
   'contact.breadcrumb': 'Partnership contact',
   'contact.badge': 'CONNECT WITH PHUC THANH',
   'contact.heroTitle': 'Partner together, create sustainable value together',
@@ -316,7 +316,7 @@ export default {
     'Phuc Thanh Holding accepts cooperation proposals in the fields of: technology and software, investment and project development, training and workforce development, media and content, distribution and commercial cooperation, and community activities.',
   'contact.faq2.q': 'How can I send proposals and related documents?',
   'contact.faq2.a':
-    'You can send them via the form on this page, call the hotline 0343 089 666, or email phuclv@phucthanhholding.com. Detailed documents can be exchanged later after the responsible team contacts you.',
+    'You can send them via the form on this page, call the hotline 0343 089 666, or email info@phucthanhholding.com. Detailed documents can be exchanged later after the responsible team contacts you.',
   'contact.faq3.q': 'How does the proposal review process work?',
   'contact.faq3.a':
     'Proposals are handled in 5 steps: receiving, preliminary screening, discussion and appraisal, agreeing on cooperation, and finally signing and deployment. Each step is carried out transparently with clear feedback.',
@@ -730,7 +730,7 @@ export default {
       heading: '2. Contact Channels',
       paragraphs: [
         'Phone: 0343 089 666',
-        'Email: phuclv@phucthanhholding.com',
+        'Email: info@phucthanhholding.com',
         'You can also connect with us via the official Facebook, YouTube and Zalo of Phuc Thanh Holding.',
       ],
     },

@@ -203,8 +203,8 @@
   }
   function mixColor(a, b, t) {
     return 'rgb(' + Math.round(lerp(a[0], b[0], t)) + ',' +
-                    Math.round(lerp(a[1], b[1], t)) + ',' +
-                    Math.round(lerp(a[2], b[2], t)) + ')';
+      Math.round(lerp(a[1], b[1], t)) + ',' +
+      Math.round(lerp(a[2], b[2], t)) + ')';
   }
 
   // ---- text splitting -----------------------------------------------------
@@ -316,9 +316,9 @@
     // One rate for the page, overridable per clip. Read from the mount root, the
     // document element, or the option bag, in that order.
     var LERP = lerpRate(root.nodeType === 1 ? root : null) ||
-               lerpRate(docEl) ||
-               (opts.lerp > 0 ? clamp(opts.lerp, 0.02, 1) : 0) ||
-               0.18;
+      lerpRate(docEl) ||
+      (opts.lerp > 0 ? clamp(opts.lerp, 0.02, 1) : 0) ||
+      0.18;
 
     // Every scrub clip on the page lives here, whatever drives it. tick() walks
     // this one list, so an act clip and a worldflight leg get the same playhead.
@@ -656,8 +656,8 @@
       // frame and the copy still cues, so the page reads without the decode.
       if (reduce || !V || V.loading) return;
       var src = V.el.getAttribute('data-sc-src') ||
-                (isMobile() && V.el.getAttribute('data-sc-src-mobile')) ||
-                V.el.currentSrc || V.el.src;
+        (isMobile() && V.el.getAttribute('data-sc-src-mobile')) ||
+        V.el.currentSrc || V.el.src;
       if (isMobile() && V.el.getAttribute('data-sc-src-mobile')) src = V.el.getAttribute('data-sc-src-mobile');
       if (!src) return;
       V.loading = true;
@@ -678,7 +678,7 @@
             // time actually needs to change, so a clip sitting at the very top
             // of its act would never seek, never fire 'seeked', and never
             // replace its poster until the reader scrolled it off zero.
-            try { V.el.currentTime = Math.max(V.target * (V.el.duration || 1), 0.001); } catch (e) {}
+            try { V.el.currentTime = Math.max(V.target * (V.el.duration || 1), 0.001); } catch (e) { }
             read();
             // Prime the decoder the moment the clip can be primed, without
             // waiting for a gesture. A muted inline play() is allowed with no
@@ -723,9 +723,9 @@
           var img = new Image();
           img.decoding = 'async';
           img.src = S.tpl.replace('{i}', String(S.start + i))
-                         .replace('{ii}', String(S.start + i).padStart(2, '0'))
-                         .replace('{iii}', String(S.start + i).padStart(3, '0'))
-                         .replace('{iiii}', String(S.start + i).padStart(4, '0'));
+            .replace('{ii}', String(S.start + i).padStart(2, '0'))
+            .replace('{iii}', String(S.start + i).padStart(3, '0'))
+            .replace('{iiii}', String(S.start + i).padStart(4, '0'));
           img.onload = function () { S.loaded++; if (S.loaded === 1) S.drawn = -1; };
           S.frames[i] = img;
         })(i);
@@ -844,7 +844,7 @@
             bubbles: true,
             detail: { index: k, count: W.segs.length, label: cur.label, el: cur.el, progress: pr }
           }));
-        } catch (e) {}
+        } catch (e) { }
       }
     }
 
@@ -984,10 +984,10 @@
           var pct = ((1 - t) * 100).toFixed(2);
           R.el.style.clipPath =
             R.dir === 'down' ? 'inset(' + pct + '% 0 0 0)' :
-            R.dir === 'left' ? 'inset(0 ' + pct + '% 0 0)' :
-            R.dir === 'right' ? 'inset(0 0 0 ' + pct + '%)' :
-            R.dir === 'iris' ? 'circle(' + (t * 78).toFixed(2) + '% at 50% 50%)' :
-                               'inset(0 0 ' + pct + '% 0)';
+              R.dir === 'left' ? 'inset(0 ' + pct + '% 0 0)' :
+                R.dir === 'right' ? 'inset(0 0 0 ' + pct + '%)' :
+                  R.dir === 'iris' ? 'circle(' + (t * 78).toFixed(2) + '% at 50% 50%)' :
+                    'inset(0 0 ' + pct + '% 0)';
         }
 
         // counters
@@ -1045,7 +1045,7 @@
           if (!V.stuckAt) V.stuckAt = nw;
           else if (nw - V.stuckAt > 700) {
             V.stuckAt = nw;
-            try { V.el.currentTime = V.el.currentTime + 0.001; } catch (e) {}
+            try { V.el.currentTime = V.el.currentTime + 0.001; } catch (e) { }
           }
           continue;
         }
@@ -1055,7 +1055,7 @@
         V.cur += (V.target - V.cur) * (reduce ? 1 : V.lerp);
         var dur = V.el.duration || 1;
         var t = clamp(V.cur, 0, 0.999) * dur;
-        if (Math.abs(V.el.currentTime - t) > eps) { try { V.el.currentTime = t; } catch (e) {} }
+        if (Math.abs(V.el.currentTime - t) > eps) { try { V.el.currentTime = t; } catch (e) { } }
       }
       scTickFrame = requestAnimationFrame(tick);
     }
@@ -1087,13 +1087,13 @@
       var done = function () {
         V.priming = false;
         if (!V.primed) { V.primed = true; primedCount++; }
-        try { V.el.pause(); } catch (e) {}
+        try { V.el.pause(); } catch (e) { }
         // repaint: nudge past the deadband so the next tick writes for real
         try {
           var dur = V.el.duration || 1;
           V.cur = clamp(V.cur, 0, 0.999);
           V.el.currentTime = clamp(V.cur * dur + 0.05, 0, dur * 0.999);
-        } catch (e) {}
+        } catch (e) { }
       };
       var fail = function () { V.priming = false; };
       // A play() promise is allowed to stay pending forever (iOS does this to a
@@ -1260,9 +1260,9 @@
       // leaves the element holding the resource.
       for (var v = 0; v < playheads.length; v++) {
         var V = playheads[v];
-        try { V.el.pause(); } catch (e) {}
+        try { V.el.pause(); } catch (e) { }
         if (V.objectURL) {
-          try { V.el.removeAttribute('src'); V.el.load(); } catch (e) {}
+          try { V.el.removeAttribute('src'); V.el.load(); } catch (e) { }
           URL.revokeObjectURL(V.objectURL);
           V.objectURL = null;
         }

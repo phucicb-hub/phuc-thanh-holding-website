@@ -22,7 +22,7 @@ export default function BrandBar() {
             <span className="whitespace-nowrap">{t('brand.hotline')}</span>
           </a>
           <a
-            href="mailto:phuclv@phucthanhholding.com"
+            href="mailto:info@phucthanhholding.com"
             className="hidden md:flex items-center gap-2 text-sm md:text-base font-medium text-background-50 hover:text-accent-300 transition-colors"
           >
             <i className="ri-mail-line w-4 h-4 flex items-center justify-center" />

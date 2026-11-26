@@ -4,9 +4,9 @@ cd -- "$(dirname -- "$0")"
 python3 - <<'PY'
 import getpass, json, subprocess
 from pathlib import Path
-print('Admin email [phuclv@phucthanhholding.com]: ', end='', flush=True)
+print('Admin email [info@phucthanhholding.com]: ', end='', flush=True)
 with open('/dev/tty', 'r') as terminal:
-    email = terminal.readline().strip() or 'phuclv@phucthanhholding.com'
+    email = terminal.readline().strip() or 'info@phucthanhholding.com'
 password = getpass.getpass('Admin password (14-128 characters): ')
 if not 14 <= len(password) <= 128:
     raise SystemExit('Password must contain 14-128 characters')

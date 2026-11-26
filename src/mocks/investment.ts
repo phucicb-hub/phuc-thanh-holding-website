@@ -284,7 +284,7 @@ export const investmentFaq: Localized<InvestmentFaqItem[]> = {
       id: 4,
       question: 'Làm thế nào để hợp tác đầu tư cùng Phúc Thành Holding?',
       answer:
-        'Đối tác có thể liên hệ qua trang Liên hệ hợp tác, email phuclv@phucthanhholding.com hoặc số điện thoại 0343 089 666 để trao đổi về nhu cầu và cơ hội hợp tác cụ thể.',
+        'Đối tác có thể liên hệ qua trang Liên hệ hợp tác, email info@phucthanhholding.com hoặc số điện thoại 0343 089 666 để trao đổi về nhu cầu và cơ hội hợp tác cụ thể.',
     },
     {
       id: 5,
@@ -316,7 +316,7 @@ export const investmentFaq: Localized<InvestmentFaqItem[]> = {
       id: 4,
       question: 'How can I partner with Phuc Thanh Holding for investment?',
       answer:
-        'Partners can contact us via the Contact page, email phuclv@phucthanhholding.com or phone 0343 089 666 to discuss specific needs and opportunities.',
+        'Partners can contact us via the Contact page, email info@phucthanhholding.com or phone 0343 089 666 to discuss specific needs and opportunities.',
     },
     {
       id: 5,

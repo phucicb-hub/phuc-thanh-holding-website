@@ -17,7 +17,7 @@ Nguồn hiện hành: https://claude.com/programs/startups
 | Pháp nhân | Nguồn công khai khớp tên quốc tế, MST 2500716846, ngày cấp 04/04/2024, đại diện LÊ VĂN PHÚC, ngành 5820 | Đối chiếu giấy đăng ký gốc; ngày cấp chưa thay thế chứng cứ về đăng ký lần đầu |
 | Tuổi doanh nghiệp | Ngày 04/04/2024 nằm trong cửa sổ 5 năm nêu ở email từ chối | Chỉ đáp ứng yếu tố thời gian theo nguồn hiện có; chưa xác nhận mọi điều kiện startup |
 | Website xác minh | /en/, /en/company-verification/, /en/ai-products/ trả HTTP 200; HTML thô có thông tin pháp lý hoặc trạng thái API chưa triển khai | Giữ thông tin nhất quán trong form; cung cấp giấy đăng ký khi được yêu cầu |
-| Email | phuclv@phucthanhholding.com là email hồ sơ; info@phucthanhholding.com là email chung. Chủ doanh nghiệp xác nhận cả hai nhận thư | Dùng cùng email trong Console và phản hồi |
+| Email | info@phucthanhholding.com là email hồ sơ; info@phucthanhholding.com là email chung. Chủ doanh nghiệp xác nhận cả hai nhận thư | Dùng cùng email trong Console và phản hồi |
 | Database | API health trả {"ok":true}; API sản phẩm trả HTTP 200 với [] | Danh mục trống không phải lỗi tải dữ liệu; chưa có sản phẩm thật được công bố trong database mới |
 | Mô tả sản phẩm | Shop đang xây dựng; trợ lý giải đáp theo danh mục và chính sách là kế hoạch | Chuẩn bị danh mục/chính sách thật và demo khi đã triển khai; không tạo dữ liệu giả |
 | Claude Team | Nhu cầu sử dụng nội bộ khác quyền lợi API | Chưa xác minh lịch sử sử dụng Team và điều kiện ưu đãi của tổ chức |
@@ -43,7 +43,7 @@ Không có bằng chứng chương trình bắt buộc đủ sáu trang theo c�
 ## Kế hoạch theo ưu tiên
 
 1. Đối chiếu bản giấy đăng ký: tên Anh, mã số, người đại diện, ngày đăng ký lần đầu và địa chỉ hiện hành. Nếu giấy dùng địa chỉ trước sáp nhập, giải thích khác biệt bằng tài liệu phù hợp, không sửa tùy ý.
-2. Dùng hồ sơ thống nhất: tên pháp lý đầy đủ; https://phucthanhholding.com; phuclv@phucthanhholding.com; ngày 2024-04-04 sau khi xác nhận giấy gốc. Kiểm tra tên miền cũ phucthanhhoding.com có thực sự được nhập hay chỉ là lỗi gõ trong chat.
+2. Dùng hồ sơ thống nhất: tên pháp lý đầy đủ; https://phucthanhholding.com; info@phucthanhholding.com; ngày 2024-04-04 sau khi xác nhận giấy gốc. Kiểm tra tên miền cũ phucthanhhoding.com có thực sự được nhập hay chỉ là lỗi gõ trong chat.
 3. Nộp mô tả một dự án: shop đang phát triển, Claude API chưa tích hợp, chức năng dự kiến trả lời dựa trên danh mục/chính sách và chuyển tiếp cho người phụ trách. Không khai có MVP AI, doanh thu, khách hàng hoặc funding khi chưa có bằng chứng.
 4. Nếu Console cho phép nộp lại, rà soát điều kiện và quyền lợi đang hiển thị rồi nộp một hồ sơ nhất quán. Nếu không cho nộp lại, dùng kênh hỗ trợ chính thức hoặc trả lời email nếu Reply-To nhận phản hồi. Không mặc định địa chỉ gửi thư được giám sát.
 5. Gửi bản phản hồi trong claude-startups-reconsideration-email.md từ email công ty, kèm giấy đăng ký đã che dữ liệu không cần thiết nếu có. Bản nháp hiện không tuyên bố đã đính kèm giấy.

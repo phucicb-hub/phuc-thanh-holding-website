@@ -1,5 +1,5 @@
 import {failure} from './providers.mjs';
-export const analyticsOwner = user => user?.email === 'phuclv@phucthanhholding.com';
+export const analyticsOwner = user => user?.email === 'info@phucthanhholding.com';
 export function analyticsReader(env, request=fetch) {
  let token='',loginPromise;
  const base='http://pt-analytics:3000/api/';

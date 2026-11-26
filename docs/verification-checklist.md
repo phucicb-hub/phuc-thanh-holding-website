@@ -6,7 +6,7 @@ Cập nhật: 09/10/2026. Phạm vi: D:\phucthanhholding. Tích chọn chỉ ph�
 
 - [x] Đối chiếu tên Việt/Anh, mã số, ngày cấp, người đại diện, địa chỉ và ngành chính với nguồn Thư Viện Pháp Luật do chủ doanh nghiệp cung cấp.
 - [ ] Đối chiếu bản giấy đăng ký doanh nghiệp; chưa nhận bản giấy. Không coi dữ liệu tra cứu là chứng nhận bản gốc.
-- [x] Thống nhất email chính trong mã nguồn: phuclv@phucthanhholding.com. Email chung: info@phucthanhholding.com. Chủ doanh nghiệp xác nhận cả hai nhận được thư; chưa kiểm thử gửi/nhận độc lập.
+- [x] Thống nhất email chính trong mã nguồn: info@phucthanhholding.com. Email chung: info@phucthanhholding.com. Chủ doanh nghiệp xác nhận cả hai nhận được thư; chưa kiểm thử gửi/nhận độc lập.
 - [x] Kiểm tra các thông tin pháp lý Việt/Anh trong mã nguồn: ngày 04/04/2024, mã số 2500716846, đại diện LÊ VĂN PHÚC, địa chỉ Phường Vĩnh Phúc, Tỉnh Phú Thọ.
 - [ ] Đồng bộ bản công khai và kiểm tra bên ngoài sau triển khai. Trang /en hiện khác mã nguồn: địa chỉ Khai Quang, 20+ dự án/công ty thành viên, 500+ nhân viên, bốn lĩnh vực chiến lược.
 

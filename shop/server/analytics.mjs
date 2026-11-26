@@ -1,5 +1,5 @@
 import {failure} from './providers.mjs';
-export const analyticsOwner = user => user?.email === 'phuclv@phucthanhholding.com';
+export const analyticsOwner = user => user?.email === 'info@phucthanhholding.com';
 export function analyticsReader(env, request=fetch) {
  env={...env,ANALYTICS_PASSWORD:env.ANALYTICS_PASSWORD_B64 ? Buffer.from(env.ANALYTICS_PASSWORD_B64,'base64').toString('utf8') : env.ANALYTICS_PASSWORD};
  let token='',loginPromise;

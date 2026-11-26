@@ -191,7 +191,7 @@ export default function Footer() {
               <li className="flex items-center gap-1">
                 <i className="ri-mail-line text-[#00f0b5]" />
                 <a
-                  href="mailto:phuclv@phucthanhholding.com"
+                  href="mailto:info@phucthanhholding.com"
                   className="text-white hover:text-[#00f0b5] transition-colors"
                 >
                   {t('footer.email')}

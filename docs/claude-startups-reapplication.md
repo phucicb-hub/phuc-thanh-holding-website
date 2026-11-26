@@ -4,7 +4,7 @@ Cập nhật ngày 09/10/2026. Chưa gửi hồ sơ. Không bảo đảm đượ
 
 ## Dữ kiện và đánh giá
 
-- Email từ chối được gửi tới phuclv@phucthanhholding.com ngày 09/10/2026, nêu điều kiện thành lập trong 5 năm hoặc nhận vốn trong 2 năm; không chỉ ra nguyên nhân riêng của hồ sơ.
+- Email từ chối được gửi tới info@phucthanhholding.com ngày 09/10/2026, nêu điều kiện thành lập trong 5 năm hoặc nhận vốn trong 2 năm; không chỉ ra nguyên nhân riêng của hồ sơ.
 - Nguồn Thư Viện Pháp Luật do chủ doanh nghiệp cung cấp ghi ngày cấp 04/04/2024, tên quốc tế và mã số 2500716846. Ngày đó nằm trong khoảng 5 năm; chưa đối chiếu bản giấy gốc.
 - Email nộp hồ sơ đã cùng domain công ty. Không suy diễn việc bị từ chối là do email.
 - Chủ doanh nghiệp cho biết đã dùng website/database cũ. Chuỗi tên miền trong câu trả lời là phucthanhhoding.com; chưa xác nhận đây là giá trị đã nhập trong hồ sơ hay lỗi gõ trong chat. Tên miền đúng để nộp lại là phucthanhholding.com.
@@ -17,7 +17,7 @@ Legal company name: PHUC THANH HOLDING INVESTMENT AND TECHNOLOGY JOINT STOCK COM
 
 Company website: https://phucthanhholding.com
 
-Work email: phuclv@phucthanhholding.com
+Work email: info@phucthanhholding.com
 
 Date founded: 2024-04-04
 
@@ -35,7 +35,7 @@ We are developing an online shop at shop.phucthanhholding.com. We plan to integr
 
 Additional verification / reconsideration statement:
 
-Our company was registered in Vietnam on 4 April 2024 under business registration number 2500716846. The legal English name is PHUC THANH HOLDING INVESTMENT AND TECHNOLOGY JOINT STOCK COMPANY. Our company website is https://phucthanhholding.com, and my work email is phuclv@phucthanhholding.com. Our previous application referred to an earlier version of our website. We have since updated our public company details and product development information to make them consistent and accessible. Our company verification page includes a public registration reference. Our online shop is still under development, with a planned Claude API assistant based on the product catalog and shop policies; the API integration has not yet been implemented. Please review our updated company information when considering our reapplication.
+Our company was registered in Vietnam on 4 April 2024 under business registration number 2500716846. The legal English name is PHUC THANH HOLDING INVESTMENT AND TECHNOLOGY JOINT STOCK COMPANY. Our company website is https://phucthanhholding.com, and my work email is info@phucthanhholding.com. Our previous application referred to an earlier version of our website. We have since updated our public company details and product development information to make them consistent and accessible. Our company verification page includes a public registration reference. Our online shop is still under development, with a planned Claude API assistant based on the product catalog and shop policies; the API integration has not yet been implemented. Please review our updated company information when considering our reapplication.
 
 Chỉ dùng đoạn trên sau khi gói HTML mới đã triển khai và kiểm tra công khai. Không nhập nhà đầu tư, funding, nhân sự, khách hàng hoặc mức sử dụng Claude nếu không có dữ kiện thực tế. Nếu form yêu cầu các trường này, điền đúng sự thật, không dùng suy đoán.
 

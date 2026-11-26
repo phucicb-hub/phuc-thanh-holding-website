@@ -42,10 +42,10 @@ export default function DataCTASection() {
               <div className="flex items-center gap-2">
                 <i className="ri-mail-line w-4 h-4 flex items-center justify-center text-accent-400" />
                 <a
-                  href="mailto:phuclv@phucthanhholding.com"
+                  href="mailto:info@phucthanhholding.com"
                   className="hover:text-accent-400 transition-colors"
                 >
-                  phuclv@phucthanhholding.com
+                  info@phucthanhholding.com
                 </a>
               </div>
               <div className="flex items-center gap-2">

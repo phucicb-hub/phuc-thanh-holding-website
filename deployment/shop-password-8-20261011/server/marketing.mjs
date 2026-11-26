@@ -1,6 +1,6 @@
 import {mailTransport,emailReady} from './email.mjs';
 export const consentText='Tôi đồng ý nhận tin cập nhật sản phẩm, hướng dẫn và ưu đãi từ Phúc Thành Holding. Tôi có thể hủy đăng ký bất cứ lúc nào.';
-export const adminEmails=['info@phucthanhholding.com','phuclv@phucthanhholding.com'];
+export const adminEmails=['info@phucthanhholding.com','info@phucthanhholding.com'];
 export const isAdmin=user=>!!user&&adminEmails.includes(user.email.toLowerCase());
 export function csvCell(value){let s=String(value??'');if(/^[\s]*[=+@-]/.test(s)||/^[\t\r\n]/.test(s))s="'"+s;return '"'+s.replaceAll('"','""')+'"';}
 export function marketingCsv(rows){return '\uFEFF'+[['Họ tên','Email','Ngày đăng ký','Ngày đồng ý','Nguồn','Nội dung đồng ý'],...rows.map(u=>[u.name,u.email,u.created_at,u.marketing_updated_at,u.marketing_source,u.marketing_consent_text])].map(r=>r.map(csvCell).join(',')).join('\r\n');}

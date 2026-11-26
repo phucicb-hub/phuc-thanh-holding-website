@@ -354,7 +354,7 @@ export const legalInfo: Localized<{
     representative: 'LÊ VĂN PHÚC - Giám đốc',
     address: 'Số 424 Đường Mê Linh, Phường Vĩnh Phúc, Tỉnh Phú Thọ, Việt Nam',
     hotline: '0343 089 666',
-    email: 'phuclv@phucthanhholding.com',
+    email: 'info@phucthanhholding.com',
     workingHours: 'Thứ 2 - Thứ 6: 08:00 - 17:30',
   },
   en: {
@@ -363,7 +363,7 @@ export const legalInfo: Localized<{
     representative: 'LE VAN PHUC - Director',
     address: '424 Me Linh Street, Vinh Phuc Ward, Phu Tho Province, Vietnam',
     hotline: '0343 089 666',
-    email: 'phuclv@phucthanhholding.com',
+    email: 'info@phucthanhholding.com',
     workingHours: 'Monday - Friday: 08:00 - 17:30',
   },
 };

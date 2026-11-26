@@ -16,7 +16,7 @@ Người đại diện: LÊ VĂN PHÚC — Giám đốc
 
 Website: https://phucthanhholding.com
 
-Email hồ sơ và liên hệ chính: phuclv@phucthanhholding.com
+Email hồ sơ và liên hệ chính: info@phucthanhholding.com
 
 Email chung: info@phucthanhholding.com
 

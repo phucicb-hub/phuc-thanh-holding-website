@@ -30,7 +30,7 @@ export default function ProposalFormSection({ selectedField }: ProposalFormSecti
       icon: 'ri-mail-line',
       label: t('contact.channelEmail'),
       value: legalInfo[lang].email,
-      href: 'mailto:phuclv@phucthanhholding.com',
+      href: 'mailto:info@phucthanhholding.com',
     },
     {
       id: 4,

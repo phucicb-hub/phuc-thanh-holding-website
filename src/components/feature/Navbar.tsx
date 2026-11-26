@@ -12,7 +12,7 @@ import {
 import { checkContentTranslation } from '@/lib/content';
 import LanguageNotice from '@/components/feature/LanguageNotice';
 
-const logoUrl = 'https://storage.helloreaddy.io/project_files/20143633-1343-48bc-9182-e82424e52f9d/7551abd8-a202-4b09-a399-9af81a596657_compressed_LOGO.webp';
+const logoUrl = '/logo.webp';
 
 const navKeys: { pageKey: PageKey; labelKey: string }[] = [
   { pageKey: 'home', labelKey: 'nav.home' },
@@ -103,22 +103,20 @@ export default function Navbar() {
             <div className="flex items-center justify-end h-9 gap-4 text-xs text-[#8b949e]">
               <a
                 href={searchHref}
-                className={`hidden md:flex items-center gap-1 transition-colors whitespace-nowrap ${
-                  isActivePath(location.pathname, searchHref)
+                className={`hidden md:flex items-center gap-1 transition-colors whitespace-nowrap ${isActivePath(location.pathname, searchHref)
                     ? 'text-[#00f0b5] font-medium'
                     : 'hover:text-[#00f0b5]'
-                }`}
+                  }`}
               >
                 <i className="ri-search-line w-3 h-3 flex items-center justify-center" />
                 {t('nav.search')}
               </a>
               <a
                 href={sitemapHref}
-                className={`hidden md:flex items-center gap-1 transition-colors whitespace-nowrap ${
-                  isActivePath(location.pathname, sitemapHref)
+                className={`hidden md:flex items-center gap-1 transition-colors whitespace-nowrap ${isActivePath(location.pathname, sitemapHref)
                     ? 'text-[#00f0b5] font-medium'
                     : 'hover:text-[#00f0b5]'
-                }`}
+                  }`}
               >
                 <i className="ri-map-2-line w-3 h-3 flex items-center justify-center" />
                 {t('nav.sitemap')}
@@ -130,9 +128,8 @@ export default function Navbar() {
                   href={viHref}
                   onClick={(e) => handleLangSwitch('vi', e)}
                   aria-label="Tiếng Việt"
-                  className={`flex items-center gap-1 transition-colors whitespace-nowrap ${
-                    lang === 'vi' ? 'text-[#00f0b5] font-semibold' : 'hover:text-[#00f0b5]'
-                  }`}
+                  className={`flex items-center gap-1 transition-colors whitespace-nowrap ${lang === 'vi' ? 'text-[#00f0b5] font-semibold' : 'hover:text-[#00f0b5]'
+                    }`}
                 >
                   <img src="https://flagcdn.com/w20/vn.png" alt="VN" className="w-4 h-3 object-cover rounded-xs" />
                   VI
@@ -142,9 +139,8 @@ export default function Navbar() {
                   href={enHref}
                   onClick={(e) => handleLangSwitch('en', e)}
                   aria-label="English"
-                  className={`flex items-center gap-1 transition-colors whitespace-nowrap ${
-                    lang === 'en' ? 'text-[#00f0b5] font-semibold' : 'hover:text-[#00f0b5]'
-                  }`}
+                  className={`flex items-center gap-1 transition-colors whitespace-nowrap ${lang === 'en' ? 'text-[#00f0b5] font-semibold' : 'hover:text-[#00f0b5]'
+                    }`}
                 >
                   <img src="https://flagcdn.com/w20/gb.png" alt="EN" className="w-4 h-3 object-cover rounded-xs" />
                   EN
@@ -156,11 +152,10 @@ export default function Navbar() {
 
         {/* Main navigation (Apple Pro Glass bar) */}
         <div
-          className={`transition-all duration-300 ${
-            scrolled
+          className={`transition-all duration-300 ${scrolled
               ? 'fixed top-0 left-0 right-0 z-40 bg-[#07080a]/85 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.6)]'
               : 'relative bg-[#07080a] border-b border-white/[0.06]'
-          }`}
+            }`}
         >
           <div className="container-main">
             <div className="flex items-center justify-between h-16 md:h-20">
@@ -209,11 +204,10 @@ export default function Navbar() {
                     <a
                       key={item.pageKey}
                       href={item.href}
-                      className={`relative px-2.5 xl:px-3 py-2 text-xs xl:text-sm font-medium transition-colors whitespace-nowrap rounded-lg ${
-                        active
+                      className={`relative px-2.5 xl:px-3 py-2 text-xs xl:text-sm font-medium transition-colors whitespace-nowrap rounded-lg ${active
                           ? 'text-[#00f0b5] bg-white/[0.04]'
                           : 'text-[#8b949e] hover:text-white hover:bg-white/[0.03]'
-                      }`}
+                        }`}
                     >
                       {item.label}
                       {active && (
@@ -262,11 +256,10 @@ export default function Navbar() {
                     <a
                       key={item.pageKey}
                       href={item.href}
-                      className={`block px-3 py-3 text-sm font-medium rounded-md transition-colors ${
-                        active
+                      className={`block px-3 py-3 text-sm font-medium rounded-md transition-colors ${active
                           ? 'bg-background-100 text-primary-600'
                           : 'text-foreground-700 hover:text-primary-600 hover:bg-background-100'
-                      }`}
+                        }`}
                     >
                       {item.label}
                     </a>
@@ -276,21 +269,19 @@ export default function Navbar() {
               <div className="mt-3 border-t border-background-200 pt-3">
                 <a
                   href={searchHref}
-                  className={`block px-3 py-3 text-sm font-medium rounded-md transition-colors ${
-                    isActivePath(location.pathname, searchHref)
+                  className={`block px-3 py-3 text-sm font-medium rounded-md transition-colors ${isActivePath(location.pathname, searchHref)
                       ? 'bg-background-100 text-primary-600'
                       : 'text-foreground-600 hover:text-primary-600 hover:bg-background-100'
-                  }`}
+                    }`}
                 >
                   {t('nav.search')}
                 </a>
                 <a
                   href={sitemapHref}
-                  className={`block px-3 py-3 text-sm font-medium rounded-md transition-colors ${
-                    isActivePath(location.pathname, sitemapHref)
+                  className={`block px-3 py-3 text-sm font-medium rounded-md transition-colors ${isActivePath(location.pathname, sitemapHref)
                       ? 'bg-background-100 text-primary-600'
                       : 'text-foreground-600 hover:text-primary-600 hover:bg-background-100'
-                  }`}
+                    }`}
                 >
                   {t('nav.sitemap')}
                 </a>
