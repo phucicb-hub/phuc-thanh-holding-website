@@ -409,11 +409,10 @@ export default function Navbar() {
 
                 <a
                   href={sitemapHref}
-                  className={`hidden md:flex items-center gap-1 transition-colors whitespace-nowrap ${
-                    isActivePath(location.pathname, sitemapHref)
+                  className={`hidden md:flex items-center gap-1 transition-colors whitespace-nowrap ${isActivePath(location.pathname, sitemapHref)
                       ? 'text-[#046842] font-semibold'
                       : 'hover:text-[#046842]'
-                  }`}
+                    }`}
                 >
                   <i className="ri-map-2-line w-3 h-3 flex items-center justify-center" />
                   {t('nav.sitemap')}
@@ -425,9 +424,8 @@ export default function Navbar() {
                     href={viHref}
                     onClick={(e) => handleLangSwitch('vi', e)}
                     aria-label="Tiếng Việt"
-                    className={`flex items-center gap-1 transition-colors whitespace-nowrap ${
-                      lang === 'vi' ? 'text-[#046842] font-bold' : 'text-gray-600 hover:text-[#046842]'
-                    }`}
+                    className={`flex items-center gap-1 transition-colors whitespace-nowrap ${lang === 'vi' ? 'text-[#046842] font-bold' : 'text-gray-600 hover:text-[#046842]'
+                      }`}
                   >
                     <img src="https://flagcdn.com/w20/vn.png" alt="VN" className="w-4 h-3 object-cover rounded-xs" />
                     VI
@@ -437,9 +435,8 @@ export default function Navbar() {
                     href={enHref}
                     onClick={(e) => handleLangSwitch('en', e)}
                     aria-label="English"
-                    className={`flex items-center gap-1 transition-colors whitespace-nowrap ${
-                      lang === 'en' ? 'text-[#046842] font-bold' : 'text-gray-600 hover:text-[#046842]'
-                    }`}
+                    className={`flex items-center gap-1 transition-colors whitespace-nowrap ${lang === 'en' ? 'text-[#046842] font-bold' : 'text-gray-600 hover:text-[#046842]'
+                      }`}
                   >
                     <img src="https://flagcdn.com/w20/gb.png" alt="EN" className="w-4 h-3 object-cover rounded-xs" />
                     EN
@@ -452,11 +449,10 @@ export default function Navbar() {
 
         {/* Main navigation (Apple Pro Glass bar) */}
         <div
-          className={`transition-all duration-300 ${
-            scrolled
+          className={`transition-all duration-300 ${scrolled
               ? 'fixed top-0 left-0 right-0 z-40 bg-white/92 backdrop-blur-xl border-b border-gray-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.06)]'
               : 'relative bg-white border-b border-gray-200/80'
-          }`}
+            }`}
           onMouseLeave={handleMouseLeaveItem}
         >
           <div className="container-main">
@@ -513,18 +509,16 @@ export default function Navbar() {
                     >
                       <a
                         href={href}
-                        className={`inline-flex items-center gap-1 px-2.5 xl:px-3 py-2 text-xs xl:text-sm font-medium transition-all rounded-lg whitespace-nowrap ${
-                          active || isHovered
+                        className={`inline-flex items-center gap-1 px-2.5 xl:px-3 py-2 text-xs xl:text-sm font-medium transition-all rounded-lg whitespace-nowrap ${active || isHovered
                             ? 'text-[#046842] bg-[#046842]/8 font-semibold'
                             : 'text-gray-700 hover:text-[#046842] hover:bg-gray-100/70'
-                        }`}
+                          }`}
                       >
                         <span>{t(item.labelKey)}</span>
                         {item.hasDropdown && (
                           <i
-                            className={`ri-arrow-down-s-line text-xs transition-transform duration-200 ${
-                              isHovered ? 'rotate-180 text-[#046842]' : 'text-gray-400'
-                            }`}
+                            className={`ri-arrow-down-s-line text-xs transition-transform duration-200 ${isHovered ? 'rotate-180 text-[#046842]' : 'text-gray-400'
+                              }`}
                           />
                         )}
                       </a>
@@ -570,9 +564,8 @@ export default function Navbar() {
                   aria-label="Toggle menu"
                 >
                   <i
-                    className={`${
-                      mobileOpen ? 'ri-close-line' : 'ri-menu-line'
-                    } w-6 h-6 flex items-center justify-center text-2xl`}
+                    className={`${mobileOpen ? 'ri-close-line' : 'ri-menu-line'
+                      } w-6 h-6 flex items-center justify-center text-2xl`}
                   />
                 </button>
               </div>
@@ -713,11 +706,10 @@ export default function Navbar() {
                     <div className="flex items-center justify-between">
                       <a
                         href={href}
-                        className={`flex-1 px-3 py-2.5 text-sm font-semibold rounded-lg transition-colors ${
-                          active
+                        className={`flex-1 px-3 py-2.5 text-sm font-semibold rounded-lg transition-colors ${active
                             ? 'bg-[#046842]/10 text-[#046842]'
                             : 'text-gray-800 hover:text-[#046842] hover:bg-gray-50'
-                        }`}
+                          }`}
                       >
                         {t(item.labelKey)}
                       </a>
@@ -728,9 +720,8 @@ export default function Navbar() {
                           aria-label="Toggle submenu"
                         >
                           <i
-                            className={`ri-arrow-down-s-line text-lg transition-transform duration-200 ${
-                              isExpanded ? 'rotate-180 text-[#046842]' : ''
-                            }`}
+                            className={`ri-arrow-down-s-line text-lg transition-transform duration-200 ${isExpanded ? 'rotate-180 text-[#046842]' : ''
+                              }`}
                           />
                         </button>
                       )}
