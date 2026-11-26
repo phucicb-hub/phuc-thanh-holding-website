@@ -65,9 +65,10 @@
     --secondary-900: 0.20 0.06 180;
     --secondary-950: 0.14 0.05 180;
 
-    --font-body: 'Inter', system-ui, sans-serif;
-    --font-heading: 'Inter', system-ui, sans-serif;
-    --font-label: 'Inter', system-ui, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-heading: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-label: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-mono: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
     --reveal-duration: 0.7s;
     --stagger-delay: 80ms;
@@ -87,11 +88,18 @@
     background-color: oklch(var(--background-50));
     color: oklch(var(--foreground-950));
     padding-bottom: env(safe-area-inset-bottom);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   html {
     scroll-behavior: smooth;
     padding-top: env(safe-area-inset-top);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   h1,
@@ -101,6 +109,12 @@
   h5,
   h6 {
     font-family: var(--font-heading);
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  p {
+    letter-spacing: -0.006em;
   }
 }
 
