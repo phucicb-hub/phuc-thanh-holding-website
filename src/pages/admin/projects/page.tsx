@@ -215,6 +215,8 @@ export default function AdminProjects() {
                           <img
                             src={item.image}
                             alt={item.title}
+                            loading="lazy"
+                            decoding="async"
                             className="absolute inset-0 w-full h-full object-cover object-top"
                             onError={(e) => {
                               (e.currentTarget as HTMLImageElement).style.display = 'none';

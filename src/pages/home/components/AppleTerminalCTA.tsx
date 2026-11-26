@@ -56,7 +56,7 @@ export default function AppleTerminalCTA() {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#046842]/8 border border-[#046842]/20 mb-6">
               <span className="w-2 h-2 rounded-full bg-[#046842]" />
               <span className="text-xs font-bold uppercase tracking-wider text-[#046842]">
-                {isVi ? 'Cổng Hợp Tác Doanh Nghiệp' : 'Enterprise Partnership Terminal'}
+                {isVi ? 'Cổng Hợp Tác Doanh Nghiệp' : 'Enterprise Partnerships'}
               </span>
             </div>
 
@@ -67,7 +67,7 @@ export default function AppleTerminalCTA() {
             <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-8">
               {isVi
                 ? 'Chúng tôi luôn chào đón các cơ hội hợp tác chiến lược, chuyển giao giải pháp công nghệ hoặc cùng đầu tư ươm tạo dự án số.'
-                : 'We welcome strategic enterprise collaboration, technology transfer, and co-investment opportunities.'}
+                : 'We welcome strategic enterprise collaboration, technology modernization, and co-investment opportunities.'}
             </p>
 
             <div className="space-y-5 text-sm text-[#4b5563] border-t border-gray-200 pt-6">
@@ -118,12 +118,12 @@ export default function AppleTerminalCTA() {
               className="bg-white rounded-3xl p-8 sm:p-10 border border-gray-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.06)]"
             >
               <h3 className="text-xl sm:text-2xl font-bold text-[#1d1d1f] mb-2">
-                {isVi ? 'Gửi Yêu Cầu Hợp Tác & Tư Vấn' : 'Submit Partnership Proposal'}
+                {isVi ? 'Gửi Yêu Cầu Hợp Tác & Tư Vấn' : 'Start a Conversation'}
               </h3>
               <p className="text-xs sm:text-sm text-[#4b5563] mb-6">
                 {isVi
                   ? 'Mọi thông tin liên hệ được bảo vệ nghiêm ngặt theo tiêu chuẩn bảo mật dữ liệu của Phúc Thành Holding.'
-                  : 'All information is strictly safeguarded in compliance with sovereign data protection protocols.'}
+                  : 'All inquiries are strictly safeguarded in compliance with enterprise data privacy standards.'}
               </p>
 
               {status === 'success' ? (
@@ -132,12 +132,12 @@ export default function AppleTerminalCTA() {
                     <i className="ri-checkbox-circle-fill text-2xl" />
                   </div>
                   <h4 className="text-[#046842] font-bold text-base mb-1">
-                    {isVi ? 'Đã gửi yêu cầu thành công!' : 'Proposal Submitted Successfully!'}
+                    {isVi ? 'Đã gửi yêu cầu thành công!' : 'Inquiry Received!'}
                   </h4>
                   <p className="text-xs text-[#4b5563]">
                     {isVi
                       ? 'Đội ngũ chuyên trách của Phúc Thành Holding sẽ liên hệ phản hồi trong thời gian sớm nhất.'
-                      : 'Our executive team will reach out with a technical and partnership response shortly.'}
+                      : 'Our executive team will review your proposal and get in touch within 24 to 48 hours.'}
                   </p>
                 </div>
               ) : (
@@ -163,7 +163,7 @@ export default function AppleTerminalCTA() {
                         required
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                        placeholder={isVi ? 'Ví dụ: Nguyễn Văn An' : 'e.g., John Smith'}
+                        placeholder={isVi ? 'Ví dụ: Nguyễn Văn An' : 'e.g., Alex Morgan'}
                         className="w-full px-4 py-3 rounded-xl bg-[#f8fafc] border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:border-[#046842] focus:bg-white transition-colors"
                       />
                     </div>
@@ -177,7 +177,7 @@ export default function AppleTerminalCTA() {
                         required
                         value={formState.phone}
                         onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                        placeholder="0912 xxx xxx"
+                        placeholder={isVi ? '0912 xxx xxx' : '+84 / Phone number'}
                         className="w-full px-4 py-3 rounded-xl bg-[#f8fafc] border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:border-[#046842] focus:bg-white transition-colors"
                       />
                     </div>
@@ -185,7 +185,7 @@ export default function AppleTerminalCTA() {
 
                   <div>
                     <label className="block text-xs font-semibold text-gray-700 mb-1.5">
-                      {isVi ? 'Địa chỉ Email doanh nghiệp *' : 'Corporate Email Address *'}
+                      {isVi ? 'Địa chỉ Email doanh nghiệp *' : 'Work Email Address *'}
                     </label>
                     <input
                       type="email"
@@ -206,7 +206,7 @@ export default function AppleTerminalCTA() {
                       required
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                      placeholder={isVi ? 'Mô tả tóm tắt nhu cầu giải pháp phần mềm, y tế, đào tạo hoặc đầu tư...' : 'Brief summary of software, healthcare, training, or venture scope...'}
+                      placeholder={isVi ? 'Mô tả tóm tắt nhu cầu giải pháp phần mềm, y tế, đào tạo hoặc đầu tư...' : 'Tell us about your project, timeline, or partnership objectives...'}
                       className="w-full px-4 py-3 rounded-xl bg-[#f8fafc] border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:border-[#046842] focus:bg-white transition-colors resize-none"
                     />
                   </div>
@@ -217,8 +217,8 @@ export default function AppleTerminalCTA() {
                     className="w-full py-3.5 rounded-xl bg-[#046842] text-white font-bold text-sm hover:bg-[#025938] transition-all duration-300 shadow-[0_4px_16px_rgba(4,104,66,0.25)] disabled:opacity-50"
                   >
                     {status === 'submitting'
-                      ? (isVi ? 'Đang gửi...' : 'Transmitting...')
-                      : (isVi ? 'Gửi Yêu Cầu Hợp Tác Ngay' : 'Submit Direct Proposal')}
+                      ? (isVi ? 'Đang gửi...' : 'Sending...')
+                      : (isVi ? 'Gửi Yêu Cầu Hợp Tác Ngay' : 'Send Proposal')}
                   </button>
                 </form>
               )}

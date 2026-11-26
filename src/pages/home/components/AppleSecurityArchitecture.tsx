@@ -20,18 +20,18 @@ export default function AppleSecurityArchitecture() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#046842]/8 border border-[#046842]/20 mb-4">
             <i className="ri-shield-check-fill text-[#046842]" />
             <span className="text-xs font-bold uppercase tracking-wider text-[#046842]">
-              {isVi ? 'Tiêu Chuẩn Apple-Grade' : 'Apple-Grade Engineering'}
+              {isVi ? 'Tiêu Chuẩn Apple-Grade' : 'Institutional-Grade Engineering'}
             </span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] mb-6">
             {isVi
               ? 'Bảo Mật Bất Khả Xâm Phạm & Kiến Trúc Hiện Đại'
-              : 'Sovereign Security & Modern Architecture'}
+              : 'Zero-Compromise Security & Modern Architecture'}
           </h2>
           <p className="text-[#4b5563] text-base sm:text-lg">
             {isVi
               ? 'Áp dụng mô hình phòng thủ theo chiều sâu (Defense-in-Depth) với các nguyên tắc bảo mật thông tin và quyền riêng tư (Privacy-by-Design) tương đương các tập đoàn công nghệ hàng đầu thế giới.'
-              : 'Built upon Defense-in-Depth and Privacy-by-Design principles matching global technology leaders.'}
+              : 'Engineered from the ground up on Defense-in-Depth and Privacy-by-Design principles matching global standards.'}
           </p>
         </div>
 
@@ -52,16 +52,16 @@ export default function AppleSecurityArchitecture() {
             <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-6">
               {isVi
                 ? 'Không mặc định tin cậy bất kỳ điểm truy cập nào. Toàn bộ yêu cầu qua API đều phải xác thực token đa nhân tố, phân quyền theo vai trò (RBAC) và lưu nhật ký kiểm toán bất biến (Audit Logging).'
-                : 'Never trust, always verify. Every internal request enforces strict token claims, RBAC privileges, and immutable audit trails.'}
+                : 'Never trust, always verify. Every request enforces cryptographically signed token claims, granular RBAC permissions, and immutable audit trails.'}
             </p>
             <ul className="space-y-2.5 text-xs sm:text-sm text-gray-700 border-t border-gray-200 pt-4">
               <li className="flex items-center gap-2">
                 <i className="ri-checkbox-circle-fill text-[#046842]" />
-                <span>{isVi ? 'Mã hóa AES-256 (At-Rest) & TLS 1.3 (In-Transit)' : 'AES-256 at-rest and TLS 1.3 in-transit'}</span>
+                <span>{isVi ? 'Mã hóa AES-256 (At-Rest) & TLS 1.3 (In-Transit)' : 'Military-grade AES-256 at rest and TLS 1.3 in transit'}</span>
               </li>
               <li className="flex items-center gap-2">
                 <i className="ri-checkbox-circle-fill text-[#046842]" />
-                <span>{isVi ? 'Bảo vệ chống rò rỉ biến môi trường và khóa bí mật' : 'Zero runtime secret exposure on client bundles'}</span>
+                <span>{isVi ? 'Bảo vệ chống rò rỉ biến môi trường và khóa bí mật' : 'Zero runtime secret exposure across client environments'}</span>
               </li>
             </ul>
           </div>
@@ -81,16 +81,16 @@ export default function AppleSecurityArchitecture() {
             <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-6">
               {isVi
                 ? 'Tiêu chuẩn HTTP Security Headers nghiêm ngặt chặn đứng hoàn toàn các cuộc tấn công XSS, CSRF, Clickjacking và giả mạo tài nguyên thông qua chính sách bảo mật nội dung chặt chẽ.'
-                : 'Enterprise HTTP security headers strictly defuse XSS, CSRF, MIME-sniffing, and frame hijacking.'}
+                : 'Comprehensive HTTP security headers neutralize XSS, CSRF, MIME-sniffing, and clickjacking before threats emerge.'}
             </p>
             <ul className="space-y-2.5 text-xs sm:text-sm text-gray-700 border-t border-gray-200 pt-4">
               <li className="flex items-center gap-2">
                 <i className="ri-checkbox-circle-fill text-blue-600" />
-                <span>{isVi ? 'X-Frame-Options: DENY & Strict Referrer Policy' : 'X-Frame-Options: DENY & Strict Referrer'}</span>
+                <span>{isVi ? 'X-Frame-Options: DENY & Strict Referrer Policy' : 'Hardened headers: X-Frame-Options: DENY & strict referrer policies'}</span>
               </li>
               <li className="flex items-center gap-2">
                 <i className="ri-checkbox-circle-fill text-blue-600" />
-                <span>{isVi ? 'Ngăn chặn thực thi script ngoại lai không an toàn' : 'Strict inline script and style sandbox execution'}</span>
+                <span>{isVi ? 'Ngăn chặn thực thi script ngoại lai không an toàn' : 'Strict script isolation and sandboxed execution policies'}</span>
               </li>
             </ul>
           </div>
@@ -110,16 +110,16 @@ export default function AppleSecurityArchitecture() {
             <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-6">
               {isVi
                 ? 'Website được tiền kết xuất (Static Site Generation / Prerender) thành mã HTML tĩnh, tối ưu hóa kích thước file tải về, mang lại tốc độ hiển thị dưới 0.5s và điểm số SEO hoàn hảo.'
-                : 'Pre-rendered static HTML with fine-tuned asset bundling, achieving sub-0.5s first contentful paint and pristine SEO indexability.'}
+                : 'Static site generation paired with fine-tuned asset bundling delivers sub-0.5s page loads and flawless search visibility.'}
             </p>
             <ul className="space-y-2.5 text-xs sm:text-sm text-gray-700 border-t border-gray-200 pt-4">
               <li className="flex items-center gap-2">
                 <i className="ri-checkbox-circle-fill text-[#d97706]" />
-                <span>{isVi ? 'Google Core Web Vitals loại Xuất sắc' : 'Excellent Core Web Vitals score (LCP, CLS, INP)'}</span>
+                <span>{isVi ? 'Google Core Web Vitals loại Xuất sắc' : 'Top-tier Google Core Web Vitals (LCP, CLS, INP)'}</span>
               </li>
               <li className="flex items-center gap-2">
                 <i className="ri-checkbox-circle-fill text-[#d97706]" />
-                <span>{isVi ? 'Tối ưu hóa hình ảnh chuẩn định dạng WebP thế hệ mới' : 'Native WebP compression with zero layout shift'}</span>
+                <span>{isVi ? 'Tối ưu hóa hình ảnh chuẩn định dạng WebP thế hệ mới' : 'Next-gen image optimization with zero cumulative layout shift'}</span>
               </li>
             </ul>
           </div>
@@ -139,16 +139,16 @@ export default function AppleSecurityArchitecture() {
             <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-6">
               {isVi
                 ? 'Hệ thống tuân thủ chính sách bảo vệ dữ liệu cá nhân theo Nghị định 13/2023/NĐ-CP của Chính phủ Việt Nam và tiệm cận tiêu chuẩn bảo mật dữ liệu quốc tế.'
-                : 'Fully compliant with Vietnam Personal Data Protection Decree 13/2023/ND-CP and international privacy benchmarks.'}
+                : 'Fully compliant with Vietnam’s Personal Data Protection Decree 13/2023/ND-CP and aligned with international privacy standards.'}
             </p>
             <ul className="space-y-2.5 text-xs sm:text-sm text-gray-700 border-t border-gray-200 pt-4">
               <li className="flex items-center gap-2">
                 <i className="ri-checkbox-circle-fill text-purple-600" />
-                <span>{isVi ? 'Cơ chế lưu trữ và tự động xóa dữ liệu định kỳ' : 'Configurable automated data retention policies'}</span>
+                <span>{isVi ? 'Cơ chế lưu trữ và tự động xóa dữ liệu định kỳ' : 'Automated data retention and scheduled lifecycle management'}</span>
               </li>
               <li className="flex items-center gap-2">
                 <i className="ri-checkbox-circle-fill text-purple-600" />
-                <span>{isVi ? 'Quyền kiểm soát và yêu cầu trích xuất dữ liệu minh bạch' : 'Transparent data sovereignty and portability'}</span>
+                <span>{isVi ? 'Quyền kiểm soát và yêu cầu trích xuất dữ liệu minh bạch' : 'Transparent user data sovereignty and seamless portability'}</span>
               </li>
             </ul>
           </div>

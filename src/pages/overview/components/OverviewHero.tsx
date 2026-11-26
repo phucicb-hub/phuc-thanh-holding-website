@@ -9,7 +9,8 @@ export default function OverviewHero() {
     <section className="relative w-full overflow-hidden bg-primary-950">
       <img
         src="https://readdy.ai/api/search-image?query=Abstract%20modern%20technology%20background%20with%20glowing%20network%20connection%20nodes%20and%20flowing%20data%20lines%20forming%20elegant%20geometric%20patterns%2C%20deep%20emerald%20green%20gradient%20with%20subtle%20warm%20golden%20light%20accents%2C%20floating%20digital%20particles%2C%20symbolizes%20enterprise%20connectivity%20and%20sustainable%20growth%2C%20clean%20minimalist%20corporate%20style%2C%20elegant%20professional%20composition&width=1600&height=640&seq=overview-hero-1&orientation=landscape"
-        alt=""
+        alt="Phúc Thành Holding - Tổng quan và Hồ sơ Năng lực Doanh nghiệp"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover opacity-45"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-950/95 via-primary-900/85 to-primary-800/70" />

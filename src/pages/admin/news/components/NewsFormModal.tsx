@@ -204,6 +204,8 @@ export default function NewsFormModal({ initial, saving, error, onClose, onSubmi
                       <img
                         src={values.image}
                         alt="Xem trước ảnh"
+                        loading="lazy"
+                        decoding="async"
                         className="absolute inset-0 w-full h-full object-cover object-top"
                         onError={(e) => {
                           (e.currentTarget as HTMLImageElement).style.display = 'none';

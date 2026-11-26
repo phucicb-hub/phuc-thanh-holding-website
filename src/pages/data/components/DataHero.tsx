@@ -9,7 +9,8 @@ export default function DataHero() {
     <section className="relative w-full overflow-hidden bg-primary-900">
       <img
         src="https://readdy.ai/api/search-image?query=Dark%20emerald%20green%20corporate%20background%20with%20abstract%20data%20management%20concept%2C%20centralized%20database%20symbol%20connected%20to%20a%20network%20of%20glowing%20nodes%20and%20flowing%20data%20streams%2C%20golden%20light%20accents%20representing%20insight%20and%20value%2C%20subtle%20grid%20and%20chart%20interface%20elements%2C%20deep%20green%20and%20gold%20color%20palette%2C%20cinematic%20soft%20lighting%2C%20professional%20aesthetic%2C%20high%20detail&width=1600&height=600&seq=data-hero-1&orientation=landscape"
-        alt=""
+        alt="Phuc Thanh Holding - Dịch vụ Dữ liệu Doanh nghiệp & AI"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-top opacity-35"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/85 to-primary-800/70" />

@@ -10,7 +10,8 @@ export default function ProductsHero() {
       {/* Background image */}
       <img
         src="https://readdy.ai/api/search-image?query=Abstract%20dark%20emerald%20green%20technology%20background%20with%20glowing%20network%20nodes%20and%20connection%20lines%2C%20data%20grid%20pattern%2C%20floating%20geometric%20shapes%2C%20digital%20particles%2C%20futuristic%20enterprise%20digital%20solutions%20concept%2C%20deep%20green%20tones%20with%20subtle%20yellow%20light%20accents%2C%20clean%20minimalist%20corporate%20style%2C%20high%20detail&width=1600&height=420&seq=products-hero-1&orientation=landscape"
-        alt=""
+        alt="Hệ sinh thái Sản phẩm Công nghệ Số Phuc Thanh Holding"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover opacity-40"
       />
       {/* Dark green overlay for text contrast */}

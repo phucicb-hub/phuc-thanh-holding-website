@@ -9,7 +9,8 @@ export default function InvestmentHero() {
     <section className="relative w-full overflow-hidden bg-primary-900">
       <img
         src="https://readdy.ai/api/search-image?query=Dark%20emerald%20green%20corporate%20background%20with%20abstract%20investment%20and%20technology%20concept%2C%20an%20ascending%20golden%20financial%20growth%20chart%20merging%20into%20a%20glowing%20digital%20network%20of%20connected%20nodes%20and%20circuit%20patterns%2C%20subtle%20rising%20arrows%20and%20coin-like%20dots%20representing%20long-term%20value%2C%20deep%20green%20and%20gold%20color%20palette%2C%20cinematic%20soft%20lighting%2C%20professional%20editorial%20aesthetic%2C%20high%20detail%2C%20harmonious%20composition&width=1600&height=600&seq=investment-hero-1&orientation=landscape"
-        alt=""
+        alt="Phuc Thanh Holding - Đầu tư Công nghệ và Tăng trưởng Bền vững"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-top opacity-35"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/85 to-primary-800/70" />

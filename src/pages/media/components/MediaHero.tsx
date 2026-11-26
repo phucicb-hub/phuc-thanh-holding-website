@@ -11,7 +11,8 @@ export default function MediaHero() {
     <section className="relative w-full overflow-hidden bg-primary-900">
       <img
         src="https://readdy.ai/api/search-image?query=Dark%20emerald%20green%20corporate%20background%20with%20abstract%20digital%20communication%20concept%2C%20a%20glowing%20golden%20megaphone%20and%20speech%20bubbles%20merging%20into%20an%20interconnected%20network%20of%20social%20media%20nodes%20and%20flowing%20content%20streams%2C%20floating%20message%20icons%20and%20light%20particles%20representing%20brand%20storytelling%2C%20deep%20green%20and%20gold%20color%20palette%2C%20cinematic%20soft%20lighting%2C%20professional%20editorial%20aesthetic%2C%20high%20detail%2C%20harmonious%20composition&width=1600&height=600&seq=media-hero-1&orientation=landscape"
-        alt=""
+        alt="Phuc Thanh Holding - Truyền thông & Thương hiệu Số Doanh nghiệp"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-top opacity-35"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/85 to-primary-800/70" />

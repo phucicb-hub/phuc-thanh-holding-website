@@ -12,8 +12,9 @@ export default function PtLmsHero() {
     <section className="relative w-full overflow-hidden bg-primary-900">
       <img
         src={ptLmsHeroImage}
-        alt=""
+        alt="PT-LMS - Nền tảng Quản lý Học tập Trực tuyến Thông minh"
         fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-top opacity-35"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/85 to-primary-800/70" />

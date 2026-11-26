@@ -12,7 +12,7 @@ export default function AppleVentures() {
       tag: isVi ? 'Y tế số thông minh' : 'Smart Healthcare Cloud',
       desc: isVi
         ? 'Phần mềm quản lý phòng khám chuyên khoa, tích hợp lịch khám, bệnh án điện tử và tương tác bệnh nhân thời gian thực.'
-        : 'Enterprise clinic operation platform with EHR workflows and real-time telehealth interfaces.',
+        : 'Comprehensive clinic operations featuring integrated EHR workflows, patient scheduling, and real-time telehealth interfaces.',
       status: isVi ? 'Đang triển khai' : 'Active Deployment',
       color: '#00f0b5',
       href: '/san-pham',
@@ -23,7 +23,7 @@ export default function AppleVentures() {
       tag: isVi ? 'Dữ liệu lớn & Phân tích' : 'Clinical Big Data Lake',
       desc: isVi
         ? 'Kho dữ liệu tập trung cho phép phân tích thống kê lâm sàng, dự báo nhu cầu y tế và chuẩn hóa dữ liệu khám chữa bệnh.'
-        : 'Centralized lakehouse aggregating clinical metrics for predictive diagnostics and health operations.',
+        : 'Centralized clinical lakehouse aggregating healthcare metrics for predictive diagnostics and unified medical intelligence.',
       status: isVi ? 'Hạ tầng cốt lõi' : 'Core Infrastructure',
       color: '#3b82f6',
       href: '/linh-vuc',
@@ -34,7 +34,7 @@ export default function AppleVentures() {
       tag: isVi ? 'Đào tạo nhân lực số' : 'Enterprise LMS Suite',
       desc: isVi
         ? 'Hệ thống quản lý học tập trực tuyến, khảo thí bảo mật và đánh giá lộ trình phát triển kỹ năng cho doanh nghiệp.'
-        : 'Multi-tenant corporate learning management platform supporting enterprise skill verification.',
+        : 'Scalable corporate learning platform engineered for personalized workforce development and verifiable skill progression.',
       status: isVi ? 'Đang vận hành' : 'In Production',
       color: '#f5a623',
       href: '/linh-vuc',
@@ -55,13 +55,13 @@ export default function AppleVentures() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f]">
-              {isVi ? 'Hiện Thực Hóa Năng Lực Công Nghệ' : 'Proven Technological Execution'}
+              {isVi ? 'Hiện Thực Hóa Năng Lực Công Nghệ' : 'Proven Innovation & Real-World Execution'}
             </h2>
           </div>
           <p className="max-w-md text-sm sm:text-base text-[#4b5563]">
             {isVi
               ? 'Tất cả các sản phẩm và dự án của Phúc Thành Holding đều được xây dựng trên nền tảng độc lập, có thể xác thực và kiểm chứng năng lực vận hành.'
-              : 'Every project is engineered with independent rigor, transparent operational verifiability, and long-term durability.'}
+              : 'Every solution we deliver is engineered with independent technical rigor, transparent verifiability, and long-term durability.'}
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function AppleVentures() {
                   href={localizeLegacyHref(venture.href, lang)}
                   className="text-xs font-bold text-[#046842] hover:text-[#025938] flex items-center gap-1.5 transition-colors"
                 >
-                  <span>{isVi ? 'Xem chi tiết giải pháp' : 'Explore architecture'}</span>
+                  <span>{isVi ? 'Xem chi tiết giải pháp' : 'Explore solution'}</span>
                   <i className="ri-arrow-right-line" />
                 </a>
               </div>

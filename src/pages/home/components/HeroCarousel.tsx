@@ -38,6 +38,8 @@ export default function HeroCarousel() {
             src={slide.image}
             alt={slide.title}
             fetchPriority={index === 0 ? 'high' : 'auto'}
+            loading={index === 0 ? 'eager' : 'lazy'}
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Overlay for text readability */}

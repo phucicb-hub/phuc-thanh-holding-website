@@ -28,8 +28,9 @@ export default function PageHero({
     <section className="relative w-full overflow-hidden bg-primary-900">
       <img
         src={image}
-        alt=""
+        alt={title ? `${title} - Phuc Thanh Holding` : 'Phuc Thanh Holding'}
         fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover opacity-40"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/85 to-primary-800/70" />

@@ -15,6 +15,8 @@ export default function ProductCard({ product, style }: { product: ProductItem; 
           src={product.image}
           alt={product.title}
           title={product.title}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
         />
         {product.featured && (

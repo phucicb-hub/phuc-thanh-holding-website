@@ -12,8 +12,9 @@ export default function PtDatalakeHero() {
     <section className="relative w-full overflow-hidden bg-primary-900">
       <img
         src={ptDatalakeHeroImage}
-        alt=""
+        alt="PT-Datalake - Nền tảng Kho Dữ liệu Doanh nghiệp Tập trung"
         fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-top opacity-35"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/85 to-primary-800/70" />

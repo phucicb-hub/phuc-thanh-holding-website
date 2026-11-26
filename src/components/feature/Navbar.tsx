@@ -259,14 +259,6 @@ const navConfig: NavItemConfig[] = [
     pageKey: 'news',
     labelKey: 'nav.news',
   },
-  {
-    pageKey: 'careers',
-    labelKey: 'nav.careers',
-  },
-  {
-    pageKey: 'contact',
-    labelKey: 'nav.contact',
-  },
 ];
 
 function normalize(path: string): string {
@@ -414,8 +406,8 @@ export default function Navbar() {
                 <a
                   href={sitemapHref}
                   className={`hidden md:flex items-center gap-1 transition-colors whitespace-nowrap ${isActivePath(location.pathname, sitemapHref)
-                      ? 'text-[#046842] font-semibold'
-                      : 'hover:text-[#046842]'
+                    ? 'text-[#046842] font-semibold'
+                    : 'hover:text-[#046842]'
                     }`}
                 >
                   <i className="ri-map-2-line w-3 h-3 flex items-center justify-center" />
@@ -431,7 +423,7 @@ export default function Navbar() {
                     className={`flex items-center gap-1 transition-colors whitespace-nowrap ${lang === 'vi' ? 'text-[#046842] font-bold' : 'text-gray-600 hover:text-[#046842]'
                       }`}
                   >
-                    <img src="https://flagcdn.com/w20/vn.png" alt="VN" className="w-4 h-3 object-cover rounded-xs" />
+                    <img src="https://flagcdn.com/w20/vn.png" alt="Tiếng Việt (Vietnam)" width="20" height="15" loading="lazy" decoding="async" className="w-4 h-3 object-cover rounded-xs" />
                     VI
                   </a>
                   <span className="text-gray-300">|</span>
@@ -442,7 +434,7 @@ export default function Navbar() {
                     className={`flex items-center gap-1 transition-colors whitespace-nowrap ${lang === 'en' ? 'text-[#046842] font-bold' : 'text-gray-600 hover:text-[#046842]'
                       }`}
                   >
-                    <img src="https://flagcdn.com/w20/gb.png" alt="EN" className="w-4 h-3 object-cover rounded-xs" />
+                    <img src="https://flagcdn.com/w20/gb.png" alt="English (United Kingdom)" width="20" height="15" loading="lazy" decoding="async" className="w-4 h-3 object-cover rounded-xs" />
                     EN
                   </a>
                 </div>
@@ -454,8 +446,8 @@ export default function Navbar() {
         {/* Main navigation (Apple Pro Glass bar) */}
         <div
           className={`transition-all duration-300 ${scrolled
-              ? 'fixed top-0 left-0 right-0 z-40 bg-white/92 backdrop-blur-xl border-b border-gray-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.06)]'
-              : 'relative bg-white border-b border-gray-200/80'
+            ? 'fixed top-0 left-0 right-0 z-40 bg-white/92 backdrop-blur-xl border-b border-gray-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.06)]'
+            : 'relative bg-white border-b border-gray-200/80'
             }`}
           onMouseLeave={handleMouseLeaveItem}
         >
@@ -467,7 +459,8 @@ export default function Navbar() {
                   <a href={homeHref} className="flex items-center gap-2.5 shrink-0 group">
                     <img
                       src={logoUrl}
-                      alt="PT Phuc Thanh Holding"
+                      alt="Phuc Thanh Holding - Investment and Technology"
+                      decoding="async"
                       className="h-11 w-11 md:h-13 md:w-13 object-contain drop-shadow-[0_2px_8px_rgba(4,104,66,0.15)] transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="hidden sm:block">
@@ -484,7 +477,8 @@ export default function Navbar() {
                 <a href={homeHref} className="flex items-center gap-2.5 shrink-0 group">
                   <img
                     src={logoUrl}
-                    alt="PT Phuc Thanh Holding"
+                    alt="Phuc Thanh Holding - Investment and Technology"
+                    decoding="async"
                     className="h-11 w-11 md:h-13 md:w-13 object-contain drop-shadow-[0_2px_8px_rgba(4,104,66,0.15)] transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="hidden sm:block">
@@ -499,7 +493,7 @@ export default function Navbar() {
               )}
 
               {/* Desktop nav with Apple-style hover detection */}
-              <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
+              <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
                 {navConfig.map((item) => {
                   const href = getLocalizedPath(item.pageKey, lang);
                   const active = isActivePath(location.pathname, href);
@@ -513,9 +507,9 @@ export default function Navbar() {
                     >
                       <a
                         href={href}
-                        className={`inline-flex items-center gap-1 px-2.5 xl:px-3 py-2 text-xs xl:text-sm font-medium transition-all rounded-lg whitespace-nowrap ${active || isHovered
-                            ? 'text-[#046842] bg-[#046842]/8 font-semibold'
-                            : 'text-gray-700 hover:text-[#046842] hover:bg-gray-100/70'
+                        className={`inline-flex items-center gap-1 px-2 xl:px-3 py-2 text-xs xl:text-sm font-medium transition-all rounded-lg whitespace-nowrap ${active || isHovered
+                          ? 'text-[#046842] bg-[#046842]/8 font-semibold'
+                          : 'text-gray-700 hover:text-[#046842] hover:bg-gray-100/70'
                           }`}
                       >
                         <span>{t(item.labelKey)}</span>
@@ -527,7 +521,7 @@ export default function Navbar() {
                         )}
                       </a>
                       {active && (
-                        <span className="absolute left-2.5 right-2.5 bottom-1 h-0.5 bg-[#046842] rounded-full shadow-[0_0_8px_rgba(4,104,66,0.4)]" />
+                        <span className="absolute left-2 xl:left-3 right-2 xl:right-3 bottom-1 h-0.5 bg-[#046842] rounded-full shadow-[0_0_8px_rgba(4,104,66,0.4)]" />
                       )}
                     </div>
                   );
@@ -537,7 +531,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setIsSearchOpen(true)}
-                  className="p-2 ml-1 text-gray-600 hover:text-[#046842] hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
+                  className="p-2 ml-0.5 text-gray-600 hover:text-[#046842] hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
                   aria-label="Open Search"
                   title={isVi ? 'Tìm kiếm' : 'Search'}
                 >
@@ -547,7 +541,7 @@ export default function Navbar() {
                 {/* Contact CTA Button */}
                 <a
                   href={partnershipHref}
-                  className="ml-3 xl:ml-4 px-4 xl:px-5 py-2.5 text-xs font-bold uppercase tracking-wider bg-[#046842] text-white rounded-full hover:bg-[#025938] transition-all duration-300 shadow-[0_4px_16px_rgba(4,104,66,0.25)] hover:shadow-[0_6px_20px_rgba(4,104,66,0.35)] whitespace-nowrap"
+                  className="ml-2 xl:ml-3 px-3.5 xl:px-4 py-2 text-xs font-bold uppercase tracking-wider bg-[#046842] text-white rounded-full hover:bg-[#025938] transition-all duration-300 shadow-[0_4px_14px_rgba(4,104,66,0.2)] hover:shadow-[0_6px_18px_rgba(4,104,66,0.3)] whitespace-nowrap"
                 >
                   {t('nav.contactCta')}
                 </a>
@@ -675,7 +669,7 @@ export default function Navbar() {
             {/* Header */}
             <div className="p-4 border-b border-gray-100 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <img src={logoUrl} alt="PT" className="h-9 w-9 object-contain" />
+                <img src={logoUrl} alt="Phuc Thanh Holding Logo" loading="lazy" decoding="async" className="h-9 w-9 object-contain" />
                 <span className="font-bold text-sm text-gray-900">PT HOLDING</span>
               </div>
               <button
@@ -715,8 +709,8 @@ export default function Navbar() {
                       <a
                         href={href}
                         className={`flex-1 px-3 py-2.5 text-sm font-semibold rounded-lg transition-colors ${active
-                            ? 'bg-[#046842]/10 text-[#046842]'
-                            : 'text-gray-800 hover:text-[#046842] hover:bg-gray-50'
+                          ? 'bg-[#046842]/10 text-[#046842]'
+                          : 'text-gray-800 hover:text-[#046842] hover:bg-gray-50'
                           }`}
                       >
                         {t(item.labelKey)}

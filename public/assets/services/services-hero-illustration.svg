@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="100%" height="100%" fill="none" style="display:block;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="shBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c1e"/>
+      <stop offset="35%" stop-color="#044d31"/>
+      <stop offset="70%" stop-color="#046842"/>
+      <stop offset="100%" stop-color="#092018"/>
+    </linearGradient>
+    <radialGradient id="shGoldAura" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#d97706" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shEmeraldAura" cx="30%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#046842" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#046842" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glass Gradients -->
+    <linearGradient id="shGlass1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="shGlassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Glowing Lines -->
+    <linearGradient id="shLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#10b981" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#fbbf24" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Filter -->
+    <filter id="shDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <pattern id="shGrid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.2" fill="#10b981" fill-opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Emerald Corporate Canvas -->
+  <rect width="1600" height="600" fill="url(#shBgGrad)"/>
+  <rect width="1600" height="600" fill="url(#shGrid)"/>
+  <rect width="1600" height="600" fill="url(#shEmeraldAura)"/>
+  <rect width="1600" height="600" fill="url(#shGoldAura)"/>
+
+  <!-- Flowing Synaptic & Data Architecture Waves -->
+  <g opacity="0.6">
+    <path d="M -100 450 C 300 350, 600 550, 950 380 C 1300 210, 1500 340, 1700 280" fill="none" stroke="url(#shLineGrad)" stroke-width="2.5"/>
+    <path d="M -50 320 C 350 200, 700 420, 1100 260 C 1400 140, 1550 220, 1750 180" fill="none" stroke="url(#shLineGrad)" stroke-width="1.8" stroke-dasharray="4 6"/>
+    <path d="M 0 520 C 450 480, 800 560, 1200 420 C 1450 320, 1600 400, 1700 360" fill="none" stroke="#10b981" stroke-opacity="0.25" stroke-width="1.5"/>
+  </g>
+
+  <!-- Node Sparks -->
+  <circle cx="380" cy="360" r="5" fill="#10b981" filter="url(#shDrop)"/>
+  <circle cx="780" cy="420" r="4" fill="#fbbf24"/>
+  <circle cx="1150" cy="270" r="6" fill="#f59e0b" filter="url(#shDrop)"/>
+  <circle cx="1380" cy="240" r="4" fill="#34d399"/>
+
+  <!-- ================= 4 FLOATING GLASS SERVICE HUBS ================= -->
+
+  <!-- Hub 1: Enterprise Software & AI -->
+  <g transform="translate(180, 130)" filter="url(#shDrop)">
+    <rect width="280" height="340" rx="24" fill="url(#shGlass1)" stroke="url(#shGlassBorder)" stroke-width="1.5"/>
+    <!-- Card header -->
+    <rect x="24" y="28" width="48" height="48" rx="14" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1.2"/>
+    <path d="M 40 44 L 48 52 L 40 60 M 56 60 L 56 44" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <text x="24" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="11" font-weight="700" fill="#34d399" letter-spacing="1">PILLAR 01</text>
+    <text x="24" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="18" font-weight="800" fill="#ffffff">Enterprise AI &amp; Software</text>
+    <text x="24" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="12" fill="#d1fae5" opacity="0.8">Cloud ERP, LLM Agents &amp; Microservices</text>
+
+    <!-- Mini Visual Representation -->
+    <g transform="translate(24, 195)">
+      <rect width="232" height="70" rx="12" fill="#000000" fill-opacity="0.25" stroke="#10b981" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="16" y="24" font-family="'SF Mono', monospace" font-size="10" fill="#34d399">> cluster.deploy(AI)</text>
+      <text x="16" y="44" font-family="'SF Mono', monospace" font-size="10" fill="#93c5fd">> status: 99.99% OK</text>
+    </g>
+
+    <g transform="translate(24, 286)">
+      <rect width="120" height="26" rx="13" fill="#10b981" fill-opacity="0.2"/>
+      <text x="60" y="303" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="10" font-weight="700" fill="#6ee7b7" text-anchor="middle">Scalable Cloud</text>
+    </g>
+  </g>
+
+  <!-- Hub 2: Digital Health & Clinic DataLake -->
+  <g transform="translate(490, 100)" filter="url(#shDrop)">
+    <rect width="280" height="370" rx="24" fill="url(#shGlass1)" stroke="url(#shGlassBorder)" stroke-width="1.5"/>
+    <rect x="24" y="28" width="48" height="48" rx="14" fill="#046842" fill-opacity="0.4" stroke="#34d399" stroke-width="1.2"/>
+    <!-- Heart pulse icon -->
+    <path d="M 38 52 L 44 52 L 47 43 L 50 61 L 53 49 L 55 52 L 60 52" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="24" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="11" font-weight="700" fill="#34d399" letter-spacing="1">PILLAR 02</text>
+    <text x="24" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="18" font-weight="800" fill="#ffffff">Digital Health DataLake</text>
+    <text x="24" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="12" fill="#d1fae5" opacity="0.8">Smart Clinic Systems &amp; HIPAA Vault</text>
+
+    <!-- ECG Visual -->
+    <g transform="translate(24, 195)">
+      <rect width="232" height="96" rx="12" fill="#000000" fill-opacity="0.25" stroke="#10b981" stroke-opacity="0.3" stroke-width="1"/>
+      <path d="M 12 50 L 50 50 L 58 35 L 66 65 L 74 20 L 82 78 L 90 44 L 98 50 L 140 50 L 148 38 L 156 62 L 164 25 L 172 75 L 180 50 L 220 50" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="14" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="9" font-weight="700" fill="#6ee7b7">TELEMETRY SYNC: 100%</text>
+    </g>
+
+    <g transform="translate(24, 314)">
+      <rect width="130" height="26" rx="13" fill="#10b981" fill-opacity="0.2"/>
+      <text x="65" y="331" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="10" font-weight="700" fill="#6ee7b7" text-anchor="middle">HIPAA Compliant</text>
+    </g>
+  </g>
+
+  <!-- Hub 3: EdTech & Workforce LMS -->
+  <g transform="translate(800, 100)" filter="url(#shDrop)">
+    <rect width="280" height="370" rx="24" fill="url(#shGlass1)" stroke="url(#shGlassBorder)" stroke-width="1.5"/>
+    <rect x="24" y="28" width="48" height="48" rx="14" fill="#d97706" fill-opacity="0.3" stroke="#fbbf24" stroke-width="1.2"/>
+    <!-- Graduation Cap -->
+    <path d="M 36 50 L 48 43 L 60 50 L 48 57 Z M 40 54 L 40 60 C 40 63 48 65 48 65 C 48 65 56 63 56 60 L 56 54" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="24" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="11" font-weight="700" fill="#fbbf24" letter-spacing="1">PILLAR 03</text>
+    <text x="24" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="18" font-weight="800" fill="#ffffff">EdTech &amp; Workforce LMS</text>
+    <text x="24" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="12" fill="#fef3c7" opacity="0.8">Enterprise Learning &amp; Talent Upskilling</text>
+
+    <!-- Radar Matrix Visual -->
+    <g transform="translate(24, 195)">
+      <rect width="232" height="96" rx="12" fill="#000000" fill-opacity="0.25" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1"/>
+      <g transform="translate(116, 48)">
+        <polygon points="0,-30 25,-15 25,15 0,30 -25,15 -25,-15" fill="none" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1"/>
+        <polygon points="0,-24 20,-10 16,12 0,22 -18,8 -16,-12" fill="#f59e0b" fill-opacity="0.35" stroke="#fbbf24" stroke-width="1.8"/>
+      </g>
+      <text x="14" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="9" font-weight="700" fill="#fbbf24">94.6% COMPLETION RATE</text>
+    </g>
+
+    <g transform="translate(24, 314)">
+      <rect width="130" height="26" rx="13" fill="#d97706" fill-opacity="0.25"/>
+      <text x="65" y="331" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="10" font-weight="700" fill="#fde68a" text-anchor="middle">Corporate LMS</text>
+    </g>
+  </g>
+
+  <!-- Hub 4: Venture Capital & Strategic Incubation -->
+  <g transform="translate(1110, 130)" filter="url(#shDrop)">
+    <rect width="280" height="340" rx="24" fill="url(#shGlass1)" stroke="url(#shGlassBorder)" stroke-width="1.5"/>
+    <rect x="24" y="28" width="48" height="48" rx="14" fill="#0284c7" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.2"/>
+    <!-- Growth chart arrow -->
+    <path d="M 38 58 L 46 48 L 52 52 L 60 42 M 56 42 L 60 42 L 60 46" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="24" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1">PILLAR 04</text>
+    <text x="24" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="18" font-weight="800" fill="#ffffff">Venture &amp; Incubation</text>
+    <text x="24" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="12" fill="#e0f2fe" opacity="0.8">Strategic Capital &amp; Startup Scaling</text>
+
+    <!-- Growth curve Visual -->
+    <g transform="translate(24, 195)">
+      <rect width="232" height="70" rx="12" fill="#000000" fill-opacity="0.25" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1"/>
+      <path d="M 16 52 Q 70 50, 110 38 T 170 24 T 216 12" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="216" cy="12" r="4" fill="#fbbf24"/>
+      <text x="14" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="9" font-weight="700" fill="#38bdf8">3.8x VALUATION MULTIPLE</text>
+    </g>
+
+    <g transform="translate(24, 286)">
+      <rect width="130" height="26" rx="13" fill="#0284c7" fill-opacity="0.25"/>
+      <text x="65" y="303" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="10" font-weight="700" fill="#bae6fd" text-anchor="middle">Seed &amp; Series A</text>
+    </g>
+  </g>
+</svg>

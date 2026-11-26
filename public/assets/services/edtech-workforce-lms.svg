@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="100%" height="100%" fill="none" style="display:block;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="lmsBgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#046842" stop-opacity="0.05"/>
+    </linearGradient>
+    <radialGradient id="lmsAmberAura" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#d97706" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lmsEmeraldAura" cx="80%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#046842" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glass Gradients -->
+    <linearGradient id="lmsGlassFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#fefce8" stop-opacity="0.86"/>
+    </linearGradient>
+    <linearGradient id="lmsCardGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#f8fafc" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="lmsBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#fed7aa" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#cbd5e1" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <linearGradient id="lmsAmber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="lmsEmerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#046842"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+
+    <!-- Shadows -->
+    <filter id="lmsShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.06"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.03"/>
+    </filter>
+    <filter id="lmsCardShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+
+    <pattern id="lmsDotGrid" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.9" fill="#94a3b8" fill-opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="560" height="380" rx="22" fill="#fffdfa"/>
+  <rect width="560" height="380" rx="22" fill="url(#lmsBgGlow)"/>
+  <rect x="18" y="18" width="524" height="344" rx="16" fill="url(#lmsDotGrid)"/>
+
+  <!-- Radial Glows -->
+  <circle cx="230" cy="180" r="140" fill="url(#lmsAmberAura)"/>
+  <circle cx="440" cy="240" r="120" fill="url(#lmsEmeraldAura)"/>
+
+  <!-- Geometric Learning Pathway Guide Lines -->
+  <g opacity="0.4" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3 3">
+    <path d="M 60 210 Q 180 140, 310 180 T 500 130"/>
+    <path d="M 100 290 Q 240 260, 380 290 T 520 250"/>
+  </g>
+
+  <!-- ================= MAIN LMS LEARNING COCKPIT ================= -->
+  <g filter="url(#lmsShadow)">
+    <rect x="42" y="44" width="320" height="290" rx="18" fill="url(#lmsGlassFill)" stroke="url(#lmsBorder)" stroke-width="1.2"/>
+
+    <!-- Header Bar -->
+    <rect x="42" y="44" width="320" height="42" rx="18" fill="#fffbeb" fill-opacity="0.9"/>
+    <rect x="42" y="70" width="320" height="16" fill="#fffbeb"/>
+    <line x1="42" y1="86" x2="362" y2="86" stroke="#fef3c7" stroke-width="1"/>
+
+    <!-- Cap Icon + LMS Title -->
+    <g transform="translate(58, 55)">
+      <rect width="20" height="20" rx="6" fill="#d97706" fill-opacity="0.12"/>
+      <path d="M 3 8 L 10 4 L 17 8 L 10 12 Z M 5 11 L 5 15 C 5 17 10 18 10 18 C 10 18 15 17 15 15 L 15 11" stroke="#d97706" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="26" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="11" font-weight="700" fill="#0f172a">PT LMS Platform</text>
+    </g>
+
+    <!-- Status Badge -->
+    <g transform="translate(262, 56)">
+      <rect width="86" height="18" rx="9" fill="#d97706" fill-opacity="0.12"/>
+      <circle cx="8" cy="9" r="3" fill="#d97706"/>
+      <text x="16" y="12.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8.5" font-weight="700" fill="#d97706">ENTERPRISE</text>
+    </g>
+
+    <!-- Learning Metrics Overview -->
+    <g transform="translate(58, 98)">
+      <!-- Metric 1: Completion Rate -->
+      <g>
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8.5" font-weight="600" fill="#64748b">COMPLETION RATE</text>
+        <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="18" font-weight="800" fill="#d97706">94.6%</text>
+        <text x="0" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8" font-weight="500" fill="#046842">● +18% vs Industry</text>
+      </g>
+
+      <line x1="96" y1="2" x2="96" y2="42" stroke="#e2e8f0" stroke-width="1"/>
+
+      <!-- Metric 2: Active Learners -->
+      <g transform="translate(110, 0)">
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8.5" font-weight="600" fill="#64748b">ACTIVE LEARNERS</text>
+        <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="18" font-weight="800" fill="#0f172a">10,000+</text>
+        <text x="0" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8" font-weight="500" fill="#046842">● 12 Enterprise Hubs</text>
+      </g>
+    </g>
+
+    <!-- Module Progression & Learning Path HUD -->
+    <g transform="translate(58, 154)">
+      <rect width="288" height="96" rx="12" fill="#ffffff" stroke="#fed7aa" stroke-width="1"/>
+
+      <!-- Track 1: Digital Transformation & Leadership -->
+      <g transform="translate(14, 16)">
+        <text x="0" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="9.5" font-weight="700" fill="#0f172a">Digital Leadership &amp; AI Integration</text>
+        <text x="210" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="9" font-weight="700" fill="#046842">100%</text>
+        
+        <!-- Progress Bar 1 -->
+        <rect x="0" y="14" width="260" height="6" rx="3" fill="#f1f5f9"/>
+        <rect x="0" y="14" width="260" height="6" rx="3" fill="url(#lmsEmerald)"/>
+      </g>
+
+      <!-- Track 2: Clinical Data Governance -->
+      <g transform="translate(14, 48)">
+        <text x="0" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="9.5" font-weight="700" fill="#0f172a">DataLake Governance &amp; Compliance</text>
+        <text x="216" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="9" font-weight="700" fill="#d97706">88%</text>
+
+        <!-- Progress Bar 2 -->
+        <rect x="0" y="14" width="260" height="6" rx="3" fill="#f1f5f9"/>
+        <rect x="0" y="14" width="228" height="6" rx="3" fill="url(#lmsAmber)"/>
+      </g>
+
+      <!-- Track 3: Micro-credentialing Status -->
+      <g transform="translate(14, 76)">
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8.5" font-weight="600" fill="#64748b">Verified Micro-credentials:</text>
+        <text x="136" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8.5" font-weight="700" fill="#046842">Level 4 Master Architect</text>
+      </g>
+    </g>
+
+    <!-- Bottom Feature Pills -->
+    <g transform="translate(58, 264)">
+      <rect width="138" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+      <circle cx="10" cy="12" r="3" fill="#d97706"/>
+      <text x="20" y="15.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="9" font-weight="600" fill="#334155">Adaptive AI Tutor</text>
+
+      <rect x="146" y="0" width="142" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+      <circle cx="156" cy="12" r="3" fill="#046842"/>
+      <text x="166" y="15.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="9" font-weight="600" fill="#334155">SCORM / xAPI Compliant</text>
+    </g>
+  </g>
+
+  <!-- ================= FLOATING WIDGET 1: SKILL RADAR HEXAGON (TOP RIGHT) ================= -->
+  <g transform="translate(330, 48)" filter="url(#lmsCardShadow)">
+    <rect width="186" height="152" rx="16" fill="url(#lmsCardGlass)" stroke="url(#lmsBorder)" stroke-width="1.2"/>
+
+    <g transform="translate(16, 14)">
+      <rect width="28" height="28" rx="8" fill="#d97706" fill-opacity="0.12"/>
+      <path d="M 8 14 L 14 8 L 20 14 L 14 20 Z" fill="none" stroke="#d97706" stroke-width="1.6"/>
+      <text x="36" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="10.5" font-weight="700" fill="#0f172a">Workforce Matrix</text>
+      <text x="36" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8.5" fill="#d97706">Continuous Upskilling</text>
+    </g>
+
+    <!-- Radar Hexagon Chart -->
+    <g transform="translate(93, 86)">
+      <!-- Outer Hexagon Grid -->
+      <polygon points="0,-32 28,-16 28,16 0,32 -28,16 -28,-16" fill="none" stroke="#fed7aa" stroke-width="1"/>
+      <!-- Inner Hexagon Grid -->
+      <polygon points="0,-18 16,-9 16,9 0,18 -16,9 -16,-9" fill="none" stroke="#fed7aa" stroke-width="0.8" stroke-dasharray="2 2"/>
+      
+      <!-- Competency Shape -->
+      <polygon points="0,-28 24,-12 20,12 0,26 -22,10 -20,-14" fill="#046842" fill-opacity="0.25" stroke="#046842" stroke-width="1.8"/>
+      
+      <!-- Anchor Dots -->
+      <circle cx="0" cy="-28" r="3" fill="#d97706"/>
+      <circle cx="24" cy="-12" r="3" fill="#046842"/>
+      <circle cx="20" cy="12" r="3" fill="#046842"/>
+      <circle cx="0" cy="26" r="3" fill="#d97706"/>
+      <circle cx="-22" cy="10" r="3" fill="#046842"/>
+      <circle cx="-20" cy="-14" r="3" fill="#10b981"/>
+    </g>
+
+    <!-- Bottom Badge -->
+    <g transform="translate(16, 122)">
+      <rect width="154" height="20" rx="5" fill="#d97706" fill-opacity="0.08"/>
+      <text x="12" y="13.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8.5" font-weight="700" fill="#d97706">98% SKILL BENCHMARK MET</text>
+    </g>
+  </g>
+
+  <!-- ================= FLOATING WIDGET 2: TALENT CERTIFICATION BADGE (BOTTOM RIGHT) ================= -->
+  <g transform="translate(346, 214)" filter="url(#lmsCardShadow)">
+    <rect width="176" height="136" rx="16" fill="url(#lmsCardGlass)" stroke="url(#lmsBorder)" stroke-width="1.2"/>
+
+    <g transform="translate(16, 14)">
+      <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="10.5" font-weight="700" fill="#0f172a">Talent Pipeline</text>
+      <text x="0" y="23" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8.5" fill="#64748b">Enterprise Retention</text>
+
+      <g transform="translate(0, 32)">
+        <!-- Stat Circle -->
+        <rect width="52" height="52" rx="12" fill="#046842" fill-opacity="0.08" stroke="#046842" stroke-width="1"/>
+        <text x="26" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="14" font-weight="800" fill="#046842" text-anchor="middle">3.2x</text>
+        <text x="26" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="7.5" font-weight="600" fill="#046842" text-anchor="middle">ROI Factor</text>
+
+        <!-- Right Side Stats -->
+        <g transform="translate(62, 6)">
+          <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="12" font-weight="800" fill="#0f172a">450+ Hours</text>
+          <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8" fill="#64748b">Modular Micro-learning</text>
+          <text x="0" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8.5" font-weight="700" fill="#059669">● Enterprise SLA Guaranteed</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Bottom Tag -->
+    <g transform="translate(16, 102)">
+      <rect width="144" height="20" rx="5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8"/>
+      <path d="M 12 10 L 15 13 L 20 8" stroke="#046842" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="26" y="13.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI'" font-size="8" font-weight="700" fill="#046842">Corporate Accredited</text>
+    </g>
+  </g>
+</svg>

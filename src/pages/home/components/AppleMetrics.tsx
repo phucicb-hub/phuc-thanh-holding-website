@@ -21,7 +21,7 @@ export default function AppleMetrics() {
               {isVi ? 'Độ sẵn sàng hệ thống' : 'Platform Uptime'}
             </div>
             <p className="text-xs text-[#4b5563]">
-              {isVi ? 'Hạ tầng dự phòng đa vùng' : 'Multi-region high availability'}
+              {isVi ? 'Hạ tầng dự phòng đa vùng' : 'Resilient multi-region infrastructure'}
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export default function AppleMetrics() {
               {isVi ? 'Giám sát An ninh mạng' : 'Active SecOps'}
             </div>
             <p className="text-xs text-[#4b5563]">
-              {isVi ? 'Phòng thủ chủ động 24/7' : 'Continuous threat neutralization'}
+              {isVi ? 'Phòng thủ chủ động 24/7' : 'Round-the-clock proactive defense'}
             </p>
           </div>
 
@@ -49,7 +49,7 @@ export default function AppleMetrics() {
               {isVi ? 'Dữ liệu được mã hóa' : 'Data Encryption'}
             </div>
             <p className="text-xs text-[#4b5563]">
-              {isVi ? 'Bảo vệ tại chỗ & khi truyền' : 'At-rest and in-transit'}
+              {isVi ? 'Bảo vệ tại chỗ & khi truyền' : 'End-to-end protection at rest and in transit'}
             </p>
           </div>
 
@@ -63,7 +63,7 @@ export default function AppleMetrics() {
               {isVi ? 'Trụ cột phát triển' : 'Core Disciplines'}
             </div>
             <p className="text-xs text-[#4b5563]">
-              {isVi ? 'Cộng hưởng giá trị bền vững' : 'Unified holding capability'}
+              {isVi ? 'Cộng hưởng giá trị bền vững' : 'Synchronized for sustainable impact'}
             </p>
           </div>
         </div>

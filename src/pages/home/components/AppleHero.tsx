@@ -54,7 +54,7 @@ export default function AppleHero() {
         <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-[#4b5563] font-normal leading-relaxed mb-10">
           {isVi
             ? 'Phúc Thành Holding hợp nhất giải pháp phần mềm cấp doanh nghiệp, y tế số, đào tạo nhân lực và nguồn vốn chiến lược để thúc đẩy tăng trưởng bền vững.'
-            : 'Phuc Thanh Holding unifies enterprise software engineering, clinical digital health, workforce tech, and strategic venture capital.'}
+            : 'Uniting enterprise software engineering, clinical digital health, workforce technology, and strategic venture capital to drive sustainable growth.'}
         </p>
 
         {/* CTA Actions */}
@@ -90,7 +90,7 @@ export default function AppleHero() {
               <p className="text-xs text-[#4b5563] leading-relaxed">
                 {isVi
                   ? 'Mã hóa đa lớp, cô lập hạ tầng và tuân thủ các tiêu chuẩn an toàn thông tin khắt khe nhất.'
-                  : 'Multi-layer encryption, infrastructure isolation and rigorous enterprise compliance.'}
+                  : 'Multi-layer encryption, isolated infrastructure, and uncompromising compliance.'}
               </p>
             </div>
 
@@ -104,7 +104,7 @@ export default function AppleHero() {
               <p className="text-xs text-[#4b5563] leading-relaxed">
                 {isVi
                   ? 'Tối ưu độ trễ dưới 50ms, khả năng mở rộng không giới hạn cho các ứng dụng quy mô lớn.'
-                  : 'Sub-50ms latency edge distribution with unbounded scalability for massive enterprise workloads.'}
+                  : 'Sub-50ms edge delivery with elastic scalability built for demanding enterprise workloads.'}
               </p>
             </div>
 
@@ -113,12 +113,12 @@ export default function AppleHero() {
                 <i className="ri-government-line text-xl" />
               </div>
               <h3 className="text-[#1d1d1f] font-bold text-sm mb-1">
-                {isVi ? 'Pháp lý Minh bạch' : 'Verified Sovereign Entity'}
+                {isVi ? 'Pháp lý Minh bạch' : 'Verified Enterprise Entity'}
               </h3>
               <p className="text-xs text-[#4b5563] leading-relaxed">
                 {isVi
                   ? `Đăng ký kinh doanh chính thức số ${company.registrationNumber}, trụ sở tại Phú Thọ, Việt Nam.`
-                  : `Fully incorporated entity #${company.registrationNumber}, headquarted in Phu Tho Province, Vietnam.`}
+                  : `Incorporated under license #${company.registrationNumber}, proudly headquartered in Phu Tho, Vietnam.`}
               </p>
             </div>
           </div>

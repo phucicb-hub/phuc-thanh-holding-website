@@ -9,7 +9,8 @@ export default function SoftwareHero() {
     <section className="relative w-full overflow-hidden bg-primary-900">
       <img
         src="https://readdy.ai/api/search-image?query=Dark%20emerald%20green%20corporate%20background%20with%20abstract%20flowing%20code%20streams%20and%20digital%20interface%20panels%2C%20golden%20light%20accents%20representing%20custom%20software%20development%2C%20subtle%20geometric%20circuit%20patterns%20and%20luminous%20data%20pathways%2C%20modern%20software%20engineering%20atmosphere%2C%20deep%20green%20and%20gold%20color%20palette%2C%20cinematic%20soft%20lighting%2C%20professional%20technology%20aesthetic%2C%20high%20detail&width=1600&height=600&seq=software-hero-2&orientation=landscape"
-        alt=""
+        alt="Phát triển Phần mềm & Giải pháp Doanh nghiệp - Phuc Thanh Holding"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-top opacity-35"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/85 to-primary-800/70" />

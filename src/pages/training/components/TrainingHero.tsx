@@ -9,7 +9,8 @@ export default function TrainingHero() {
     <section className="relative w-full overflow-hidden bg-primary-900">
       <img
         src="https://readdy.ai/api/search-image?query=Dark%20emerald%20green%20corporate%20background%20with%20golden%20glowing%20knowledge%20network%20nodes%20and%20flowing%20data%20pathways%2C%20silhouettes%20of%20learners%20and%20professional%20teams%20at%20the%20center%20connected%20by%20luminous%20streams%20of%20information%2C%20warm%20gold%20light%20beams%20representing%20growth%20and%20opportunity%2C%20subtle%20geometric%20connection%20lines%2C%20modern%20educational%20technology%20atmosphere%2C%20deep%20green%20and%20gold%20color%20palette%2C%20cinematic%20soft%20lighting%2C%20professional%20corporate%20photography%20style%2C%20high%20detail&width=1600&height=600&seq=training-hero-1&orientation=landscape"
-        alt=""
+        alt="Đào tạo & Phát triển Năng lực Công nghệ - Phuc Thanh Holding"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-top opacity-35"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/85 to-primary-800/70" />

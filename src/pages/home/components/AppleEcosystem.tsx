@@ -28,7 +28,7 @@ export default function AppleEcosystem() {
           <p className="text-[#4b5563] text-base sm:text-lg">
             {isVi
               ? 'Được thiết kế theo cấu trúc module độc lập nhưng tương hỗ sâu sắc, mang lại hiệu ứng cộng hưởng giá trị vượt trội cho các đối tác và khách hàng.'
-              : 'Architected as decoupled yet deeply synergistic modules, providing compounding value across all partner engagements.'}
+              : 'Purpose-built as autonomous yet deeply synergistic pillars—delivering compounding value across all enterprise engagements.'}
           </p>
         </div>
 
@@ -54,11 +54,23 @@ export default function AppleEcosystem() {
               <h3 className="text-2xl sm:text-3xl font-bold text-[#1d1d1f] mb-4 group-hover:text-[#046842] transition-colors">
                 {isVi ? 'Phần Mềm Doanh Nghiệp & Trí Tuệ Nhân Tạo' : 'Enterprise Software & Applied AI'}
               </h3>
-              <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-6">
+              <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-4">
                 {isVi
                   ? 'Phát triển các hệ thống ERP, CRM chuyên biệt và tích hợp mô hình ngôn ngữ lớn (LLM), AI Agent tự động hóa quy trình cho doanh nghiệp quy mô lớn.'
-                  : 'Bespoke ERP, CRM platforms coupled with generative AI pipelines and autonomous workflow agents.'}
+                  : 'Custom ERP and CRM platforms powered by intelligent workflow automation, production-grade LLMs, and autonomous agents.'}
               </p>
+
+              {/* Visual Asset Illustration */}
+              <div className="my-5 rounded-2xl overflow-hidden border border-gray-200/80 bg-[#f8fafc]/70 p-2 sm:p-3 group-hover:border-[#046842]/30 transition-all duration-500 shadow-sm">
+                <img
+                  src="/assets/services/enterprise-software-ai.svg"
+                  alt={isVi ? 'Kiến trúc Phần Mềm Doanh Nghiệp & Trí Tuệ Nhân Tạo' : 'Enterprise Software & Applied AI Architecture'}
+                  className="w-full h-auto max-h-[240px] sm:max-h-[260px] object-contain rounded-xl transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="lazy"
+                  width="640"
+                  height="400"
+                />
+              </div>
             </div>
 
             <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
@@ -97,11 +109,23 @@ export default function AppleEcosystem() {
               <h3 className="text-2xl sm:text-3xl font-bold text-[#1d1d1f] mb-4 group-hover:text-[#046842] transition-colors">
                 {isVi ? 'Y Tế Số & PT DataLake' : 'Digital Health & DataLake'}
               </h3>
-              <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-6">
+              <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-4">
                 {isVi
                   ? 'Giải pháp quản lý phòng khám thông minh (PT Clinic) kết hợp kiến trúc kho dữ liệu lâm sàng y tế đạt chuẩn an toàn thông tin.'
-                  : 'Intelligent clinical management (PT Clinic) with compliant health data lakes and predictive patient workflows.'}
+                  : 'Intelligent clinical operations with PT Clinic, unified health data lakes, and predictive workflows built for complete data integrity.'}
               </p>
+
+              {/* Visual Asset Illustration */}
+              <div className="my-5 rounded-2xl overflow-hidden border border-gray-200/80 bg-[#f8fafc]/70 p-2 sm:p-3 group-hover:border-[#046842]/30 transition-all duration-500 shadow-sm">
+                <img
+                  src="/assets/services/digital-health-datalake.svg"
+                  alt={isVi ? 'Hệ thống Y Tế Số & PT DataLake' : 'Digital Health & PT DataLake Platform'}
+                  className="w-full h-auto max-h-[220px] sm:max-h-[240px] object-contain rounded-xl transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="lazy"
+                  width="560"
+                  height="380"
+                />
+              </div>
             </div>
 
             <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
@@ -136,11 +160,23 @@ export default function AppleEcosystem() {
               <h3 className="text-2xl sm:text-3xl font-bold text-[#1d1d1f] mb-4 group-hover:text-[#d97706] transition-colors">
                 {isVi ? 'Đào Tạo & Nhân Lực Số (PT LMS)' : 'EdTech & Digital Workforce'}
               </h3>
-              <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-6">
+              <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-4">
                 {isVi
                   ? 'Nâng chuẩn năng lực đội ngũ với nền tảng học trực tuyến đa kênh, chương trình chuẩn hóa kỹ năng số hóa và quản trị hiện đại.'
-                  : 'Cloud LMS infrastructure and executive digital upskilling programs delivering continuous organizational competence.'}
+                  : 'Next-generation LMS infrastructure and targeted executive upskilling programs delivering continuous organizational competence.'}
               </p>
+
+              {/* Visual Asset Illustration */}
+              <div className="my-5 rounded-2xl overflow-hidden border border-gray-200/80 bg-[#fffdfa]/80 p-2 sm:p-3 group-hover:border-[#d97706]/30 transition-all duration-500 shadow-sm">
+                <img
+                  src="/assets/services/edtech-workforce-lms.svg"
+                  alt={isVi ? 'Nền tảng Đào Tạo & Nhân Lực Số PT LMS' : 'EdTech & Workforce LMS Platform'}
+                  className="w-full h-auto max-h-[220px] sm:max-h-[240px] object-contain rounded-xl transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="lazy"
+                  width="560"
+                  height="380"
+                />
+              </div>
             </div>
 
             <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
@@ -175,11 +211,23 @@ export default function AppleEcosystem() {
               <h3 className="text-2xl sm:text-3xl font-bold text-[#1d1d1f] mb-4 group-hover:text-blue-600 transition-colors">
                 {isVi ? 'Đầu Tư Công Nghệ & Quỹ Phát Triển' : 'Venture Capital & Tech Incubation'}
               </h3>
-              <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-6">
+              <p className="text-[#4b5563] text-sm sm:text-base leading-relaxed mb-4">
                 {isVi
                   ? 'Đầu tư trực tiếp và bảo trợ hạ tầng kỹ thuật cho các giải pháp công nghệ tiềm năng cao, tăng tốc đưa sản phẩm ra thị trường.'
-                  : 'Direct strategic investment and technical scaffolding for high-conviction ventures navigating rapid market commercialization.'}
+                  : 'Direct capital backing, technical architecture, and strategic scaffolding for high-conviction ventures scaling breakthrough solutions.'}
               </p>
+
+              {/* Visual Asset Illustration */}
+              <div className="my-5 rounded-2xl overflow-hidden border border-gray-200/80 bg-[#f8fafc]/70 p-2 sm:p-3 group-hover:border-blue-500/30 transition-all duration-500 shadow-sm">
+                <img
+                  src="/assets/services/venture-capital-incubation.svg"
+                  alt={isVi ? 'Đầu Tư Công Nghệ & Quỹ Tăng Tốc Chiến Lược' : 'Venture Capital & Tech Incubation Scaffolding'}
+                  className="w-full h-auto max-h-[240px] sm:max-h-[260px] object-contain rounded-xl transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="lazy"
+                  width="640"
+                  height="400"
+                />
+              </div>
             </div>
 
             <div className="pt-6 border-t border-gray-100 flex items-center justify-between">

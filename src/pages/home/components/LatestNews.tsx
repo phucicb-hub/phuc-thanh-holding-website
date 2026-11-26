@@ -73,6 +73,8 @@ export default function LatestNews() {
                     src={article.image}
                     alt={article.title}
                     title={article.title}
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                   <span className="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-bold bg-white/90 backdrop-blur-md text-[#046842] border border-gray-200 rounded-md shadow-xs">

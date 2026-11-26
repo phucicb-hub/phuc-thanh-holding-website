@@ -9,7 +9,8 @@ export default function CooperationHero() {
     <section className="relative w-full overflow-hidden bg-primary-900">
       <img
         src="https://readdy.ai/api/search-image?query=Professional%20corporate%20team%20of%20business%20colleagues%20collaborating%20around%20a%20modern%20conference%20table%20in%20a%20bright%20contemporary%20office%2C%20reviewing%20project%20documents%20and%20a%20digital%20screen%2C%20warm%20natural%20window%20light%2C%20subtle%20emerald%20green%20and%20warm%20gold%20color%20tones%2C%20editorial%20corporate%20photography%2C%20authentic%20candid%20working%20atmosphere%2C%20sharp%20focus%2C%20high%20detail&width=1600&height=600&seq=contact-hero-1&orientation=landscape&nocache=true"
-        alt=""
+        alt="Phuc Thanh Holding - Hợp tác và đầu tư chiến lược"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-top opacity-40"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/85 to-primary-800/70" />
