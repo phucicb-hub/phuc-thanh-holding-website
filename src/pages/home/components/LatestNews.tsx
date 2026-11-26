@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useNews } from '@/hooks/useContent';
 import useLang from '@/hooks/useLang';
 import { getLocalizedPath, detailHref } from '@/lib/routes';
+import { FLAGSHIP_LINKS } from '@/lib/content';
 import RevealStagger from '@/components/base/RevealStagger';
 
 function formatDate(dateStr: string): string {
@@ -14,7 +15,7 @@ export default function LatestNews() {
   const lang = useLang();
   const { items: articles, loading, error, retry } = useNews();
 
-  const latest = articles.slice(0, 3);
+  const latest = articles.slice(0, 6);
 
   return (
     <section className="py-16 md:py-24 bg-white text-[#1d1d1f]">
@@ -60,51 +61,71 @@ export default function LatestNews() {
           </div>
         ) : (
           <RevealStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {latest.map((article) => (
-              <article
-                key={article.id}
-                className="group bg-white rounded-2xl border border-gray-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] overflow-hidden transition-all duration-300 flex flex-col"
-              >
-                <a
-                  href={detailHref('news', article.id, lang)}
-                  className="relative block overflow-hidden aspect-[16/10]"
+            {latest.map((article) => {
+              const text = (article.title + ' ' + article.excerpt + ' ' + (article.tags || []).join(' ')).toLowerCase();
+              const match = Object.entries(FLAGSHIP_LINKS).find(([k, url]) => {
+                return text.includes(k) || text.includes(url.replace('https://', ''));
+              });
+
+              return (
+                <article
+                  key={article.id}
+                  className="group bg-white rounded-2xl border border-gray-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] overflow-hidden transition-all duration-300 flex flex-col"
                 >
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    title={article.title}
-                    loading="lazy"
-                    decoding="async"
-                    className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-bold bg-white/90 backdrop-blur-md text-[#046842] border border-gray-200 rounded-md shadow-xs">
-                    {article.category}
-                  </span>
-                </a>
-                <div className="p-6 flex flex-col flex-1">
-                  <span className="inline-flex items-center gap-1.5 text-xs text-gray-500 mb-2.5">
-                    <i className="ri-calendar-line text-sm" />
-                    {formatDate(article.date)}
-                  </span>
                   <a
                     href={detailHref('news', article.id, lang)}
-                    className="text-base sm:text-lg font-bold text-[#1d1d1f] mb-2.5 group-hover:text-[#046842] transition-colors line-clamp-2"
+                    className="relative block overflow-hidden aspect-[16/10]"
                   >
-                    {article.title}
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      title={article.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <span className="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-bold bg-white/90 backdrop-blur-md text-[#046842] border border-gray-200 rounded-md shadow-xs">
+                      {article.category}
+                    </span>
                   </a>
-                  <p className="text-xs sm:text-sm text-[#4b5563] mb-5 flex-1 leading-relaxed line-clamp-3">
-                    {article.excerpt}
-                  </p>
-                  <a
-                    href={detailHref('news', article.id, lang)}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#046842] hover:text-[#025938] transition-colors whitespace-nowrap mt-auto"
-                  >
-                    {t('common.readMore')}
-                    <i className="ri-arrow-right-line w-4 h-4 flex items-center justify-center" />
-                  </a>
-                </div>
-              </article>
-            ))}
+                  <div className="p-6 flex flex-col flex-1">
+                    <span className="inline-flex items-center gap-1.5 text-xs text-gray-500 mb-2.5">
+                      <i className="ri-calendar-line text-sm" />
+                      {formatDate(article.date)}
+                    </span>
+                    <a
+                      href={detailHref('news', article.id, lang)}
+                      className="text-base sm:text-lg font-bold text-[#1d1d1f] mb-2.5 group-hover:text-[#046842] transition-colors line-clamp-2"
+                    >
+                      {article.title}
+                    </a>
+                    <p className="text-xs sm:text-sm text-[#4b5563] mb-5 flex-1 leading-relaxed line-clamp-3">
+                      {article.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between gap-2 pt-3 border-t border-gray-100 mt-auto">
+                      <a
+                        href={detailHref('news', article.id, lang)}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#046842] hover:text-[#025938] transition-colors whitespace-nowrap"
+                      >
+                        {t('common.readMore')}
+                        <i className="ri-arrow-right-line w-3.5 h-3.5 flex items-center justify-center" />
+                      </a>
+                      {match && (
+                        <a
+                          href={match[1]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold bg-[#046842] hover:bg-[#025938] text-white rounded-md transition-all whitespace-nowrap shadow-xs"
+                        >
+                          <span>{t('common.launchPlatform', 'Vào app')}</span>
+                          <i className="ri-external-link-line text-xs" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </RevealStagger>
         )}
       </div>
