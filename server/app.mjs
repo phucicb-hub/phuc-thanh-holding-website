@@ -98,6 +98,21 @@ export async function createApp(db, options = {}) {
         if (token) await db.query('DELETE FROM admin_sessions WHERE token_hash=$1',[digest(token)]);
         return send(200,{ok:true},{'Set-Cookie':cookie('',0)});
       }
+      if (path === '/api/auth/change-password' && method === 'POST') {
+        const user = await session(req);
+        if (!user) throw failure(401, 'Unauthorized');
+        const currentPassword = String(body.current_password || '');
+        const newPassword = String(body.new_password || '');
+        if (!newPassword || newPassword.length < 14 || newPassword.length > 128) {
+          throw failure(400, 'Mật khẩu mới phải có từ 14 đến 128 ký tự.');
+        }
+        const userRow = (await db.query('SELECT password_hash FROM admin_users WHERE id=$1', [user.id])).rows[0];
+        const valid = await verifyPassword(currentPassword, userRow?.password_hash ?? dummyHash);
+        if (!valid) throw failure(400, 'Mật khẩu hiện tại không chính xác.');
+        const newHash = await hashPassword(newPassword);
+        await db.query('SELECT * FROM cms_reset_admin_password($1,$2,$3)', [user.id, newHash, user.id]);
+        return send(200, { ok: true });
+      }
       if (path === '/api/admin/users/audit' && method === 'GET') {
         const user = await session(req);
         if (!user) throw failure(401, 'Unauthorized');
@@ -106,7 +121,7 @@ export async function createApp(db, options = {}) {
         return send(200, { data: result.rows });
       }
       const usersMatch = /^\/api\/admin\/users(?:\/(\d+)(?:\/(reset-password))?)?$/.exec(path);
-      if (usersMatch && ['GET','POST','PATCH'].includes(method)) {
+      if (usersMatch && ['GET','POST','PATCH','DELETE'].includes(method)) {
         const user = await session(req);
         if (!user) throw failure(401, 'Unauthorized');
         if (!can(user.role, 'users:write')) throw failure(403, 'Permission denied');
@@ -127,6 +142,15 @@ export async function createApp(db, options = {}) {
           const result = await db.query('SELECT * FROM cms_reset_admin_password($1,$2,$3)', [targetId, passwordHash, user.id]);
           if (!result.rows[0]) throw failure(404, 'User not found');
           return send(200, { data: result.rows[0] });
+        }
+        if (method === 'DELETE') {
+          if (targetId === user.id) throw failure(409, 'Không thể xóa tài khoản của chính mình.');
+          const target = (await db.query('SELECT id, role FROM admin_users WHERE id=$1', [targetId])).rows[0];
+          if (!target) throw failure(404, 'Không tìm thấy người dùng.');
+          if (target.role === 'owner' && user.role !== 'owner') throw failure(403, 'Chỉ Chủ sở hữu (Owner) mới có quyền xóa tài khoản Owner.');
+          
+          await db.query('SELECT * FROM cms_delete_admin($1,$2)', [targetId, user.id]);
+          return send(200, { ok: true, id: targetId });
         }
         if (method !== 'PATCH') throw failure(405, 'Method not allowed');
         if (targetId === user.id && body.is_active === false) throw failure(409, 'Cannot deactivate current user');

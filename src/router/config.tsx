@@ -43,6 +43,7 @@ const AdminDashboard = lazy(() => import("@/pages/admin/dashboard/page"));
 const AdminNews = lazy(() => import("@/pages/admin/news/page"));
 const AdminProjects = lazy(() => import("@/pages/admin/projects/page"));
 const AdminProducts = lazy(() => import("@/pages/admin/products/page"));
+const AdminUsers = lazy(() => import("@/pages/admin/users/page"));
 const AdminOrders = lazy(() => import("@/pages/admin/orders/page"));
 const AdminContacts = lazy(() => import("@/pages/admin/contacts/page"));
 
@@ -199,6 +200,7 @@ const routes: RouteObject[] = [
     ),
     children: [
       { path: 'lien-he', element: <Suspense fallback={<AdminLoadingState />}><AdminContacts /></Suspense> },
+      { path: 'nguoi-dung', element: <Suspense fallback={<AdminLoadingState />}><AdminUsers /></Suspense> },
       {
         index: true,
         element: (

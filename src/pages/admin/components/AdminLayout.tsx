@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { Navigate, Outlet, Link } from 'react-router-dom';
 import { useAdminAuth } from '@/hooks/useAdminAuth';
 import AdminSidebar from './AdminSidebar';
+import ChangePasswordModal from './ChangePasswordModal';
 
 export default function AdminLayout() {
   const { user, isAdmin, loading, signOut } = useAdminAuth();
+  const [changePasswordOpen, setChangePasswordOpen] = useState(false);
 
   if (loading) {
     return (
@@ -54,7 +57,7 @@ export default function AdminLayout() {
             <i className="ri-calendar-line w-4 h-4 flex items-center justify-center" />
             <span className="whitespace-nowrap">Bảng điều khiển</span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary-100 text-primary-700 text-xs font-bold">
                 {(user.email?.[0] ?? 'A').toUpperCase()}
@@ -63,8 +66,17 @@ export default function AdminLayout() {
             </div>
             <button
               type="button"
+              onClick={() => setChangePasswordOpen(true)}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors whitespace-nowrap"
+              title="Đổi mật khẩu cá nhân"
+            >
+              <i className="ri-key-2-line text-sm" />
+              <span className="hidden sm:inline">Đổi mật khẩu</span>
+            </button>
+            <button
+              type="button"
               onClick={() => signOut()}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-foreground-600 hover:text-foreground-900 hover:bg-background-100 rounded-md transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-foreground-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors whitespace-nowrap"
             >
               <i className="ri-logout-box-r-line w-4 h-4 flex items-center justify-center" />
               <span className="hidden sm:inline">Đăng xuất</span>
@@ -75,6 +87,11 @@ export default function AdminLayout() {
         <main className="flex-1 p-6">
           <Outlet />
         </main>
+
+        <ChangePasswordModal
+          isOpen={changePasswordOpen}
+          onClose={() => setChangePasswordOpen(false)}
+        />
 
         <footer className="px-6 py-3 text-xs text-foreground-500 border-t border-background-200 bg-background-50">
           <Link to="/" className="hover:text-primary-600 transition-colors whitespace-nowrap">

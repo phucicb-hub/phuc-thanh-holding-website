@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 const navItems = [
   { to: '/admin/lien-he', label: 'Yêu cầu liên hệ', icon: 'ri-mail-line', end: false },
   { to: '/admin', label: 'Tổng quan', icon: 'ri-dashboard-line', end: true },
+  { to: '/admin/nguoi-dung', label: 'Quản lý người dùng', icon: 'ri-user-settings-line', end: false },
   { to: '/admin/tin-tuc', label: 'Tin tức', icon: 'ri-newspaper-line', end: false },
   { to: '/admin/du-an', label: 'Dự án', icon: 'ri-briefcase-line', end: false },
   { to: '/admin/san-pham', label: 'Sản phẩm', icon: 'ri-box-3-line', end: false },
