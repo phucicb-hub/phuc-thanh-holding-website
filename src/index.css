@@ -93,7 +93,12 @@
     padding-top: env(safe-area-inset-top);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
   }
 }
@@ -127,13 +132,24 @@
     opacity: 0;
     transform: translateY(var(--reveal-distance, 24px));
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-<<<<<<< HEAD
-=======
+
 /* Preserve v3 defaults used by the existing design. */
-@layer base { *, ::before, ::after { border-color: var(--color-gray-200, currentColor); } button, [role="button"] { cursor: pointer; } }
->>>>>>> a25e08e (Upload project)
+@layer base {
+
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+}

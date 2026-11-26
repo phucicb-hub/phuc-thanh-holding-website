@@ -2,10 +2,8 @@
 .env.*
 !.env.example
 node_modules/
-<<<<<<< HEAD
 .npm-cache/
 .gradle-cache/
-=======
 server/node_modules/
 ubuntu-fresh-build/
 verification-build/
@@ -15,12 +13,10 @@ ubuntu-release/
 deployment/*.tar.gz
 deployment/fresh-stack/html/
 deployment/startups-update/html/
->>>>>>> a25e08e (Upload project)
 out/
 *.log
 *.map
 *.zip
-<<<<<<< HEAD
 android/.gradle/
 android/local.properties
 android/app/build/
@@ -28,7 +24,6 @@ ios/App/Pods/
 ios/App/DerivedData/
 ios/App/App.xcworkspace/xcuserdata/
 supabase/.temp/
-=======
 
 shop/.preview-db/
 shop/google-oauth.local.json
@@ -45,4 +40,3 @@ shop/youtube-api.local.txt
 shop/gemini-api.local.txt
 shop/gemini-model.local.txt
 security-build/
->>>>>>> a25e08e (Upload project)
