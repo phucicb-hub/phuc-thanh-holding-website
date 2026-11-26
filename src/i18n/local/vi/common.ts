@@ -33,6 +33,7 @@ export default {
   'quicklinks.connect': 'Kết nối & trao đổi ngay',
   'common.home': 'Trang chủ',
   'common.viewDetail': 'Xem chi tiết',
+  'common.launchPlatform': 'Truy cập nền tảng',
   'common.retry': 'Thử lại',
   'common.readMore': 'Đọc tiếp',
   'common.contactConsult': 'LIÊN HỆ TƯ VẤN',

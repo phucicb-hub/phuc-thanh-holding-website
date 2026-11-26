@@ -33,6 +33,7 @@ export default {
   'quicklinks.connect': 'Connect with us today',
   'common.home': 'Home',
   'common.viewDetail': 'View details',
+  'common.launchPlatform': 'Launch Platform',
   'common.retry': 'Try again',
   'common.readMore': 'Read more',
   'common.contactConsult': 'CONTACT FOR CONSULTATION',

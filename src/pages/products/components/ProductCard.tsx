@@ -35,13 +35,27 @@ export default function ProductCard({ product, style }: { product: ProductItem; 
         <p className="text-xs md:text-sm text-foreground-600 mb-4 flex-1 line-clamp-3">
           {product.description}
         </p>
-        <a
-          href={href}
-          className="inline-flex items-center gap-1 text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors whitespace-nowrap"
-        >
-          {t('common.viewDetail')}
-          <i className="ri-arrow-right-line w-4 h-4 flex items-center justify-center" />
-        </a>
+        <div className="flex items-center justify-between gap-2 pt-3 border-t border-background-200/70 mt-auto">
+          <a
+            href={href}
+            className="inline-flex items-center gap-1 text-xs md:text-sm font-medium text-foreground-600 hover:text-primary-600 transition-colors whitespace-nowrap"
+          >
+            {t('common.viewDetail')}
+            <i className="ri-arrow-right-line w-3.5 h-3.5 flex items-center justify-center" />
+          </a>
+          {product.externalUrl && (
+            <a
+              href={product.externalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold bg-[#046842] hover:bg-[#025938] text-white rounded-md transition-all shadow-xs hover:shadow-sm whitespace-nowrap"
+              title={product.externalUrl}
+            >
+              <span>{t('common.launchPlatform', 'Mở app')}</span>
+              <i className="ri-external-link-line text-xs" />
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );

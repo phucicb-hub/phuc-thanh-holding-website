@@ -156,9 +156,36 @@ export default function ProductDetail() {
                   ))}
                 </ul>
 
+                {product.externalUrl && (
+                  <div className="mb-8 p-5 rounded-xl bg-gradient-to-br from-white to-[#f0fdf4] border-2 border-[#046842]/20 shadow-sm">
+                    <div className="flex items-center gap-2 mb-2 text-xs font-bold text-[#046842] uppercase tracking-wider">
+                      <span className="relative flex h-2.5 w-2.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#046842]"></span>
+                      </span>
+                      <span>{lang === 'vi' ? 'Nền tảng trực tuyến sẵn sàng' : 'Production Cloud Platform'}</span>
+                    </div>
+                    <p className="text-xs text-foreground-600 mb-4 leading-relaxed">
+                      {lang === 'vi'
+                        ? 'Khách hàng và đối tác có thể truy cập trực tiếp hệ thống để trải nghiệm các tính năng và bắt đầu sử dụng ngay.'
+                        : 'Explore live features and deploy directly through our dedicated cloud endpoint.'}
+                    </p>
+                    <a
+                      href={product.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 text-sm font-bold bg-[#046842] hover:bg-[#025938] text-white rounded-lg transition-all shadow-[0_4px_14px_rgba(4,104,66,0.25)] hover:shadow-[0_6px_20px_rgba(4,104,66,0.35)]"
+                    >
+                      <i className="ri-rocket-line text-base" />
+                      <span>{t('common.launchPlatform')} ({product.externalUrl.replace('https://', '')})</span>
+                      <i className="ri-external-link-line text-sm" />
+                    </a>
+                  </div>
+                )}
+
                 <a
                   href={getLocalizedPath('contact', lang)}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold bg-primary-500 text-background-50 rounded-md hover:bg-primary-600 transition-colors whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold bg-background-200 text-foreground-800 hover:bg-background-300 rounded-md transition-colors whitespace-nowrap"
                 >
                   {t('common.contactConsult')}
                   <i className="ri-arrow-right-line w-4 h-4 flex items-center justify-center" />

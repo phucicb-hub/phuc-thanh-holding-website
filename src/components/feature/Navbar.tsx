@@ -207,7 +207,47 @@ const navConfig: NavItemConfig[] = [
       const isVi = lang === 'vi';
       return [
         {
-          title: isVi ? 'Hệ sinh thái Y tế & Dữ liệu' : 'Digital Health & Big Data',
+          title: isVi ? 'Nền tảng Trực tuyến (Live Platforms)' : 'Live Platforms & SaaS Apps',
+          items: [
+            {
+              title: 'PT AI Shop',
+              desc: isVi ? 'shop.phucthanhholding.com - Bản quyền AI & giải pháp số' : 'shop.phucthanhholding.com - Enterprise AI accounts & licenses',
+              href: 'https://shop.phucthanhholding.com',
+              icon: 'ri-shopping-bag-3-line',
+              badge: 'Store',
+            },
+            {
+              title: 'PT AI Studio',
+              desc: isVi ? 'studio.phucthanhholding.com - Xưởng video & media GenAI' : 'studio.phucthanhholding.com - GenAI video & creative studio',
+              href: 'https://studio.phucthanhholding.com',
+              icon: 'ri-movie-2-line',
+              badge: 'GenAI',
+            },
+            {
+              title: 'PT Automation Engine',
+              desc: isVi ? 'n8n.phucthanhholding.com - Tự động hóa luồng việc n8n' : 'n8n.phucthanhholding.com - Automated workflow engine',
+              href: 'https://n8n.phucthanhholding.com',
+              icon: 'ri-flow-chart',
+              badge: 'n8n',
+            },
+            {
+              title: '9Router AI Gateway',
+              desc: isVi ? '9router.phucthanhholding.com - Cổng định tuyến LLM tốc độ cao' : '9router.phucthanhholding.com - Low-latency LLM gateway & router',
+              href: 'https://9router.phucthanhholding.com',
+              icon: 'ri-router-line',
+              badge: 'Gateway',
+            },
+            {
+              title: 'PT Landing Studio',
+              desc: isVi ? 'unbounce.phucthanhholding.com - Thiết kế Landing Page chuyển đổi' : 'unbounce.phucthanhholding.com - High-converting landing page builder',
+              href: 'https://unbounce.phucthanhholding.com',
+              icon: 'ri-layout-masonry-line',
+              badge: 'Unbounce',
+            },
+          ],
+        },
+        {
+          title: isVi ? 'Giải pháp Doanh nghiệp & Y tế số' : 'Enterprise & HealthTech Suites',
           items: [
             {
               title: 'PT Clinic Platform',
@@ -222,23 +262,11 @@ const navConfig: NavItemConfig[] = [
               href: getLocalizedPath('pt-datalake', lang),
               icon: 'ri-database-2-line',
             },
-          ],
-        },
-        {
-          title: isVi ? 'Hệ sinh thái Giáo dục & AI' : 'EdTech & Artificial Intelligence',
-          items: [
             {
               title: 'PT LMS Ecosystem',
               desc: isVi ? 'Nền tảng quản lý đào tạo trực tuyến chuẩn doanh nghiệp' : 'Enterprise-grade cloud learning management suite',
               href: getLocalizedPath('pt-lms', lang),
               icon: 'ri-graduation-cap-line',
-            },
-            {
-              title: isVi ? 'AI Agentic Workflow' : 'Autonomous AI Agents',
-              desc: isVi ? 'Tự động hóa tác vụ chuyên sâu với mô hình AI đa tác nhân' : 'Enterprise multi-agent autonomous automation',
-              href: getLocalizedPath('ai-product', lang),
-              icon: 'ri-magic-line',
-              badge: 'New',
             },
             {
               title: isVi ? 'Xem toàn bộ Sản phẩm' : 'View All Products',
@@ -591,37 +619,45 @@ export default function Navbar() {
                         {section.title}
                       </div>
                       <div className="space-y-2">
-                        {section.items.map((sub, sIdx) => (
-                          <a
-                            key={sIdx}
-                            href={sub.href}
-                            onClick={() => setActiveFlyout(null)}
-                            className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-[#f8fafc] border border-transparent hover:border-gray-200/80 transition-all"
-                          >
-                            {sub.icon && (
-                              <div className="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-[#046842]/10 text-gray-600 group-hover:text-[#046842] flex items-center justify-center shrink-0 mt-0.5 transition-colors">
-                                <i className={`${sub.icon} text-base`} />
-                              </div>
-                            )}
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2">
-                                <span className="text-sm font-semibold text-gray-900 group-hover:text-[#046842] transition-colors">
-                                  {sub.title}
-                                </span>
-                                {sub.badge && (
-                                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#046842]/10 text-[#046842]">
-                                    {sub.badge}
+                        {section.items.map((sub, sIdx) => {
+                          const isExt = sub.href.startsWith('http');
+                          return (
+                            <a
+                              key={sIdx}
+                              href={sub.href}
+                              target={isExt ? '_blank' : undefined}
+                              rel={isExt ? 'noopener noreferrer' : undefined}
+                              onClick={() => setActiveFlyout(null)}
+                              className="group flex items-start gap-3 p-2.5 rounded-xl hover:bg-[#f8fafc] border border-transparent hover:border-gray-200/80 transition-all"
+                            >
+                              {sub.icon && (
+                                <div className="w-8 h-8 rounded-lg bg-gray-100 group-hover:bg-[#046842]/10 text-gray-600 group-hover:text-[#046842] flex items-center justify-center shrink-0 mt-0.5 transition-colors">
+                                  <i className={`${sub.icon} text-base`} />
+                                </div>
+                              )}
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-sm font-semibold text-gray-900 group-hover:text-[#046842] transition-colors">
+                                    {sub.title}
                                   </span>
+                                  {sub.badge && (
+                                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#046842]/10 text-[#046842]">
+                                      {sub.badge}
+                                    </span>
+                                  )}
+                                  {isExt && (
+                                    <i className="ri-external-link-line text-xs text-gray-400 group-hover:text-[#046842]" />
+                                  )}
+                                </div>
+                                {sub.desc && (
+                                  <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">
+                                    {sub.desc}
+                                  </p>
                                 )}
                               </div>
-                              {sub.desc && (
-                                <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">
-                                  {sub.desc}
-                                </p>
-                              )}
-                            </div>
-                          </a>
-                        ))}
+                            </a>
+                          );
+                        })}
                       </div>
                     </div>
                   ))}
@@ -732,21 +768,29 @@ export default function Navbar() {
                     {/* Accordion Sub-links */}
                     {item.hasDropdown && isExpanded && (
                       <div className="pl-4 pr-2 py-2 space-y-1 bg-gray-50/80 rounded-lg mt-1 border border-gray-100">
-                        {sections.flatMap((s) => s.items).map((sub, sIdx) => (
-                          <a
-                            key={sIdx}
-                            href={sub.href}
-                            className="flex items-center gap-2 py-2 px-2 text-xs font-medium text-gray-600 hover:text-[#046842] hover:bg-white rounded-md transition-colors"
-                          >
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#046842]" />
-                            <span className="flex-1 truncate">{sub.title}</span>
-                            {sub.badge && (
-                              <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-[#046842]/10 text-[#046842] font-semibold">
-                                {sub.badge}
-                              </span>
-                            )}
-                          </a>
-                        ))}
+                        {sections.flatMap((s) => s.items).map((sub, sIdx) => {
+                          const isExt = sub.href.startsWith('http');
+                          return (
+                            <a
+                              key={sIdx}
+                              href={sub.href}
+                              target={isExt ? '_blank' : undefined}
+                              rel={isExt ? 'noopener noreferrer' : undefined}
+                              className="flex items-center gap-2 py-2 px-2 text-xs font-medium text-gray-600 hover:text-[#046842] hover:bg-white rounded-md transition-colors"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#046842]" />
+                              <span className="flex-1 truncate">{sub.title}</span>
+                              {sub.badge && (
+                                <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-[#046842]/10 text-[#046842] font-semibold">
+                                  {sub.badge}
+                                </span>
+                              )}
+                              {isExt && (
+                                <i className="ri-external-link-line text-[11px] text-gray-400" />
+                              )}
+                            </a>
+                          );
+                        })}
                       </div>
                     )}
                   </div>

@@ -13,6 +13,14 @@ export interface NewsItem {
   tags: string[];
 }
 
+export const FLAGSHIP_LINKS: Record<string, string> = {
+  shop: 'https://shop.phucthanhholding.com',
+  studio: 'https://studio.phucthanhholding.com',
+  n8n: 'https://n8n.phucthanhholding.com',
+  '9router': 'https://9router.phucthanhholding.com',
+  unbounce: 'https://unbounce.phucthanhholding.com',
+};
+
 export interface ProductItem {
   id: number;
   categoryId: string;
@@ -23,6 +31,7 @@ export interface ProductItem {
   featured: boolean;
   date: string;
   features: string[];
+  externalUrl?: string | null;
 }
 
 export interface ProjectItem {
@@ -99,6 +108,8 @@ interface ProductRow {
 
 function mapProduct(row: ProductRow): ProductItem {
   const en = isEnglish();
+  const slugKey = (row.slug ?? '').toLowerCase().trim();
+  const externalUrl = (slugKey && FLAGSHIP_LINKS[slugKey]) ? FLAGSHIP_LINKS[slugKey] : null;
   return {
     id: row.id,
     categoryId: row.category_id,
@@ -109,6 +120,7 @@ function mapProduct(row: ProductRow): ProductItem {
     featured: row.featured,
     date: row.date,
     features: en && row.features_en ? row.features_en : row.features,
+    externalUrl,
   };
 }
 
