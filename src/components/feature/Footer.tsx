@@ -198,8 +198,17 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-            <p className="text-[11px] text-[#8b949e]/80">
-              {t('footer.copyright')}
+            <p className="text-[11px] text-[#8b949e]/80 flex items-center justify-center gap-2">
+              <span>{t('footer.copyright')}</span>
+              <span>·</span>
+              <a
+                href="/admin/dang-nhap"
+                className="text-[#8b949e]/60 hover:text-[#046842] transition-colors inline-flex items-center gap-1 font-medium"
+                title="Cổng quản trị nội bộ"
+              >
+                <i className="ri-shield-keyhole-line text-[11px]" />
+                <span>Portal Quản trị</span>
+              </a>
             </p>
           </div>
         </div>
