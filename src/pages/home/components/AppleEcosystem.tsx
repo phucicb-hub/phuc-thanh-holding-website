@@ -41,7 +41,7 @@ export default function AppleEcosystem() {
             className="md:col-span-7 rounded-3xl bg-white border border-gray-200/90 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-8 sm:p-10 flex flex-col justify-between relative group overflow-hidden transition-all duration-300"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#046842]/5 rounded-full blur-[70px] pointer-events-none group-hover:bg-[#046842]/10 transition-all duration-500" />
-            
+
             <div>
               <div className="flex items-center justify-between mb-8">
                 <div className="w-14 h-14 rounded-2xl bg-[#046842]/10 border border-[#046842]/20 flex items-center justify-center text-[#046842]">
@@ -84,7 +84,7 @@ export default function AppleEcosystem() {
             className="md:col-span-5 rounded-3xl bg-white border border-gray-200/90 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-8 sm:p-10 flex flex-col justify-between relative group overflow-hidden transition-all duration-300"
           >
             <div className="absolute top-0 right-0 w-52 h-52 bg-emerald-500/5 rounded-full blur-[60px] pointer-events-none group-hover:bg-emerald-500/10 transition-all duration-500" />
-            
+
             <div>
               <div className="flex items-center justify-between mb-8">
                 <div className="w-14 h-14 rounded-2xl bg-[#046842]/10 border border-[#046842]/20 flex items-center justify-center text-[#046842]">
@@ -123,7 +123,7 @@ export default function AppleEcosystem() {
             className="md:col-span-5 rounded-3xl bg-white border border-gray-200/90 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-8 sm:p-10 flex flex-col justify-between relative group overflow-hidden transition-all duration-300"
           >
             <div className="absolute top-0 right-0 w-52 h-52 bg-[#f59e0b]/5 rounded-full blur-[60px] pointer-events-none group-hover:bg-[#f59e0b]/10 transition-all duration-500" />
-            
+
             <div>
               <div className="flex items-center justify-between mb-8">
                 <div className="w-14 h-14 rounded-2xl bg-[#d97706]/10 border border-[#d97706]/20 flex items-center justify-center text-[#d97706]">
@@ -162,7 +162,7 @@ export default function AppleEcosystem() {
             className="md:col-span-7 rounded-3xl bg-white border border-gray-200/90 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-8 sm:p-10 flex flex-col justify-between relative group overflow-hidden transition-all duration-300"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[70px] pointer-events-none group-hover:bg-blue-500/10 transition-all duration-500" />
-            
+
             <div>
               <div className="flex items-center justify-between mb-8">
                 <div className="w-14 h-14 rounded-2xl bg-blue-600/10 border border-blue-600/20 flex items-center justify-center text-blue-600">
