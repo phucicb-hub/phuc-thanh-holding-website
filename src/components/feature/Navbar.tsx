@@ -98,15 +98,15 @@ export default function Navbar() {
     <>
       <header className="w-full">
         {/* Top bar */}
-        <div className="bg-background-100 border-b border-background-200">
+        <div className="bg-[#060709] border-b border-white/[0.06]">
           <div className="container-main">
-            <div className="flex items-center justify-end h-9 gap-4 text-xs text-foreground-600">
+            <div className="flex items-center justify-end h-9 gap-4 text-xs text-[#8b949e]">
               <a
                 href={searchHref}
                 className={`hidden md:flex items-center gap-1 transition-colors whitespace-nowrap ${
                   isActivePath(location.pathname, searchHref)
-                    ? 'text-primary-600 font-medium'
-                    : 'hover:text-primary-600'
+                    ? 'text-[#00f0b5] font-medium'
+                    : 'hover:text-[#00f0b5]'
                 }`}
               >
                 <i className="ri-search-line w-3 h-3 flex items-center justify-center" />
@@ -116,8 +116,8 @@ export default function Navbar() {
                 href={sitemapHref}
                 className={`hidden md:flex items-center gap-1 transition-colors whitespace-nowrap ${
                   isActivePath(location.pathname, sitemapHref)
-                    ? 'text-primary-600 font-medium'
-                    : 'hover:text-primary-600'
+                    ? 'text-[#00f0b5] font-medium'
+                    : 'hover:text-[#00f0b5]'
                 }`}
               >
                 <i className="ri-map-2-line w-3 h-3 flex items-center justify-center" />
@@ -131,22 +131,22 @@ export default function Navbar() {
                   onClick={(e) => handleLangSwitch('vi', e)}
                   aria-label="Tiếng Việt"
                   className={`flex items-center gap-1 transition-colors whitespace-nowrap ${
-                    lang === 'vi' ? 'text-primary-600 font-semibold' : 'hover:text-primary-600'
+                    lang === 'vi' ? 'text-[#00f0b5] font-semibold' : 'hover:text-[#00f0b5]'
                   }`}
                 >
-                  <img src="https://flagcdn.com/w20/vn.png" alt="VN" className="w-4 h-3 object-cover" />
+                  <img src="https://flagcdn.com/w20/vn.png" alt="VN" className="w-4 h-3 object-cover rounded-xs" />
                   VI
                 </a>
-                <span className="text-foreground-400">|</span>
+                <span className="text-white/20">|</span>
                 <a
                   href={enHref}
                   onClick={(e) => handleLangSwitch('en', e)}
                   aria-label="English"
                   className={`flex items-center gap-1 transition-colors whitespace-nowrap ${
-                    lang === 'en' ? 'text-primary-600 font-semibold' : 'hover:text-primary-600'
+                    lang === 'en' ? 'text-[#00f0b5] font-semibold' : 'hover:text-[#00f0b5]'
                   }`}
                 >
-                  <img src="https://flagcdn.com/w20/gb.png" alt="EN" className="w-4 h-3 object-cover" />
+                  <img src="https://flagcdn.com/w20/gb.png" alt="EN" className="w-4 h-3 object-cover rounded-xs" />
                   EN
                 </a>
               </div>
@@ -154,67 +154,77 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Main navigation */}
+        {/* Main navigation (Apple Pro Glass bar) */}
         <div
           className={`transition-all duration-300 ${
             scrolled
-              ? 'fixed top-0 left-0 right-0 z-40 bg-background-50/95 backdrop-blur-sm border-b border-background-200'
-              : 'relative bg-background-50'
+              ? 'fixed top-0 left-0 right-0 z-40 bg-[#07080a]/85 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.6)]'
+              : 'relative bg-[#07080a] border-b border-white/[0.06]'
           }`}
         >
           <div className="container-main">
             <div className="flex items-center justify-between h-16 md:h-20">
               {/* Logo */}
               {isHome ? (
-                <h1 className="flex items-center gap-2 shrink-0 m-0">
-                  <a href={homeHref} className="flex items-center gap-2 shrink-0">
+                <h1 className="flex items-center gap-2.5 shrink-0 m-0">
+                  <a href={homeHref} className="flex items-center gap-2.5 shrink-0 group">
                     <img
                       src={logoUrl}
                       alt="PT Phuc Thanh Holding"
-                      className="h-12 w-12 md:h-14 md:w-14 object-contain"
+                      className="h-11 w-11 md:h-13 md:w-13 object-contain drop-shadow-[0_0_12px_rgba(0,240,181,0.2)]"
                     />
                     <div className="hidden sm:block">
-                      <div className="text-sm font-bold text-primary-700 leading-tight">PT HOLDING</div>
-                      <div className="text-[10px] text-foreground-500 leading-tight">{t('brand.subtitle')}</div>
+                      <div className="text-sm font-bold text-white tracking-wider leading-tight group-hover:text-[#00f0b5] transition-colors">
+                        PT HOLDING
+                      </div>
+                      <div className="text-[10px] text-[#8b949e] tracking-tight leading-tight">
+                        {t('brand.subtitle')}
+                      </div>
                     </div>
                   </a>
                 </h1>
               ) : (
-                <a href={homeHref} className="flex items-center gap-2 shrink-0">
+                <a href={homeHref} className="flex items-center gap-2.5 shrink-0 group">
                   <img
                     src={logoUrl}
                     alt="PT Phuc Thanh Holding"
-                    className="h-12 w-12 md:h-14 md:w-14 object-contain"
+                    className="h-11 w-11 md:h-13 md:w-13 object-contain drop-shadow-[0_0_12px_rgba(0,240,181,0.2)]"
                   />
                   <div className="hidden sm:block">
-                    <div className="text-sm font-bold text-primary-700 leading-tight">PT HOLDING</div>
-                    <div className="text-[10px] text-foreground-500 leading-tight">{t('brand.subtitle')}</div>
+                    <div className="text-sm font-bold text-white tracking-wider leading-tight group-hover:text-[#00f0b5] transition-colors">
+                      PT HOLDING
+                    </div>
+                    <div className="text-[10px] text-[#8b949e] tracking-tight leading-tight">
+                      {t('brand.subtitle')}
+                    </div>
                   </div>
                 </a>
               )}
 
               {/* Desktop nav */}
-              <nav className="hidden lg:flex items-center gap-0">
+              <nav className="hidden lg:flex items-center gap-1">
                 {navItems.map((item) => {
                   const active = isActivePath(location.pathname, item.href);
                   return (
                     <a
                       key={item.pageKey}
                       href={item.href}
-                      className={`relative px-2 lg:px-2 xl:px-3 py-2 text-sm font-medium transition-colors whitespace-nowrap ${
-                        active ? 'text-primary-600' : 'text-foreground-700 hover:text-primary-600'
+                      className={`relative px-2.5 xl:px-3 py-2 text-xs xl:text-sm font-medium transition-colors whitespace-nowrap rounded-lg ${
+                        active
+                          ? 'text-[#00f0b5] bg-white/[0.04]'
+                          : 'text-[#8b949e] hover:text-white hover:bg-white/[0.03]'
                       }`}
                     >
                       {item.label}
                       {active && (
-                        <span className="absolute left-2 lg:left-2 xl:left-3 right-2 xl:right-3 -bottom-0.5 h-0.5 bg-accent-500 rounded-full" />
+                        <span className="absolute left-2.5 right-2.5 -bottom-0.5 h-0.5 bg-[#00f0b5] rounded-full shadow-[0_0_8px_#00f0b5]" />
                       )}
                     </a>
                   );
                 })}
                 <a
                   href={partnershipHref}
-                  className="ml-3 px-5 py-2.5 text-sm font-semibold bg-accent-500 text-primary-950 rounded-md hover:bg-accent-400 transition-colors whitespace-nowrap"
+                  className="ml-4 px-5 py-2.5 text-xs font-bold uppercase tracking-wider bg-[#00f0b5] text-[#07080a] rounded-full hover:bg-white hover:text-[#07080a] transition-all duration-300 shadow-[0_0_20px_rgba(0,240,181,0.25)] whitespace-nowrap"
                 >
                   {t('nav.contactCta')}
                 </a>
@@ -223,7 +233,7 @@ export default function Navbar() {
               {/* Mobile hamburger */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="lg:hidden p-2 text-foreground-700 hover:text-primary-600 transition-colors"
+                className="lg:hidden p-2 text-white/80 hover:text-[#00f0b5] transition-colors"
                 aria-label="Toggle menu"
               >
                 <i className={`${mobileOpen ? 'ri-close-line' : 'ri-menu-line'} w-6 h-6 flex items-center justify-center text-xl`} />
