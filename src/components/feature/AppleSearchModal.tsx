@@ -85,7 +85,7 @@ export default function AppleSearchModal({ isOpen, onClose }: AppleSearchModalPr
 
   const quickLinks = [
     {
-      title: isVi ? 'Xác minh doanh nghiệp (MST: 2500716846)' : 'Enterprise Verification (Tax ID: 2500716846)',
+      title: isVi ? 'Xác minh doanh nghiệp (MST: 2500716846)' : 'Enterprise Verification (Tax: 2500716846)',
       href: getLocalizedPath('verification', lang),
       icon: 'ri-shield-check-line',
       tag: isVi ? 'Pháp lý' : 'Compliance',

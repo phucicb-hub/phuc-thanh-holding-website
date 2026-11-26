@@ -30,7 +30,7 @@ export default function AppleHero() {
           <span className="text-xs font-semibold tracking-wide text-gray-800">
             {isVi
               ? `MST: ${company.registrationNumber} • Doanh nghiệp Công nghệ & Đầu tư`
-              : `Tax ID: ${company.registrationNumber} • Technology & Investment JSC`}
+              : `Tax: ${company.registrationNumber} • Enterprise Technology & Investment`}
           </span>
           <span className="text-xs text-gray-300">|</span>
           <span className="text-xs text-[#046842] font-bold">

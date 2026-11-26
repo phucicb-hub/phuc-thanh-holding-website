@@ -18,7 +18,7 @@ export default function CompanyIdentity() {
             </div>
             <p className="text-sm sm:text-base font-bold text-[#046842]">{en ? company.nameEn : company.nameVi}</p>
             <p className="text-xs sm:text-sm text-[#4b5563] mt-1.5">
-              {en ? 'Registered on 4 April 2024 · Enterprise Code / Tax ID: ' : 'Ngày cấp phép: 04/04/2024 · Mã số doanh nghiệp / MST: '}
+              {en ? 'Registered on 4 April 2024 · Enterprise Code / Tax: ' : 'Ngày cấp phép: 04/04/2024 · Mã số doanh nghiệp / MST: '}
               <span className="text-[#046842] font-mono font-bold">{company.registrationNumber}</span>
             </p>
             <p className="text-xs sm:text-sm text-[#4b5563] mt-1">{en ? company.addressEn : company.addressVi}</p>

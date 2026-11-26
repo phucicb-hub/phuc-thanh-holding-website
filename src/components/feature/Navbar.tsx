@@ -57,7 +57,7 @@ const navConfig: NavItemConfig[] = [
               icon: 'ri-building-4-line',
             },
             {
-              title: isVi ? 'Xác minh Pháp lý & MST' : 'Legal Verification & Tax ID',
+              title: isVi ? 'Xác minh Pháp lý & MST' : 'Legal Verification & Tax',
               desc: isVi ? 'Đăng ký kinh doanh số 2500716846 minh bạch' : 'Official incorporation and tax registration',
               href: getLocalizedPath('verification', lang),
               icon: 'ri-shield-check-line',
@@ -376,7 +376,7 @@ export default function Navbar() {
               <div className="hidden sm:flex items-center gap-3">
                 <span className="inline-flex items-center gap-1.5 text-gray-600">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#046842]" />
-                  <span className="font-semibold text-gray-800">MST: 2500716846</span>
+                  <span className="font-semibold text-gray-800">{isVi ? 'MST: ' : 'Tax: '}2500716846</span>
                 </span>
                 <span className="text-gray-300">•</span>
                 <a href="tel:0343089666" className="hover:text-[#046842] transition-colors font-medium">
@@ -385,7 +385,7 @@ export default function Navbar() {
               </div>
               <div className="flex sm:hidden items-center gap-1.5 text-gray-700">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#046842]" />
-                <span className="font-semibold text-[11px]">MST: 2500716846</span>
+                <span className="font-semibold text-[11px]">{isVi ? 'MST: ' : 'Tax: '}2500716846</span>
               </div>
 
               {/* Right: Search, Sitemap, Language switcher */}
@@ -631,7 +631,7 @@ export default function Navbar() {
                     <div>
                       <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#046842]/10 text-[#046842] text-xs font-bold mb-3">
                         <i className="ri-verified-badge-line" />
-                        <span>MST: 2500716846</span>
+                        <span>{isVi ? 'MST: ' : 'Tax: '}2500716846</span>
                       </div>
                       <h4 className="text-base font-bold text-gray-900 mb-2">
                         {isVi ? 'Hợp Tác Chiến Lược Cùng Phúc Thành' : 'Strategic Partnership Terminal'}

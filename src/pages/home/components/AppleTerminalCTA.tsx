@@ -76,7 +76,7 @@ export default function AppleTerminalCTA() {
                 <div>
                   <div className="text-xs text-gray-500">{isVi ? 'Pháp nhân chính thức' : 'Legal Entity'}</div>
                   <div className="text-[#1d1d1f] font-bold">{isVi ? company.nameVi : company.nameEn}</div>
-                  <div className="text-xs text-[#046842] font-semibold mt-0.5">MST: {company.registrationNumber}</div>
+                  <div className="text-xs text-[#046842] font-semibold mt-0.5">{isVi ? 'MST: ' : 'Tax: '}{company.registrationNumber}</div>
                 </div>
               </div>
 
